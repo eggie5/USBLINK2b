@@ -176,6 +176,7 @@ namespace com.AComm
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.timerStatusMessage = new System.Windows.Forms.Timer(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -208,6 +209,7 @@ namespace com.AComm
             ((System.ComponentModel.ISupportInitialize)(this.led14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.led16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.led10)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -275,7 +277,7 @@ namespace com.AComm
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.checkBoxMatlabEnabled);
@@ -314,10 +316,12 @@ namespace com.AComm
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(558, 115);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(12, 106);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(458, 615);
+            this.tabControl1.ShowToolTips = true;
+            this.tabControl1.Size = new System.Drawing.Size(1016, 615);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
@@ -473,7 +477,7 @@ namespace com.AComm
             this.groupBoxAmps.Controls.Add(this.trackBarFreq1);
             this.groupBoxAmps.Controls.Add(this.trackBarFreq3);
             this.groupBoxAmps.Controls.Add(this.trackBarFreq5);
-            this.groupBoxAmps.Location = new System.Drawing.Point(55, 319);
+            this.groupBoxAmps.Location = new System.Drawing.Point(24, 191);
             this.groupBoxAmps.Name = "groupBoxAmps";
             this.groupBoxAmps.Size = new System.Drawing.Size(486, 411);
             this.groupBoxAmps.TabIndex = 26;
@@ -1402,7 +1406,7 @@ namespace com.AComm
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.checkBoxContFeed);
             this.groupBox1.Controls.Add(this.buttonWriteData);
-            this.groupBox1.Location = new System.Drawing.Point(52, 134);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(157, 93);
             this.groupBox1.TabIndex = 22;
@@ -1450,7 +1454,7 @@ namespace com.AComm
             // 
             this.labelRegister4.AutoSize = true;
             this.labelRegister4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegister4.Location = new System.Drawing.Point(296, 193);
+            this.labelRegister4.Location = new System.Drawing.Point(250, 65);
             this.labelRegister4.Name = "labelRegister4";
             this.labelRegister4.Size = new System.Drawing.Size(16, 16);
             this.labelRegister4.TabIndex = 86;
@@ -1460,7 +1464,7 @@ namespace com.AComm
             // 
             this.labelRegister2.AutoSize = true;
             this.labelRegister2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegister2.Location = new System.Drawing.Point(296, 175);
+            this.labelRegister2.Location = new System.Drawing.Point(250, 47);
             this.labelRegister2.Name = "labelRegister2";
             this.labelRegister2.Size = new System.Drawing.Size(16, 16);
             this.labelRegister2.TabIndex = 85;
@@ -1470,7 +1474,7 @@ namespace com.AComm
             // 
             this.labelRegister1.AutoSize = true;
             this.labelRegister1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegister1.Location = new System.Drawing.Point(296, 157);
+            this.labelRegister1.Location = new System.Drawing.Point(250, 29);
             this.labelRegister1.Name = "labelRegister1";
             this.labelRegister1.Size = new System.Drawing.Size(16, 16);
             this.labelRegister1.TabIndex = 84;
@@ -1662,7 +1666,7 @@ namespace com.AComm
             this.groupBoxSysStatus.Controls.Add(this.label5);
             this.groupBoxSysStatus.Controls.Add(this.label8);
             this.groupBoxSysStatus.Controls.Add(this.label6);
-            this.groupBoxSysStatus.Location = new System.Drawing.Point(52, 233);
+            this.groupBoxSysStatus.Location = new System.Drawing.Point(6, 105);
             this.groupBoxSysStatus.Name = "groupBoxSysStatus";
             this.groupBoxSysStatus.Size = new System.Drawing.Size(489, 80);
             this.groupBoxSysStatus.TabIndex = 87;
@@ -1824,7 +1828,7 @@ namespace com.AComm
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(230, 192);
+            this.label18.Location = new System.Drawing.Point(184, 64);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(60, 13);
             this.label18.TabIndex = 86;
@@ -1833,7 +1837,7 @@ namespace com.AComm
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(230, 175);
+            this.label17.Location = new System.Drawing.Point(184, 47);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(60, 13);
             this.label17.TabIndex = 85;
@@ -1842,7 +1846,7 @@ namespace com.AComm
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(230, 158);
+            this.label16.Location = new System.Drawing.Point(184, 30);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(60, 13);
             this.label16.TabIndex = 84;
@@ -1854,23 +1858,33 @@ namespace com.AComm
             this.timerStatusMessage.Interval = 3000;
             this.timerStatusMessage.Tick += new System.EventHandler(this.timerStatusMessage_Tick);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBoxAmps);
+            this.tabPage3.Controls.Add(this.label18);
+            this.tabPage3.Controls.Add(this.groupBox1);
+            this.tabPage3.Controls.Add(this.groupBoxSysStatus);
+            this.tabPage3.Controls.Add(this.labelRegister1);
+            this.tabPage3.Controls.Add(this.labelRegister4);
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.labelRegister2);
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1008, 589);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Controls";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1028, 773);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.groupBoxSysStatus);
-            this.Controls.Add(this.labelRegister4);
-            this.Controls.Add(this.groupBoxAmps);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.labelRegister2);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.labelRegister1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MinimumSize = new System.Drawing.Size(850, 38);
@@ -1915,6 +1929,8 @@ namespace com.AComm
             ((System.ComponentModel.ISupportInitialize)(this.led14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.led16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.led10)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2068,6 +2084,7 @@ namespace com.AComm
         private System.Windows.Forms.Label labelcheckBoxCS1_;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
 
