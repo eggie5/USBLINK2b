@@ -23,8 +23,10 @@ namespace com.AComm
         MATLABFileIO fio;
         LineItem myCurve;
         LineItem myFFT;
-        GraphPane RAWUSBPane;
-        GraphPane FFTPane;
+        GraphPane channel1;
+        GraphPane channel2;
+        GraphPane channel3;
+        GraphPane channel4;
         MasterPane myMaster;
         PictureBox[] leds;
 
@@ -57,13 +59,13 @@ namespace com.AComm
             }
 
             fio = new MATLABFileIO(this);
-            
+
             if (!usb.Open(usb.FindDevices()))
             {
-                MessageBox.Show(usb.LastError,"USB Connection Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(usb.LastError, "USB Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //SetUSBControlsState(false);
 
-               
+
             }
 
             if (usb.IsOpen)
@@ -86,107 +88,88 @@ namespace com.AComm
             myMaster.InnerPaneGap = 10;
             myMaster.Legend.IsVisible = false;
 
-            RAWUSBPane = new GraphPane();
-            RAWUSBPane.XAxis.Max = 512;
-            RAWUSBPane.XAxis.IsShowGrid = true;
-            RAWUSBPane.XAxis.ScaleFontSpec.FontColor = Color.Black;
-            RAWUSBPane.XAxis.ScaleFontSpec.Size = 12;
-            RAWUSBPane.XAxis.Step = 50;
-           
-            
-            RAWUSBPane.YAxis.Max = 256;
-            RAWUSBPane.YAxis.IsShowGrid = true;
-            RAWUSBPane.YAxis.ScaleFontSpec.FontColor = Color.Black;
-            RAWUSBPane.YAxis.ScaleFontSpec.Size = 12;
-            RAWUSBPane.YAxis.Step = 50;
+            channel1 = new GraphPane();
+            channel1.XAxis.Max = 512;
+            channel1.XAxis.IsShowGrid = true;
+            channel1.XAxis.ScaleFontSpec.FontColor = Color.Black;
+            channel1.XAxis.ScaleFontSpec.Size = 12;
+            channel1.XAxis.Step = 50;
+
+
+            channel1.YAxis.Max = 256;
+            channel1.YAxis.IsShowGrid = true;
+            channel1.YAxis.ScaleFontSpec.FontColor = Color.Black;
+            channel1.YAxis.ScaleFontSpec.Size = 12;
+            channel1.YAxis.Step = 50;
 
 
             //add a place holder line
-            RAWUSBPane.AddCurve("USB Input", new double[1], new double[1], Color.Red, SymbolType.None);
-
-            
+            channel1.AddCurve("Channel 1", new double[1], new double[1], Color.Red, SymbolType.None);
 
 
 
-            FFTPane = new GraphPane();
-            FFTPane.XAxis.Max = 512;
-            FFTPane.XAxis.IsShowGrid = true;
-            FFTPane.XAxis.ScaleFontSpec.FontColor = Color.Black;
-            FFTPane.XAxis.ScaleFontSpec.Size = 12;
-            FFTPane.XAxis.Step = 50;
-
-            FFTPane.YAxis.Max = 256;
-            FFTPane.YAxis.IsShowGrid = true;
-            FFTPane.YAxis.ScaleFontSpec.FontColor = Color.Black;
-            FFTPane.YAxis.ScaleFontSpec.Size = 12;
-            FFTPane.YAxis.Step = 50;
-
-            FFTPane.AddCurve("FFT Output", new double[1], new double[1], Color.Blue, SymbolType.None);
 
 
-           
-            myMaster.Add(RAWUSBPane);
-            myMaster.Add(FFTPane);
+            channel2 = new GraphPane();
+            channel2.XAxis.Max = 512;
+            channel2.XAxis.IsShowGrid = true;
+            channel2.XAxis.ScaleFontSpec.FontColor = Color.Black;
+            channel2.XAxis.ScaleFontSpec.Size = 12;
+            channel2.XAxis.Step = 50;
+
+            channel2.YAxis.Max = 256;
+            channel2.YAxis.IsShowGrid = true;
+            channel2.YAxis.ScaleFontSpec.FontColor = Color.Black;
+            channel2.YAxis.ScaleFontSpec.Size = 12;
+            channel2.YAxis.Step = 50;
+
+            channel2.AddCurve("Channel 2", new double[1], new double[1], Color.Blue, SymbolType.None);
 
 
+            channel3 = new GraphPane();
+            channel3.XAxis.Max = 512;
+            channel3.XAxis.IsShowGrid = true;
+            channel3.XAxis.ScaleFontSpec.FontColor = Color.Black;
+            channel3.XAxis.ScaleFontSpec.Size = 12;
+            channel3.XAxis.Step = 50;
 
-            // Tell ZedGraph to auto layout all the panes
-            Graphics g = CreateGraphics();
-            myMaster.AutoPaneLayout(g, PaneLayout.SingleColumn);
-            myMaster.AxisChange(g);
-            g.Dispose();
+            channel3.YAxis.Max = 256;
+            channel3.YAxis.IsShowGrid = true;
+            channel3.YAxis.ScaleFontSpec.FontColor = Color.Black;
+            channel3.YAxis.ScaleFontSpec.Size = 12;
+            channel3.YAxis.Step = 50;
 
-            /*
-            myMaster = Graph.MasterPane;
+            channel3.AddCurve("Channel 3", new double[1], new double[1], Color.Blue, SymbolType.None);
 
-            // Remove the default pane that comes with the ZedGraphControl.MasterPane
-            myMaster.PaneList.Clear();
-            myMaster.IsShowTitle = false;
-            // Fill the pane background with a color gradient
-            myMaster.PaneFill = new Fill(Color.FromArgb(((System.Byte)(159)), ((System.Byte)(191)), ((System.Byte)(245))), System.Drawing.Color.FromArgb(((System.Byte)(196)), System.Drawing.Color.FromArgb(((System.Byte)(223)), ((System.Byte)(234)), ((System.Byte)(251)))));
-            // Set the margins and the space between panes to 10 points
-            myMaster.MarginAll = 10;
-            myMaster.InnerPaneGap = 10;
-            myMaster.Legend.IsVisible = false;
-
-            
-            RAWUSBPane Graph Pane
-            RAWUSBPane = new GraphPane();
-            RAWUSBPane.XAxis.Max = 512;
-            RAWUSBPane.YAxis.Max = 256;
-            RAWUSBPane.XAxis.IsShowTitle = false;
-            RAWUSBPane.YAxis.IsShowTitle = false;
-            RAWUSBPane.FontSpec.Size = 20;
-            RAWUSBPane.IsFontsScaled = false;
-            RAWUSBPane.Legend.IsVisible = false;
-            myMaster.Add(RAWUSBPane);
-
-            RAWUSBPane = new GraphPane();
-
-            myMaster.Add(RAWUSBPane);
+            channel4 = new GraphPane();
+            channel4.XAxis.Max = 512;
+            channel4.XAxis.IsShowGrid = true;
+            channel4.XAxis.ScaleFontSpec.FontColor = Color.Black;
+            channel4.XAxis.ScaleFontSpec.Size = 12;
+            channel4.XAxis.Step = 50;
+            channel4.YAxis.Max = 256;
+            channel4.YAxis.IsShowGrid = true;
+            channel4.YAxis.ScaleFontSpec.FontColor = Color.Black;
+            channel4.YAxis.ScaleFontSpec.Size = 12;
+            channel4.YAxis.Step = 50;
+            channel4.AddCurve("Channel 4", new double[1], new double[1], Color.Blue, SymbolType.None);
 
 
 
-            // FFT Graph Pane
-            FFTPane = new GraphPane();
-            FFTPane.XAxis.Max = 512;
-            FFTPane.YAxis.Max = 256;
-            FFTPane.XAxis.IsShowTitle = false;
-            FFTPane.YAxis.IsShowTitle = false;
-            FFTPane.FontSpec.Size = 10;
-            FFTPane.IsFontsScaled = false;
-            FFTPane.Legend.IsVisible = false;
-            myMaster.Add(FFTPane);
-
+            myMaster.Add(channel1);
+            myMaster.Add(channel2);
+            myMaster.Add(channel3);
+            myMaster.Add(channel4);
 
 
 
             // Tell ZedGraph to auto layout all the panes
             Graphics g = CreateGraphics();
-            myMaster.AutoPaneLayout(g, PaneLayout.SingleColumn);
+            myMaster.AutoPaneLayout(g, PaneLayout.ForceSquare);
             myMaster.AxisChange(g);
             g.Dispose();
-*/
+
+
             #endregion
 
 
@@ -209,10 +192,10 @@ namespace com.AComm
             leds[13] = led14;
             leds[14] = led15;
             leds[15] = led16;
-           
-           
-           
-           
+
+
+
+
         }
 
         private void WriteUSBSettings()
@@ -306,7 +289,7 @@ namespace com.AComm
                 myMaster.PaneList[1].CurveList.Clear();
 
                 //Add a new line to the Plot
-                myCurve = RAWUSBPane.AddCurve("USB Input", null, Color.Red, SymbolType.None);
+                myCurve = channel1.AddCurve("USB Input", null, Color.Red, SymbolType.None);
 
                 //Create binary file for DYDA then run DYDA and copy image to clipboard
                 MakeBowStaff(@"bowstaff2.cdf");
@@ -401,7 +384,7 @@ namespace com.AComm
 
         private void PlotFFT()
         {
-            myFFT = FFTPane.AddCurve("FFT Output", null, Color.FromKnownColor(KnownColor.MenuHighlight), SymbolType.None);
+            myFFT = channel2.AddCurve("FFT Output", null, Color.FromKnownColor(KnownColor.MenuHighlight), SymbolType.None);
             float[] fft = new float[fio.GraphPoints.Length];
             fio.GraphPoints.CopyTo(fft, 0);
             
