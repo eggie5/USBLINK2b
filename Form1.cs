@@ -113,10 +113,6 @@ namespace com.AComm
             //add a place holder line
             channel1.AddCurve("Channel 1", new double[1], new double[1], Color.Red, SymbolType.None);
 
-
-
-
-
             channel2 = new GraphPane();
             channel2.XAxis.Max = 512;
             channel2.XAxis.IsShowGrid = true;
@@ -327,6 +323,11 @@ namespace com.AComm
 
                 //find which plot we're working with
                 int plot_position =(int) fio.USBPacketData[0];
+                if (plot_position > 3)
+                {
+                    plot_position = 3;
+                }
+                
 
                 //now create label text
                 String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz", fio.USBPacketData[1], fio.USBPacketData[2]);
