@@ -45,6 +45,7 @@ namespace com.AComm
             this.Graph = new ZedGraph.ZedGraphControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBoxMATLABPlot = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBoxAmps = new System.Windows.Forms.GroupBox();
             this.labelDeccheckBoxCS3_ = new System.Windows.Forms.Label();
             this.labelcheckBoxCS3_ = new System.Windows.Forms.Label();
@@ -131,30 +132,11 @@ namespace com.AComm
             this.trackBarFreq1 = new System.Windows.Forms.TrackBar();
             this.trackBarFreq3 = new System.Windows.Forms.TrackBar();
             this.trackBarFreq5 = new System.Windows.Forms.TrackBar();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBoxContFeed = new System.Windows.Forms.CheckBox();
             this.buttonWriteData = new System.Windows.Forms.Button();
-            this.timerContFeed = new System.Windows.Forms.Timer(this.components);
-            this.labelRegister4 = new System.Windows.Forms.Label();
-            this.labelRegister2 = new System.Windows.Forms.Label();
-            this.labelRegister1 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.led2 = new System.Windows.Forms.PictureBox();
-            this.led8 = new System.Windows.Forms.PictureBox();
-            this.led7 = new System.Windows.Forms.PictureBox();
-            this.led6 = new System.Windows.Forms.PictureBox();
-            this.led5 = new System.Windows.Forms.PictureBox();
-            this.led4 = new System.Windows.Forms.PictureBox();
-            this.led3 = new System.Windows.Forms.PictureBox();
-            this.led1 = new System.Windows.Forms.PictureBox();
             this.groupBoxSysStatus = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -172,11 +154,32 @@ namespace com.AComm
             this.led14 = new System.Windows.Forms.PictureBox();
             this.led16 = new System.Windows.Forms.PictureBox();
             this.led10 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.led7 = new System.Windows.Forms.PictureBox();
+            this.led1 = new System.Windows.Forms.PictureBox();
+            this.led3 = new System.Windows.Forms.PictureBox();
+            this.led4 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.led5 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.led6 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.led8 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.led2 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelRegister1 = new System.Windows.Forms.Label();
+            this.labelRegister4 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.labelRegister2 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.timerContFeed = new System.Windows.Forms.Timer(this.components);
             this.timerStatusMessage = new System.Windows.Forms.Timer(this.components);
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.channel1_info_label = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -184,6 +187,7 @@ namespace com.AComm
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMATLABPlot)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.groupBoxAmps.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq4)).BeginInit();
@@ -192,14 +196,6 @@ namespace com.AComm
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq5)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.led2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led1)).BeginInit();
             this.groupBoxSysStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.led15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.led9)).BeginInit();
@@ -209,7 +205,15 @@ namespace com.AComm
             ((System.ComponentModel.ISupportInitialize)(this.led14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.led16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.led10)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.led7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led2)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -317,11 +321,11 @@ namespace com.AComm
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 106);
+            this.tabControl1.Location = new System.Drawing.Point(176, 106);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.ShowToolTips = true;
-            this.tabControl1.Size = new System.Drawing.Size(1016, 615);
+            this.tabControl1.Size = new System.Drawing.Size(618, 615);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
@@ -330,7 +334,7 @@ namespace com.AComm
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(450, 589);
+            this.tabPage1.Size = new System.Drawing.Size(610, 589);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "USB Output";
             // 
@@ -360,7 +364,7 @@ namespace com.AComm
             this.Graph.ScrollMinX = 0D;
             this.Graph.ScrollMinY = 0D;
             this.Graph.ScrollMinY2 = 0D;
-            this.Graph.Size = new System.Drawing.Size(444, 583);
+            this.Graph.Size = new System.Drawing.Size(604, 583);
             this.Graph.TabIndex = 0;
             this.Graph.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
             this.Graph.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
@@ -376,7 +380,7 @@ namespace com.AComm
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(450, 589);
+            this.tabPage2.Size = new System.Drawing.Size(1008, 589);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "3D Display";
             // 
@@ -389,6 +393,25 @@ namespace com.AComm
             this.pictureBoxMATLABPlot.TabIndex = 0;
             this.pictureBoxMATLABPlot.TabStop = false;
             this.pictureBoxMATLABPlot.Click += new System.EventHandler(this.pictureBoxMATLABPlot_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBoxAmps);
+            this.tabPage3.Controls.Add(this.label18);
+            this.tabPage3.Controls.Add(this.groupBox1);
+            this.tabPage3.Controls.Add(this.groupBoxSysStatus);
+            this.tabPage3.Controls.Add(this.labelRegister1);
+            this.tabPage3.Controls.Add(this.labelRegister4);
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.labelRegister2);
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1008, 589);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Controls";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBoxAmps
             // 
@@ -1401,6 +1424,15 @@ namespace com.AComm
             this.trackBarFreq5.TickFrequency = 13;
             this.trackBarFreq5.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(184, 64);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(60, 13);
+            this.label18.TabIndex = 86;
+            this.label18.Text = "Register 3:";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
@@ -1444,193 +1476,6 @@ namespace com.AComm
             this.buttonWriteData.TabIndex = 0;
             this.buttonWriteData.Text = "Write";
             this.buttonWriteData.Click += new System.EventHandler(this.buttonWriteData_Click_1);
-            // 
-            // timerContFeed
-            // 
-            this.timerContFeed.Interval = 250;
-            this.timerContFeed.Tick += new System.EventHandler(this.timerTick);
-            // 
-            // labelRegister4
-            // 
-            this.labelRegister4.AutoSize = true;
-            this.labelRegister4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegister4.Location = new System.Drawing.Point(250, 65);
-            this.labelRegister4.Name = "labelRegister4";
-            this.labelRegister4.Size = new System.Drawing.Size(16, 16);
-            this.labelRegister4.TabIndex = 86;
-            this.labelRegister4.Text = "0";
-            // 
-            // labelRegister2
-            // 
-            this.labelRegister2.AutoSize = true;
-            this.labelRegister2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegister2.Location = new System.Drawing.Point(250, 47);
-            this.labelRegister2.Name = "labelRegister2";
-            this.labelRegister2.Size = new System.Drawing.Size(16, 16);
-            this.labelRegister2.TabIndex = 85;
-            this.labelRegister2.Text = "0";
-            // 
-            // labelRegister1
-            // 
-            this.labelRegister1.AutoSize = true;
-            this.labelRegister1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegister1.Location = new System.Drawing.Point(250, 29);
-            this.labelRegister1.Name = "labelRegister1";
-            this.labelRegister1.Size = new System.Drawing.Size(16, 16);
-            this.labelRegister1.TabIndex = 84;
-            this.labelRegister1.Text = "0";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(203, 49);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 13);
-            this.label15.TabIndex = 83;
-            this.label15.Text = "7";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(178, 49);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(13, 13);
-            this.label14.TabIndex = 82;
-            this.label14.Text = "6";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(153, 49);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 13);
-            this.label13.TabIndex = 81;
-            this.label13.Text = "5";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(128, 49);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(13, 13);
-            this.label12.TabIndex = 80;
-            this.label12.Text = "4";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(103, 49);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 13);
-            this.label10.TabIndex = 79;
-            this.label10.Text = "3";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(78, 49);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(13, 13);
-            this.label8.TabIndex = 78;
-            this.label8.Text = "2";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(53, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 13);
-            this.label6.TabIndex = 77;
-            this.label6.Text = "1";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 49);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 13);
-            this.label5.TabIndex = 76;
-            this.label5.Text = "0";
-            // 
-            // led2
-            // 
-            this.led2.Image = ((System.Drawing.Image)(resources.GetObject("led2.Image")));
-            this.led2.Location = new System.Drawing.Point(51, 30);
-            this.led2.Name = "led2";
-            this.led2.Size = new System.Drawing.Size(16, 16);
-            this.led2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.led2.TabIndex = 75;
-            this.led2.TabStop = false;
-            // 
-            // led8
-            // 
-            this.led8.Image = ((System.Drawing.Image)(resources.GetObject("led8.Image")));
-            this.led8.Location = new System.Drawing.Point(201, 30);
-            this.led8.Name = "led8";
-            this.led8.Size = new System.Drawing.Size(16, 16);
-            this.led8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.led8.TabIndex = 74;
-            this.led8.TabStop = false;
-            // 
-            // led7
-            // 
-            this.led7.Image = ((System.Drawing.Image)(resources.GetObject("led7.Image")));
-            this.led7.Location = new System.Drawing.Point(176, 30);
-            this.led7.Name = "led7";
-            this.led7.Size = new System.Drawing.Size(16, 16);
-            this.led7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.led7.TabIndex = 73;
-            this.led7.TabStop = false;
-            // 
-            // led6
-            // 
-            this.led6.Image = ((System.Drawing.Image)(resources.GetObject("led6.Image")));
-            this.led6.Location = new System.Drawing.Point(151, 30);
-            this.led6.Name = "led6";
-            this.led6.Size = new System.Drawing.Size(16, 16);
-            this.led6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.led6.TabIndex = 72;
-            this.led6.TabStop = false;
-            // 
-            // led5
-            // 
-            this.led5.Image = ((System.Drawing.Image)(resources.GetObject("led5.Image")));
-            this.led5.Location = new System.Drawing.Point(126, 30);
-            this.led5.Name = "led5";
-            this.led5.Size = new System.Drawing.Size(16, 16);
-            this.led5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.led5.TabIndex = 71;
-            this.led5.TabStop = false;
-            // 
-            // led4
-            // 
-            this.led4.Image = ((System.Drawing.Image)(resources.GetObject("led4.Image")));
-            this.led4.Location = new System.Drawing.Point(101, 30);
-            this.led4.Name = "led4";
-            this.led4.Size = new System.Drawing.Size(16, 16);
-            this.led4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.led4.TabIndex = 70;
-            this.led4.TabStop = false;
-            // 
-            // led3
-            // 
-            this.led3.Image = ((System.Drawing.Image)(resources.GetObject("led3.Image")));
-            this.led3.Location = new System.Drawing.Point(76, 30);
-            this.led3.Name = "led3";
-            this.led3.Size = new System.Drawing.Size(16, 16);
-            this.led3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.led3.TabIndex = 69;
-            this.led3.TabStop = false;
-            // 
-            // led1
-            // 
-            this.led1.Image = ((System.Drawing.Image)(resources.GetObject("led1.Image")));
-            this.led1.Location = new System.Drawing.Point(26, 30);
-            this.led1.Name = "led1";
-            this.led1.Size = new System.Drawing.Size(16, 16);
-            this.led1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.led1.TabIndex = 68;
-            this.led1.TabStop = false;
             // 
             // groupBoxSysStatus
             // 
@@ -1825,23 +1670,177 @@ namespace com.AComm
             this.led10.TabIndex = 91;
             this.led10.TabStop = false;
             // 
-            // label18
+            // led7
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(184, 64);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(60, 13);
-            this.label18.TabIndex = 86;
-            this.label18.Text = "Register 3:";
+            this.led7.Image = ((System.Drawing.Image)(resources.GetObject("led7.Image")));
+            this.led7.Location = new System.Drawing.Point(176, 30);
+            this.led7.Name = "led7";
+            this.led7.Size = new System.Drawing.Size(16, 16);
+            this.led7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.led7.TabIndex = 73;
+            this.led7.TabStop = false;
             // 
-            // label17
+            // led1
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(184, 47);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 13);
-            this.label17.TabIndex = 85;
-            this.label17.Text = "Register 2:";
+            this.led1.Image = ((System.Drawing.Image)(resources.GetObject("led1.Image")));
+            this.led1.Location = new System.Drawing.Point(26, 30);
+            this.led1.Name = "led1";
+            this.led1.Size = new System.Drawing.Size(16, 16);
+            this.led1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.led1.TabIndex = 68;
+            this.led1.TabStop = false;
+            // 
+            // led3
+            // 
+            this.led3.Image = ((System.Drawing.Image)(resources.GetObject("led3.Image")));
+            this.led3.Location = new System.Drawing.Point(76, 30);
+            this.led3.Name = "led3";
+            this.led3.Size = new System.Drawing.Size(16, 16);
+            this.led3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.led3.TabIndex = 69;
+            this.led3.TabStop = false;
+            // 
+            // led4
+            // 
+            this.led4.Image = ((System.Drawing.Image)(resources.GetObject("led4.Image")));
+            this.led4.Location = new System.Drawing.Point(101, 30);
+            this.led4.Name = "led4";
+            this.led4.Size = new System.Drawing.Size(16, 16);
+            this.led4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.led4.TabIndex = 70;
+            this.led4.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(203, 49);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(13, 13);
+            this.label15.TabIndex = 83;
+            this.label15.Text = "7";
+            // 
+            // led5
+            // 
+            this.led5.Image = ((System.Drawing.Image)(resources.GetObject("led5.Image")));
+            this.led5.Location = new System.Drawing.Point(126, 30);
+            this.led5.Name = "led5";
+            this.led5.Size = new System.Drawing.Size(16, 16);
+            this.led5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.led5.TabIndex = 71;
+            this.led5.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(178, 49);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(13, 13);
+            this.label14.TabIndex = 82;
+            this.label14.Text = "6";
+            // 
+            // led6
+            // 
+            this.led6.Image = ((System.Drawing.Image)(resources.GetObject("led6.Image")));
+            this.led6.Location = new System.Drawing.Point(151, 30);
+            this.led6.Name = "led6";
+            this.led6.Size = new System.Drawing.Size(16, 16);
+            this.led6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.led6.TabIndex = 72;
+            this.led6.TabStop = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(153, 49);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 13);
+            this.label13.TabIndex = 81;
+            this.label13.Text = "5";
+            // 
+            // led8
+            // 
+            this.led8.Image = ((System.Drawing.Image)(resources.GetObject("led8.Image")));
+            this.led8.Location = new System.Drawing.Point(201, 30);
+            this.led8.Name = "led8";
+            this.led8.Size = new System.Drawing.Size(16, 16);
+            this.led8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.led8.TabIndex = 74;
+            this.led8.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(128, 49);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(13, 13);
+            this.label12.TabIndex = 80;
+            this.label12.Text = "4";
+            // 
+            // led2
+            // 
+            this.led2.Image = ((System.Drawing.Image)(resources.GetObject("led2.Image")));
+            this.led2.Location = new System.Drawing.Point(51, 30);
+            this.led2.Name = "led2";
+            this.led2.Size = new System.Drawing.Size(16, 16);
+            this.led2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.led2.TabIndex = 75;
+            this.led2.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(103, 49);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(13, 13);
+            this.label10.TabIndex = 79;
+            this.label10.Text = "3";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(28, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(13, 13);
+            this.label5.TabIndex = 76;
+            this.label5.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(78, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(13, 13);
+            this.label8.TabIndex = 78;
+            this.label8.Text = "2";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(53, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(13, 13);
+            this.label6.TabIndex = 77;
+            this.label6.Text = "1";
+            // 
+            // labelRegister1
+            // 
+            this.labelRegister1.AutoSize = true;
+            this.labelRegister1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegister1.Location = new System.Drawing.Point(250, 29);
+            this.labelRegister1.Name = "labelRegister1";
+            this.labelRegister1.Size = new System.Drawing.Size(16, 16);
+            this.labelRegister1.TabIndex = 84;
+            this.labelRegister1.Text = "0";
+            // 
+            // labelRegister4
+            // 
+            this.labelRegister4.AutoSize = true;
+            this.labelRegister4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegister4.Location = new System.Drawing.Point(250, 65);
+            this.labelRegister4.Name = "labelRegister4";
+            this.labelRegister4.Size = new System.Drawing.Size(16, 16);
+            this.labelRegister4.TabIndex = 86;
+            this.labelRegister4.Text = "0";
             // 
             // label16
             // 
@@ -1852,30 +1851,65 @@ namespace com.AComm
             this.label16.TabIndex = 84;
             this.label16.Text = "Register 1:";
             // 
+            // labelRegister2
+            // 
+            this.labelRegister2.AutoSize = true;
+            this.labelRegister2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegister2.Location = new System.Drawing.Point(250, 47);
+            this.labelRegister2.Name = "labelRegister2";
+            this.labelRegister2.Size = new System.Drawing.Size(16, 16);
+            this.labelRegister2.TabIndex = 85;
+            this.labelRegister2.Text = "0";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(184, 47);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(60, 13);
+            this.label17.TabIndex = 85;
+            this.label17.Text = "Register 2:";
+            // 
+            // timerContFeed
+            // 
+            this.timerContFeed.Interval = 250;
+            this.timerContFeed.Tick += new System.EventHandler(this.timerTick);
+            // 
             // timerStatusMessage
             // 
             this.timerStatusMessage.Enabled = true;
             this.timerStatusMessage.Interval = 3000;
             this.timerStatusMessage.Tick += new System.EventHandler(this.timerStatusMessage_Tick);
             // 
-            // tabPage3
+            // groupBox2
             // 
-            this.tabPage3.Controls.Add(this.groupBoxAmps);
-            this.tabPage3.Controls.Add(this.label18);
-            this.tabPage3.Controls.Add(this.groupBox1);
-            this.tabPage3.Controls.Add(this.groupBoxSysStatus);
-            this.tabPage3.Controls.Add(this.labelRegister1);
-            this.tabPage3.Controls.Add(this.labelRegister4);
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Controls.Add(this.labelRegister2);
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1008, 589);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Controls";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.channel1_info_label);
+            this.groupBox2.Location = new System.Drawing.Point(1, 128);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(169, 249);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Channel 1";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(1, 462);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(169, 259);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Channel 3";
+            // 
+            // channel1_info_label
+            // 
+            this.channel1_info_label.AutoSize = true;
+            this.channel1_info_label.Location = new System.Drawing.Point(11, 26);
+            this.channel1_info_label.Name = "channel1_info_label";
+            this.channel1_info_label.Size = new System.Drawing.Size(79, 13);
+            this.channel1_info_label.TabIndex = 0;
+            this.channel1_info_label.Text = "[SIGNAL INFO]";
             // 
             // Form1
             // 
@@ -1883,6 +1917,8 @@ namespace com.AComm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1028, 773);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
@@ -1901,6 +1937,8 @@ namespace com.AComm
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMATLABPlot)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.groupBoxAmps.ResumeLayout(false);
             this.groupBoxAmps.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq6)).EndInit();
@@ -1911,14 +1949,6 @@ namespace com.AComm
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq5)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.led2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led1)).EndInit();
             this.groupBoxSysStatus.ResumeLayout(false);
             this.groupBoxSysStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.led15)).EndInit();
@@ -1929,8 +1959,16 @@ namespace com.AComm
             ((System.ComponentModel.ISupportInitialize)(this.led14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.led16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.led10)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.led7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led2)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2085,6 +2123,9 @@ namespace com.AComm
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label channel1_info_label;
     }
 }
 

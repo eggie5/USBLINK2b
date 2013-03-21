@@ -21,7 +21,7 @@ namespace com.AComm
         internal EngMATAccess ema;
         internal CSQuickUsb usb;
         MATLABFileIO fio;
-        LineItem myCurve;
+        LineItem channel1_curve;
         LineItem myFFT;
         GraphPane channel1;
         GraphPane channel2;
@@ -29,6 +29,9 @@ namespace com.AComm
         GraphPane channel4;
         MasterPane myMaster;
         PictureBox[] leds;
+        Bitmap on = Properties.Resources.onled;
+        Bitmap off = Properties.Resources.off;
+        LineItem[] curves = new LineItem[4];
 
         public Form1()
         {
@@ -94,13 +97,15 @@ namespace com.AComm
             channel1.XAxis.ScaleFontSpec.FontColor = Color.Black;
             channel1.XAxis.ScaleFontSpec.Size = 12;
             channel1.XAxis.Step = 50;
-
-
             channel1.YAxis.Max = 256;
             channel1.YAxis.IsShowGrid = true;
             channel1.YAxis.ScaleFontSpec.FontColor = Color.Black;
             channel1.YAxis.ScaleFontSpec.Size = 12;
             channel1.YAxis.Step = 50;
+
+            ZedGraph.GraphItem i = new ZedGraph.TextItem("HELLO", 0, 0);
+            myMaster.GraphItemList.Add(i);
+            
 
 
             //add a place holder line
@@ -289,7 +294,11 @@ namespace com.AComm
                 myMaster.PaneList[1].CurveList.Clear();
 
                 //Add a new line to the Plot
-                myCurve = channel1.AddCurve("USB Input", null, Color.Red, SymbolType.None);
+                for (int i = 0; i < 4; i++)
+                {
+                    curves[i] = channel1.AddCurve("USB Input"+i.ToString(), null, Color.Red, SymbolType.None);
+                }
+             
 
                 //Create binary file for DYDA then run DYDA and copy image to clipboard
                 MakeBowStaff(@"bowstaff2.cdf");
@@ -319,16 +328,19 @@ namespace com.AComm
         private void PlotRegular()
         {
             int x = 0;
-            // Add points to plot starting at element 5
+            // first 8 are control data
+            //round robbin to each plot
+            LineItem curve = curves[plot_counter % 4];
             for (int i = 8; i < fio.GraphPoints.Length; i++)
             {
-                myCurve.AddPoint(x, fio.GraphPoints[i]);
+                curve.AddPoint(x, fio.GraphPoints[i]);
                 x++;
             }
+
+            plot_counter++;
         }
 
-        Bitmap on = Properties.Resources.onled;
-        Bitmap off = Properties.Resources.off;
+        
 
        
         
@@ -627,6 +639,8 @@ namespace com.AComm
         }
 
         int graphCounter;
+
+        private int plot_counter;
         private void timerTick(object sender, EventArgs e)
         {
             if (checkBoxContFeed.Checked)
