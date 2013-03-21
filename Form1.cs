@@ -21,7 +21,7 @@ namespace com.AComm
         internal EngMATAccess ema;
         internal CSQuickUsb usb;
         MATLABFileIO fio;
-        LineItem channel1_curve;
+   
         LineItem myFFT;
         GraphPane channel1;
         GraphPane channel2;
@@ -32,6 +32,8 @@ namespace com.AComm
         Bitmap on = Properties.Resources.onled;
         Bitmap off = Properties.Resources.off;
         LineItem[] curves = new LineItem[4];
+        GraphPane[] channels = new GraphPane[4];
+        Label[] data_labels = new Label[4];
 
         public Form1()
         {
@@ -166,6 +168,19 @@ namespace com.AComm
             myMaster.Add(channel3);
             myMaster.Add(channel4);
 
+            //bundle channels in array
+            
+            channels[0]=channel1;
+            channels[1] = channel2;
+            channels[2] = channel3;
+            channels[3] = channel4;
+
+            //collect data labels
+            data_labels[0] = channel1_info_label;
+            data_labels[1] = channel2_info_label;
+            data_labels[2] = channel3_info_label;
+            data_labels[3] = channel4_info_label;
+
 
 
             // Tell ZedGraph to auto layout all the panes
@@ -281,9 +296,9 @@ namespace com.AComm
             if (fio.GetAmpValuesFromUSB())
             {
                 //upate those 3 bytes things    
-                labelRegister1.Text = fio.GraphPoints[4].ToString(); //2
-                labelRegister2.Text = fio.GraphPoints[5].ToString(); //3
-                labelRegister4.Text = fio.GraphPoints[6].ToString(); //4
+                labelRegister1.Text = fio.USBPacketData[4].ToString(); //2
+                labelRegister2.Text = fio.USBPacketData[5].ToString(); //3
+                labelRegister4.Text = fio.USBPacketData[6].ToString(); //4
 
                 //Update the Graph count
                 statusPanelUSBStatus.Text = "  " + graphCounter.ToString() + " Samples";
@@ -296,7 +311,7 @@ namespace com.AComm
                 //Add a new line to the Plot
                 for (int i = 0; i < 4; i++)
                 {
-                    curves[i] = channel1.AddCurve("USB Input"+i.ToString(), null, Color.Red, SymbolType.None);
+                    curves[i] = channels[i].AddCurve("USB Input"+i.ToString(), null, Color.Red, SymbolType.None);
                 }
              
 
@@ -309,6 +324,15 @@ namespace com.AComm
                 }
 
                 PlotRegular();
+
+                //find which plot we're working with
+                int plot_position =(int) fio.USBPacketData[0];
+
+                //now create label text
+                String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz", fio.USBPacketData[1], fio.USBPacketData[2]);
+
+                data_labels[plot_position].Text = lt;
+
                 
                 //PlotFFT();
 
@@ -330,10 +354,12 @@ namespace com.AComm
             int x = 0;
             // first 8 are control data
             //round robbin to each plot
-            LineItem curve = curves[plot_counter % 4];
-            for (int i = 8; i < fio.GraphPoints.Length; i++)
+            //ben says first bit is plot position
+            int plot_position = 0;// (int)fio.USBPacketData[0];
+            LineItem curve = curves[plot_position];
+            for (int i = 8; i < fio.USBPacketData.Length; i++)
             {
-                curve.AddPoint(x, fio.GraphPoints[i]);
+                curve.AddPoint(x, fio.USBPacketData[i]);
                 x++;
             }
 
@@ -361,7 +387,7 @@ namespace com.AComm
 
             //get the second byte of the resp in bits for second set of LEDS
             bool [] led_bin = new bool[8];
-            BitArray bits = new BitArray(fio.GraphPoints);
+            BitArray bits = new BitArray(fio.USBPacketData);
             for (int j = 0; j < 8; j++)
             {
                 led_bin[j] = bits[j+8]; //+8 to get the second byte of bits
@@ -387,7 +413,7 @@ namespace com.AComm
             FileStream fs = new FileStream(path, FileMode.Create);
             BinaryWriter bw = new BinaryWriter(fs);
 
-            bw.Write(fio.GraphPoints);
+            bw.Write(fio.USBPacketData);
 
             fs.Close();
             bw.Close();
@@ -397,8 +423,8 @@ namespace com.AComm
         private void PlotFFT()
         {
             myFFT = channel2.AddCurve("FFT Output", null, Color.FromKnownColor(KnownColor.MenuHighlight), SymbolType.None);
-            float[] fft = new float[fio.GraphPoints.Length];
-            fio.GraphPoints.CopyTo(fft, 0);
+            float[] fft = new float[fio.USBPacketData.Length];
+            fio.USBPacketData.CopyTo(fft, 0);
             
             Fourier.FFT(fft, 256, FourierDirection.Forward);
 

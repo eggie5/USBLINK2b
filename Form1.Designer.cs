@@ -178,8 +178,13 @@ namespace com.AComm
             this.timerContFeed = new System.Windows.Forms.Timer(this.components);
             this.timerStatusMessage = new System.Windows.Forms.Timer(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.channel1_info_label = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.channel3_info_label = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.channel2_info_label = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.channel4_info_label = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -214,6 +219,9 @@ namespace com.AComm
             ((System.ComponentModel.ISupportInitialize)(this.led8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.led2)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -380,7 +388,7 @@ namespace com.AComm
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1008, 589);
+            this.tabPage2.Size = new System.Drawing.Size(610, 589);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "3D Display";
             // 
@@ -408,7 +416,7 @@ namespace com.AComm
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1008, 589);
+            this.tabPage3.Size = new System.Drawing.Size(610, 589);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Controls";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1892,16 +1900,6 @@ namespace com.AComm
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Channel 1";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(1, 462);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(169, 259);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Channel 3";
-            // 
             // channel1_info_label
             // 
             this.channel1_info_label.AutoSize = true;
@@ -1911,12 +1909,76 @@ namespace com.AComm
             this.channel1_info_label.TabIndex = 0;
             this.channel1_info_label.Text = "[SIGNAL INFO]";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.channel3_info_label);
+            this.groupBox3.Location = new System.Drawing.Point(1, 462);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(169, 259);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Channel 3";
+            // 
+            // channel3_info_label
+            // 
+            this.channel3_info_label.AutoSize = true;
+            this.channel3_info_label.Location = new System.Drawing.Point(11, 28);
+            this.channel3_info_label.Name = "channel3_info_label";
+            this.channel3_info_label.Size = new System.Drawing.Size(79, 13);
+            this.channel3_info_label.TabIndex = 1;
+            this.channel3_info_label.Text = "[SIGNAL INFO]";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.BackColor = System.Drawing.Color.White;
+            this.groupBox4.Controls.Add(this.channel2_info_label);
+            this.groupBox4.Location = new System.Drawing.Point(810, 154);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(169, 249);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Channel 2";
+            // 
+            // channel2_info_label
+            // 
+            this.channel2_info_label.AutoSize = true;
+            this.channel2_info_label.Location = new System.Drawing.Point(11, 26);
+            this.channel2_info_label.Name = "channel2_info_label";
+            this.channel2_info_label.Size = new System.Drawing.Size(79, 13);
+            this.channel2_info_label.TabIndex = 0;
+            this.channel2_info_label.Text = "[SIGNAL INFO]";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.BackColor = System.Drawing.Color.White;
+            this.groupBox5.Controls.Add(this.channel4_info_label);
+            this.groupBox5.Location = new System.Drawing.Point(824, 462);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(169, 249);
+            this.groupBox5.TabIndex = 9;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Channel 4";
+            // 
+            // channel4_info_label
+            // 
+            this.channel4_info_label.AutoSize = true;
+            this.channel4_info_label.Location = new System.Drawing.Point(11, 26);
+            this.channel4_info_label.Name = "channel4_info_label";
+            this.channel4_info_label.Size = new System.Drawing.Size(79, 13);
+            this.channel4_info_label.TabIndex = 0;
+            this.channel4_info_label.Text = "[SIGNAL INFO]";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1028, 773);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.tabControl1);
@@ -1969,6 +2031,12 @@ namespace com.AComm
             ((System.ComponentModel.ISupportInitialize)(this.led2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2126,6 +2194,11 @@ namespace com.AComm
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label channel1_info_label;
+        private System.Windows.Forms.Label channel3_info_label;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label channel2_info_label;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label channel4_info_label;
     }
 }
 

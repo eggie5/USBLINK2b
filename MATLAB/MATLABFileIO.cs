@@ -20,7 +20,7 @@ namespace USBLiNK
         
         private Form1 guiRef;
        
-        internal byte[] GraphPoints;
+        internal byte[] USBPacketData;
         
         private byte[] usbAmpValues;
         internal bool[] USBprolog = new bool[8];
@@ -115,18 +115,18 @@ namespace USBLiNK
 #endregion
 
 
-            GraphPoints= new byte[512];
+            USBPacketData= new byte[512];
             //graphValues.CopyTo(GraphPoints);
 
             //this seems really redundant and I should consider
             //removing it for preformance concerns
-            usbAmpValues.CopyTo(GraphPoints, 0);
+            usbAmpValues.CopyTo(USBPacketData, 0);
            
             
 
 
             //get the USB stream as bits from bytes
-            BitArray USBStreamAsBits = new BitArray(GraphPoints);
+            BitArray USBStreamAsBits = new BitArray(USBPacketData);
             
             //Get the USB prolog from the first byte of the USB stream
             for(int i=0; i<8; i++)
