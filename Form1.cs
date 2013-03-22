@@ -23,16 +23,16 @@ namespace com.AComm
         MATLABFileIO fio;
    
         LineItem myFFT;
-        GraphPane channel1;
-        GraphPane channel2;
-        GraphPane channel3;
-        GraphPane channel4;
+        GraphPane pane1;
+        GraphPane pane2;
+        GraphPane pane3;
+        GraphPane pane4;
         MasterPane myMaster;
         PictureBox[] leds;
         Bitmap on = Properties.Resources.onled;
         Bitmap off = Properties.Resources.off;
         LineItem[] curves = new LineItem[4];
-        GraphPane[] channels = new GraphPane[4];
+        GraphPane[] panes = new GraphPane[4];
         Label[] data_labels = new Label[4];
 
         public Form1()
@@ -93,17 +93,17 @@ namespace com.AComm
             myMaster.InnerPaneGap = 10;
             myMaster.Legend.IsVisible = false;
 
-            channel1 = new GraphPane();
-            channel1.XAxis.Max = 512;
-            channel1.XAxis.IsShowGrid = true;
-            channel1.XAxis.ScaleFontSpec.FontColor = Color.Black;
-            channel1.XAxis.ScaleFontSpec.Size = 12;
-            channel1.XAxis.Step = 50;
-            channel1.YAxis.Max = 256;
-            channel1.YAxis.IsShowGrid = true;
-            channel1.YAxis.ScaleFontSpec.FontColor = Color.Black;
-            channel1.YAxis.ScaleFontSpec.Size = 12;
-            channel1.YAxis.Step = 50;
+            pane1 = new GraphPane();
+            pane1.XAxis.Max = 512;
+            pane1.XAxis.IsShowGrid = true;
+            pane1.XAxis.ScaleFontSpec.FontColor = Color.Black;
+            pane1.XAxis.ScaleFontSpec.Size = 12;
+            pane1.XAxis.Step = 50;
+            pane1.YAxis.Max = 256;
+            pane1.YAxis.IsShowGrid = true;
+            pane1.YAxis.ScaleFontSpec.FontColor = Color.Black;
+            pane1.YAxis.ScaleFontSpec.Size = 12;
+            pane1.YAxis.Step = 50;
 
             ZedGraph.GraphItem i = new ZedGraph.TextItem("HELLO", 0, 0);
             myMaster.GraphItemList.Add(i);
@@ -111,65 +111,65 @@ namespace com.AComm
 
 
             //add a place holder line
-            channel1.AddCurve("Channel 1", new double[1], new double[1], Color.Red, SymbolType.None);
+            pane1.AddCurve("Channel 1", new double[1], new double[1], Color.Red, SymbolType.None);
 
-            channel2 = new GraphPane();
-            channel2.XAxis.Max = 512;
-            channel2.XAxis.IsShowGrid = true;
-            channel2.XAxis.ScaleFontSpec.FontColor = Color.Black;
-            channel2.XAxis.ScaleFontSpec.Size = 12;
-            channel2.XAxis.Step = 50;
+            pane2 = new GraphPane();
+            pane2.XAxis.Max = 512;
+            pane2.XAxis.IsShowGrid = true;
+            pane2.XAxis.ScaleFontSpec.FontColor = Color.Black;
+            pane2.XAxis.ScaleFontSpec.Size = 12;
+            pane2.XAxis.Step = 50;
 
-            channel2.YAxis.Max = 256;
-            channel2.YAxis.IsShowGrid = true;
-            channel2.YAxis.ScaleFontSpec.FontColor = Color.Black;
-            channel2.YAxis.ScaleFontSpec.Size = 12;
-            channel2.YAxis.Step = 50;
+            pane2.YAxis.Max = 256;
+            pane2.YAxis.IsShowGrid = true;
+            pane2.YAxis.ScaleFontSpec.FontColor = Color.Black;
+            pane2.YAxis.ScaleFontSpec.Size = 12;
+            pane2.YAxis.Step = 50;
 
-            channel2.AddCurve("Channel 2", new double[1], new double[1], Color.Blue, SymbolType.None);
-
-
-            channel3 = new GraphPane();
-            channel3.XAxis.Max = 512;
-            channel3.XAxis.IsShowGrid = true;
-            channel3.XAxis.ScaleFontSpec.FontColor = Color.Black;
-            channel3.XAxis.ScaleFontSpec.Size = 12;
-            channel3.XAxis.Step = 50;
-
-            channel3.YAxis.Max = 256;
-            channel3.YAxis.IsShowGrid = true;
-            channel3.YAxis.ScaleFontSpec.FontColor = Color.Black;
-            channel3.YAxis.ScaleFontSpec.Size = 12;
-            channel3.YAxis.Step = 50;
-
-            channel3.AddCurve("Channel 3", new double[1], new double[1], Color.Blue, SymbolType.None);
-
-            channel4 = new GraphPane();
-            channel4.XAxis.Max = 512;
-            channel4.XAxis.IsShowGrid = true;
-            channel4.XAxis.ScaleFontSpec.FontColor = Color.Black;
-            channel4.XAxis.ScaleFontSpec.Size = 12;
-            channel4.XAxis.Step = 50;
-            channel4.YAxis.Max = 256;
-            channel4.YAxis.IsShowGrid = true;
-            channel4.YAxis.ScaleFontSpec.FontColor = Color.Black;
-            channel4.YAxis.ScaleFontSpec.Size = 12;
-            channel4.YAxis.Step = 50;
-            channel4.AddCurve("Channel 4", new double[1], new double[1], Color.Blue, SymbolType.None);
+            pane2.AddCurve("Channel 2", new double[1], new double[1], Color.Blue, SymbolType.None);
 
 
+            pane3 = new GraphPane();
+            pane3.XAxis.Max = 512;
+            pane3.XAxis.IsShowGrid = true;
+            pane3.XAxis.ScaleFontSpec.FontColor = Color.Black;
+            pane3.XAxis.ScaleFontSpec.Size = 12;
+            pane3.XAxis.Step = 50;
 
-            myMaster.Add(channel1);
-            myMaster.Add(channel2);
-            myMaster.Add(channel3);
-            myMaster.Add(channel4);
+            pane3.YAxis.Max = 256;
+            pane3.YAxis.IsShowGrid = true;
+            pane3.YAxis.ScaleFontSpec.FontColor = Color.Black;
+            pane3.YAxis.ScaleFontSpec.Size = 12;
+            pane3.YAxis.Step = 50;
+
+            pane3.AddCurve("Channel 3", new double[1], new double[1], Color.Blue, SymbolType.None);
+
+            pane4 = new GraphPane();
+            pane4.XAxis.Max = 512;
+            pane4.XAxis.IsShowGrid = true;
+            pane4.XAxis.ScaleFontSpec.FontColor = Color.Black;
+            pane4.XAxis.ScaleFontSpec.Size = 12;
+            pane4.XAxis.Step = 50;
+            pane4.YAxis.Max = 256;
+            pane4.YAxis.IsShowGrid = true;
+            pane4.YAxis.ScaleFontSpec.FontColor = Color.Black;
+            pane4.YAxis.ScaleFontSpec.Size = 12;
+            pane4.YAxis.Step = 50;
+            pane4.AddCurve("Channel 4", new double[1], new double[1], Color.Blue, SymbolType.None);
+
+
+
+            myMaster.Add(pane1);
+            myMaster.Add(pane2);
+            myMaster.Add(pane3);
+            myMaster.Add(pane4);
 
             //bundle channels in array
             
-            channels[0]=channel1;
-            channels[1] = channel2;
-            channels[2] = channel3;
-            channels[3] = channel4;
+            panes[0]=pane1;
+            panes[1] = pane2;
+            panes[2] = pane3;
+            panes[3] = pane4;
 
             //collect data labels
             data_labels[0] = channel1_info_label;
@@ -210,8 +210,14 @@ namespace com.AComm
             leds[15] = led16;
 
 
+            SetupFFTTab();
 
 
+        }
+
+        private void SetupFFTTab()
+        {
+            throw new NotImplementedException();
         }
 
         private void WriteUSBSettings()
@@ -291,6 +297,13 @@ namespace com.AComm
 
             if (fio.GetAmpValuesFromUSB())
             {
+                //find which plot we're working with
+                plot_position = (int)fio.USBPacketData[0];
+                if (plot_position > 3)
+                {
+                    plot_position = 3;
+                }
+
                 //upate those 3 bytes things    
                 labelRegister1.Text = fio.USBPacketData[4].ToString(); //2
                 labelRegister2.Text = fio.USBPacketData[5].ToString(); //3
@@ -303,12 +316,14 @@ namespace com.AComm
                 //Clear The previous graphs
                 myMaster.PaneList[0].CurveList.Clear();
                 myMaster.PaneList[1].CurveList.Clear();
+                myMaster.PaneList[2].CurveList.Clear();
+                myMaster.PaneList[3].CurveList.Clear();
 
                 //Add a new line to the Plot
-                for (int i = 0; i < 4; i++)
-                {
-                    curves[i] = channels[i].AddCurve("USB Input"+i.ToString(), null, Color.Red, SymbolType.None);
-                }
+              //  for (int i = 0; i < 4; i++)
+                //{
+                    curves[plot_position] = panes[plot_position].AddCurve("USB Input"+plot_position.ToString(), null, Color.Red, SymbolType.None);
+                //}
              
 
                 //Create binary file for DYDA then run DYDA and copy image to clipboard
@@ -321,12 +336,7 @@ namespace com.AComm
 
                 PlotRegular();
 
-                //find which plot we're working with
-                int plot_position =(int) fio.USBPacketData[0];
-                if (plot_position > 3)
-                {
-                    plot_position = 3;
-                }
+                
                 
 
                 //now create label text
@@ -356,7 +366,7 @@ namespace com.AComm
             // first 8 are control data
             //round robbin to each plot
             //ben says first bit is plot position
-            int plot_position = 0;// (int)fio.USBPacketData[0];
+           // int plot_position = plot_position;// (int)fio.USBPacketData[0];
             LineItem curve = curves[plot_position];
             for (int i = 8; i < fio.USBPacketData.Length; i++)
             {
@@ -423,7 +433,7 @@ namespace com.AComm
 
         private void PlotFFT()
         {
-            myFFT = channel2.AddCurve("FFT Output", null, Color.FromKnownColor(KnownColor.MenuHighlight), SymbolType.None);
+            myFFT = pane2.AddCurve("FFT Output", null, Color.FromKnownColor(KnownColor.MenuHighlight), SymbolType.None);
             float[] fft = new float[fio.USBPacketData.Length];
             fio.USBPacketData.CopyTo(fft, 0);
             
@@ -668,6 +678,7 @@ namespace com.AComm
         int graphCounter;
 
         private int plot_counter;
+        private int plot_position;
         private void timerTick(object sender, EventArgs e)
         {
             if (checkBoxContFeed.Checked)

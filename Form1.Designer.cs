@@ -185,6 +185,8 @@ namespace com.AComm
             this.channel2_info_label = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.channel4_info_label = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.zedGraphControlFFTs = new ZedGraph.ZedGraphControl();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -222,6 +224,7 @@ namespace com.AComm
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -329,6 +332,7 @@ namespace com.AComm
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(176, 106);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -1971,6 +1975,51 @@ namespace com.AComm
             this.channel4_info_label.TabIndex = 0;
             this.channel4_info_label.Text = "[SIGNAL INFO]";
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.zedGraphControlFFTs);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(610, 589);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "FFT";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // zedGraphControlFFTs
+            // 
+            this.zedGraphControlFFTs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zedGraphControlFFTs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zedGraphControlFFTs.IsEnableHPan = true;
+            this.zedGraphControlFFTs.IsEnableVPan = true;
+            this.zedGraphControlFFTs.IsEnableZoom = true;
+            this.zedGraphControlFFTs.IsScrollY2 = false;
+            this.zedGraphControlFFTs.IsShowContextMenu = true;
+            this.zedGraphControlFFTs.IsShowHScrollBar = false;
+            this.zedGraphControlFFTs.IsShowPointValues = false;
+            this.zedGraphControlFFTs.IsShowVScrollBar = false;
+            this.zedGraphControlFFTs.IsZoomOnMouseCenter = false;
+            this.zedGraphControlFFTs.Location = new System.Drawing.Point(3, 3);
+            this.zedGraphControlFFTs.Name = "zedGraphControlFFTs";
+            this.zedGraphControlFFTs.PanButtons = System.Windows.Forms.MouseButtons.Left;
+            this.zedGraphControlFFTs.PanButtons2 = System.Windows.Forms.MouseButtons.Middle;
+            this.zedGraphControlFFTs.PanModifierKeys2 = System.Windows.Forms.Keys.None;
+            this.zedGraphControlFFTs.PointDateFormat = "g";
+            this.zedGraphControlFFTs.PointValueFormat = "G";
+            this.zedGraphControlFFTs.ScrollMaxX = 0D;
+            this.zedGraphControlFFTs.ScrollMaxY = 0D;
+            this.zedGraphControlFFTs.ScrollMaxY2 = 0D;
+            this.zedGraphControlFFTs.ScrollMinX = 0D;
+            this.zedGraphControlFFTs.ScrollMinY = 0D;
+            this.zedGraphControlFFTs.ScrollMinY2 = 0D;
+            this.zedGraphControlFFTs.Size = new System.Drawing.Size(604, 583);
+            this.zedGraphControlFFTs.TabIndex = 1;
+            this.zedGraphControlFFTs.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
+            this.zedGraphControlFFTs.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
+            this.zedGraphControlFFTs.ZoomModifierKeys = System.Windows.Forms.Keys.None;
+            this.zedGraphControlFFTs.ZoomModifierKeys2 = System.Windows.Forms.Keys.None;
+            this.zedGraphControlFFTs.ZoomStepFraction = 0.1D;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2037,6 +2086,7 @@ namespace com.AComm
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2199,6 +2249,8 @@ namespace com.AComm
         private System.Windows.Forms.Label channel2_info_label;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label channel4_info_label;
+        private System.Windows.Forms.TabPage tabPage4;
+        private ZedGraph.ZedGraphControl zedGraphControlFFTs;
     }
 }
 
