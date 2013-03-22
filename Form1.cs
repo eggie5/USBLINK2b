@@ -106,8 +106,7 @@ namespace com.AComm
             pane1.YAxis.ScaleFontSpec.Size = 12;
             pane1.YAxis.Step = 50;
 
-            ZedGraph.GraphItem i = new ZedGraph.TextItem("HELLO", 0, 0);
-            myMaster.GraphItemList.Add(i);
+           
             
 
 
@@ -218,6 +217,15 @@ namespace com.AComm
 
         private void SetupFFTTab()
         {
+            MasterPane myFFTMaster = zedGraphControlFFTs.MasterPane;
+            myFFTMaster.PaneList.Clear();
+            myFFTMaster.IsShowTitle = false;
+            //Fill the pane background with a color gradient
+            myFFTMaster.PaneFill = new Fill(Color.FromArgb(((System.Byte)(159)), ((System.Byte)(191)), ((System.Byte)(245))), Color.FromArgb(((System.Byte)(196)), System.Drawing.Color.FromArgb(((System.Byte)(223)), ((System.Byte)(234)), ((System.Byte)(251)))));
+            //Set the margins and the space between panes to 10 points
+            myFFTMaster.MarginAll = 10;
+            myFFTMaster.InnerPaneGap = 10;
+            myFFTMaster.Legend.IsVisible = false;
             FFTPane = new GraphPane();
             FFTPane.XAxis.Max = 512;
             FFTPane.XAxis.IsShowGrid = true;
@@ -337,34 +345,42 @@ namespace com.AComm
                 myMaster.PaneList[1].CurveList.Clear();
                 myMaster.PaneList[2].CurveList.Clear();
                 myMaster.PaneList[3].CurveList.Clear();
+                FFTPane.CurveList.Clear();
 
                 //Add a new line to the Plot
-              //  for (int i = 0; i < 4; i++)
+                //  for (int i = 0; i < 4; i++)
                 //{
-                    curves[plot_position] = panes[plot_position].AddCurve("USB Input"+plot_position.ToString(), null, Color.Red, SymbolType.None);
+                curves[plot_position] = panes[plot_position].AddCurve("USB Input" + plot_position.ToString(), null, Color.Red, SymbolType.None);
                 //}
-             
+
 
                 //Create binary file for DYDA then run DYDA and copy image to clipboard
                 MakeBowStaff(@"bowstaff2.cdf");
                 if (ema != null && checkBoxMatlabEnabled.Checked)
                 {
                     ema.Evaluate("DYDA");
-                   
+
                 }
 
-                PlotRegular();
+                if (tabControl1.SelectedIndex == 0)
+                {
+                    PlotRegular();
 
-                
-                
+
+
+                }
 
                 //now create label text
-                String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz", fio.USBPacketData[1], fio.USBPacketData[2]);
+                String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz\nSTDN Prob: {2}\nSGLS Prob: {3}\nSub Carrier det: {4}\nRanging Det: {5}",
+                    fio.USBPacketData[1], fio.USBPacketData[2], fio.USBPacketData[3], fio.USBPacketData[4], fio.USBPacketData[5], fio.USBPacketData[6]);
 
                 data_labels[plot_position].Text = lt;
 
-                
-                PlotFFT();
+                if (tabControl1.SelectedIndex == 2)
+                {
+                    PlotFFT();
+                    zedGraphControlFFTs.Invalidate();
+                }
 
                 //Causes the graph to be redrawn
                 Graph.Invalidate();

@@ -43,8 +43,6 @@ namespace com.AComm
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Graph = new ZedGraph.ZedGraphControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBoxMATLABPlot = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBoxAmps = new System.Windows.Forms.GroupBox();
             this.labelDeccheckBoxCS3_ = new System.Windows.Forms.Label();
@@ -175,6 +173,8 @@ namespace com.AComm
             this.label16 = new System.Windows.Forms.Label();
             this.labelRegister2 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.zedGraphControlFFTs = new ZedGraph.ZedGraphControl();
             this.timerContFeed = new System.Windows.Forms.Timer(this.components);
             this.timerStatusMessage = new System.Windows.Forms.Timer(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -185,15 +185,11 @@ namespace com.AComm
             this.channel2_info_label = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.channel4_info_label = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.zedGraphControlFFTs = new ZedGraph.ZedGraphControl();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMATLABPlot)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBoxAmps.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq6)).BeginInit();
@@ -220,11 +216,11 @@ namespace com.AComm
             ((System.ComponentModel.ISupportInitialize)(this.led6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.led8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.led2)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -330,7 +326,6 @@ namespace com.AComm
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(176, 106);
@@ -384,27 +379,6 @@ namespace com.AComm
             this.Graph.ZoomModifierKeys2 = System.Windows.Forms.Keys.None;
             this.Graph.ZoomStepFraction = 0.1D;
             this.Graph.Load += new System.EventHandler(this.Graph_Load);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage2.Controls.Add(this.pictureBoxMATLABPlot);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(610, 589);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "3D Display";
-            // 
-            // pictureBoxMATLABPlot
-            // 
-            this.pictureBoxMATLABPlot.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBoxMATLABPlot.Location = new System.Drawing.Point(37, 40);
-            this.pictureBoxMATLABPlot.Name = "pictureBoxMATLABPlot";
-            this.pictureBoxMATLABPlot.Size = new System.Drawing.Size(387, 522);
-            this.pictureBoxMATLABPlot.TabIndex = 0;
-            this.pictureBoxMATLABPlot.TabStop = false;
-            this.pictureBoxMATLABPlot.Click += new System.EventHandler(this.pictureBoxMATLABPlot_Click);
             // 
             // tabPage3
             // 
@@ -1882,6 +1856,51 @@ namespace com.AComm
             this.label17.TabIndex = 85;
             this.label17.Text = "Register 2:";
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.zedGraphControlFFTs);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(610, 589);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "FFT";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // zedGraphControlFFTs
+            // 
+            this.zedGraphControlFFTs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zedGraphControlFFTs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zedGraphControlFFTs.IsEnableHPan = true;
+            this.zedGraphControlFFTs.IsEnableVPan = true;
+            this.zedGraphControlFFTs.IsEnableZoom = true;
+            this.zedGraphControlFFTs.IsScrollY2 = false;
+            this.zedGraphControlFFTs.IsShowContextMenu = true;
+            this.zedGraphControlFFTs.IsShowHScrollBar = false;
+            this.zedGraphControlFFTs.IsShowPointValues = false;
+            this.zedGraphControlFFTs.IsShowVScrollBar = false;
+            this.zedGraphControlFFTs.IsZoomOnMouseCenter = false;
+            this.zedGraphControlFFTs.Location = new System.Drawing.Point(3, 3);
+            this.zedGraphControlFFTs.Name = "zedGraphControlFFTs";
+            this.zedGraphControlFFTs.PanButtons = System.Windows.Forms.MouseButtons.Left;
+            this.zedGraphControlFFTs.PanButtons2 = System.Windows.Forms.MouseButtons.Middle;
+            this.zedGraphControlFFTs.PanModifierKeys2 = System.Windows.Forms.Keys.None;
+            this.zedGraphControlFFTs.PointDateFormat = "g";
+            this.zedGraphControlFFTs.PointValueFormat = "G";
+            this.zedGraphControlFFTs.ScrollMaxX = 0D;
+            this.zedGraphControlFFTs.ScrollMaxY = 0D;
+            this.zedGraphControlFFTs.ScrollMaxY2 = 0D;
+            this.zedGraphControlFFTs.ScrollMinX = 0D;
+            this.zedGraphControlFFTs.ScrollMinY = 0D;
+            this.zedGraphControlFFTs.ScrollMinY2 = 0D;
+            this.zedGraphControlFFTs.Size = new System.Drawing.Size(604, 583);
+            this.zedGraphControlFFTs.TabIndex = 1;
+            this.zedGraphControlFFTs.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
+            this.zedGraphControlFFTs.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
+            this.zedGraphControlFFTs.ZoomModifierKeys = System.Windows.Forms.Keys.None;
+            this.zedGraphControlFFTs.ZoomModifierKeys2 = System.Windows.Forms.Keys.None;
+            this.zedGraphControlFFTs.ZoomStepFraction = 0.1D;
+            // 
             // timerContFeed
             // 
             this.timerContFeed.Interval = 250;
@@ -1975,51 +1994,6 @@ namespace com.AComm
             this.channel4_info_label.TabIndex = 0;
             this.channel4_info_label.Text = "[SIGNAL INFO]";
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.zedGraphControlFFTs);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(610, 589);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "FFT";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // zedGraphControlFFTs
-            // 
-            this.zedGraphControlFFTs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zedGraphControlFFTs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zedGraphControlFFTs.IsEnableHPan = true;
-            this.zedGraphControlFFTs.IsEnableVPan = true;
-            this.zedGraphControlFFTs.IsEnableZoom = true;
-            this.zedGraphControlFFTs.IsScrollY2 = false;
-            this.zedGraphControlFFTs.IsShowContextMenu = true;
-            this.zedGraphControlFFTs.IsShowHScrollBar = false;
-            this.zedGraphControlFFTs.IsShowPointValues = false;
-            this.zedGraphControlFFTs.IsShowVScrollBar = false;
-            this.zedGraphControlFFTs.IsZoomOnMouseCenter = false;
-            this.zedGraphControlFFTs.Location = new System.Drawing.Point(3, 3);
-            this.zedGraphControlFFTs.Name = "zedGraphControlFFTs";
-            this.zedGraphControlFFTs.PanButtons = System.Windows.Forms.MouseButtons.Left;
-            this.zedGraphControlFFTs.PanButtons2 = System.Windows.Forms.MouseButtons.Middle;
-            this.zedGraphControlFFTs.PanModifierKeys2 = System.Windows.Forms.Keys.None;
-            this.zedGraphControlFFTs.PointDateFormat = "g";
-            this.zedGraphControlFFTs.PointValueFormat = "G";
-            this.zedGraphControlFFTs.ScrollMaxX = 0D;
-            this.zedGraphControlFFTs.ScrollMaxY = 0D;
-            this.zedGraphControlFFTs.ScrollMaxY2 = 0D;
-            this.zedGraphControlFFTs.ScrollMinX = 0D;
-            this.zedGraphControlFFTs.ScrollMinY = 0D;
-            this.zedGraphControlFFTs.ScrollMinY2 = 0D;
-            this.zedGraphControlFFTs.Size = new System.Drawing.Size(604, 583);
-            this.zedGraphControlFFTs.TabIndex = 1;
-            this.zedGraphControlFFTs.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
-            this.zedGraphControlFFTs.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
-            this.zedGraphControlFFTs.ZoomModifierKeys = System.Windows.Forms.Keys.None;
-            this.zedGraphControlFFTs.ZoomModifierKeys2 = System.Windows.Forms.Keys.None;
-            this.zedGraphControlFFTs.ZoomStepFraction = 0.1D;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2046,8 +2020,6 @@ namespace com.AComm
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMATLABPlot)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.groupBoxAmps.ResumeLayout(false);
@@ -2078,6 +2050,7 @@ namespace com.AComm
             ((System.ComponentModel.ISupportInitialize)(this.led6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.led8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.led2)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -2086,7 +2059,6 @@ namespace com.AComm
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2098,7 +2070,6 @@ namespace com.AComm
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBoxAmps;
         private System.Windows.Forms.Label labelcheckBoxBit;
         private System.Windows.Forms.Label label11;
@@ -2156,7 +2127,6 @@ namespace com.AComm
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ToolStripMenuItem uSBControlPanelToolStripMenuItem;
         private System.Windows.Forms.Timer timerStatusMessage;
-        private System.Windows.Forms.PictureBox pictureBoxMATLABPlot;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
