@@ -27,6 +27,7 @@ namespace com.AComm
         GraphPane pane2;
         GraphPane pane3;
         GraphPane pane4;
+        GraphPane FFTPane;
         MasterPane myMaster;
         PictureBox[] leds;
         Bitmap on = Properties.Resources.onled;
@@ -217,7 +218,25 @@ namespace com.AComm
 
         private void SetupFFTTab()
         {
-            throw new NotImplementedException();
+            FFTPane = new GraphPane();
+            FFTPane.XAxis.Max = 512;
+            FFTPane.XAxis.IsShowGrid = true;
+            FFTPane.XAxis.ScaleFontSpec.FontColor = Color.Black;
+            FFTPane.XAxis.ScaleFontSpec.Size = 12;
+            FFTPane.XAxis.Step = 50;
+
+            FFTPane.YAxis.Max = 600;
+            FFTPane.YAxis.Min = 20;
+            FFTPane.YAxis.IsShowGrid = true;
+            FFTPane.YAxis.ScaleFontSpec.FontColor = Color.Black;
+            FFTPane.YAxis.ScaleFontSpec.Size = 12;
+            FFTPane.YAxis.Step = 50;
+
+            FFTPane.AddCurve("FFT Output", new double[1], new double[1], Color.Blue, SymbolType.None);
+
+
+            zedGraphControlFFTs.MasterPane.Add(FFTPane);
+            //myMaster.Add(FFTPane);
         }
 
         private void WriteUSBSettings()
@@ -345,7 +364,7 @@ namespace com.AComm
                 data_labels[plot_position].Text = lt;
 
                 
-                //PlotFFT();
+                PlotFFT();
 
                 //Causes the graph to be redrawn
                 Graph.Invalidate();
@@ -431,30 +450,44 @@ namespace com.AComm
         }
 
 
+        float[] last_fft = new float[512];
         private void PlotFFT()
         {
-            myFFT = pane2.AddCurve("FFT Output", null, Color.FromKnownColor(KnownColor.MenuHighlight), SymbolType.None);
-            float[] fft = new float[fio.USBPacketData.Length];
-            fio.USBPacketData.CopyTo(fft, 0);
-            
-            Fourier.FFT(fft, 256, FourierDirection.Forward);
+            myFFT = FFTPane.AddCurve("FFT Output", null, Color.FromKnownColor(KnownColor.MenuHighlight), SymbolType.None);
 
-            
-            for (int i = 0; i < fft.Length; i++)
+            float[] fft_vector = new float[fio.USBPacketData.Length];
+            fio.USBPacketData.CopyTo(fft_vector, 0);
+
+            //multiply data by W THEN fft
+            for (int k = 0; k < fft_vector.Length; k++)
             {
-                fft[i] = 20*((float)Math.Log10((Math.Abs(fft[i]))));
+                fft_vector[k] = fft_vector[k] * 1;//W[k];
             }
 
-            int j = 0;
-            foreach(float point in fft)
-            {
-                myFFT.AddPoint(j, point);
-                j++;
+            Fourier.FFT(fft_vector, 256, FourierDirection.Forward);
 
+
+
+
+
+            for (int i = 0; i < fft_vector.Length; i++)
+            {
+                float _fft = 20 * ((float)Math.Log10((Math.Abs(fft_vector[i]))));
+
+                float avg = (_fft + last_fft[i]) * (float)0.9;
+                fft_vector[i] = avg;
+            }
+
+            last_fft = fft_vector;
+
+
+            for (int j = 0; j < fft_vector.Length; j++)
+            {
+                myFFT.AddPoint(j, fft_vector[j]);
             }
 
             Graph.Invalidate();
-           
+
         }
 
       
