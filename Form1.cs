@@ -18,7 +18,7 @@ namespace com.AComm
 {
     public partial class Form1 : Form
     {
-        internal EngMATAccess ema;
+        //internal EngMATAccess ema;
         internal CSQuickUsb usb;
         MATLABFileIO fio;
    
@@ -36,6 +36,9 @@ namespace com.AComm
         GraphPane[] panes = new GraphPane[4];
         Label[] data_labels = new Label[4];
 
+
+        MLApp.MLApp matlab;
+
         public Form1()
         {
             InitializeComponent();
@@ -51,16 +54,20 @@ namespace com.AComm
         {
             try
             {
-                ema = new EngMATAccess();
+               // ema = new EngMATAccess();
+               matlab = new MLApp.MLApp();
 
                 //TEMP SETTINGS
-                ema.Evaluate("fs=1400"); //FOR BEN'S FUNCTION
-                ema.Evaluate("cd work"); //FOR MAT LAB 7.0.1
+               // ema.Evaluate("fs=1400"); //FOR BEN'S FUNCTION
+               // ema.Evaluate("cd work"); //FOR MAT LAB 7.0.1
                 ///
-            }
-            catch (DllNotFoundException)
-            {
+               matlab.Execute("fs=1400");
+               matlab.Execute("cd C:\\Users\\AlexEgg\\Downloads\\CSharp_MATLAB\\CSharp_MATLAB\\mcode");
 
+            }
+            catch (DllNotFoundException ee)
+            {
+                Console.WriteLine(ee.Message);
                 Log("MATLAB not loaded");
             }
 
@@ -356,9 +363,9 @@ namespace com.AComm
 
                 //Create binary file for DYDA then run DYDA and copy image to clipboard
                 MakeBowStaff(@"bowstaff2.cdf");
-                if (ema != null && checkBoxMatlabEnabled.Checked)
+                if (matlab != null && checkBoxMatlabEnabled.Checked)
                 {
-                    ema.Evaluate("DYDA");
+                    matlab.Execute("DYDA");
 
                 }
 
