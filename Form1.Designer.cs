@@ -229,9 +229,9 @@ namespace com.AComm
             this.usbStatusStrip,
             this.statusPanelInfo,
             this.statusPanelUSBStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 751);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 749);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1028, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1028, 24);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -244,7 +244,7 @@ namespace com.AComm
             this.usbStatusStrip.Image = global::com.AComm.Properties.Resources.try7;
             this.usbStatusStrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usbStatusStrip.Name = "usbStatusStrip";
-            this.usbStatusStrip.Size = new System.Drawing.Size(108, 20);
+            this.usbStatusStrip.Size = new System.Drawing.Size(128, 22);
             this.usbStatusStrip.Text = "USB Status:";
             // 
             // toolStripMenuItemConnect
@@ -252,7 +252,7 @@ namespace com.AComm
             this.toolStripMenuItemConnect.Image = global::com.AComm.Properties.Resources.connect3;
             this.toolStripMenuItemConnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItemConnect.Name = "toolStripMenuItemConnect";
-            this.toolStripMenuItemConnect.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemConnect.Size = new System.Drawing.Size(202, 22);
             this.toolStripMenuItemConnect.Text = "Connect";
             this.toolStripMenuItemConnect.Click += new System.EventHandler(this.toolStripMenuItemConnect_Click);
             // 
@@ -261,14 +261,14 @@ namespace com.AComm
             this.toolStripMenuItemDisconnect.Image = global::com.AComm.Properties.Resources.try7;
             this.toolStripMenuItemDisconnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItemDisconnect.Name = "toolStripMenuItemDisconnect";
-            this.toolStripMenuItemDisconnect.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemDisconnect.Size = new System.Drawing.Size(202, 22);
             this.toolStripMenuItemDisconnect.Text = "Disconect";
             this.toolStripMenuItemDisconnect.Click += new System.EventHandler(this.toolStripMenuItemDisconnect_Click);
             // 
             // uSBControlPanelToolStripMenuItem
             // 
             this.uSBControlPanelToolStripMenuItem.Name = "uSBControlPanelToolStripMenuItem";
-            this.uSBControlPanelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.uSBControlPanelToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.uSBControlPanelToolStripMenuItem.Text = "USB Control Panel";
             this.uSBControlPanelToolStripMenuItem.Click += new System.EventHandler(this.uSBControlPanelToolStripMenuItem_Click);
             // 
@@ -278,13 +278,13 @@ namespace com.AComm
             this.statusPanelInfo.ForeColor = System.Drawing.Color.Black;
             this.statusPanelInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.statusPanelInfo.Name = "statusPanelInfo";
-            this.statusPanelInfo.Size = new System.Drawing.Size(77, 17);
+            this.statusPanelInfo.Size = new System.Drawing.Size(95, 19);
             this.statusPanelInfo.Text = "[statusPanel1]";
             // 
             // statusPanelUSBStatus
             // 
             this.statusPanelUSBStatus.Name = "statusPanelUSBStatus";
-            this.statusPanelUSBStatus.Size = new System.Drawing.Size(0, 17);
+            this.statusPanelUSBStatus.Size = new System.Drawing.Size(0, 19);
             // 
             // panel1
             // 
@@ -315,7 +315,7 @@ namespace com.AComm
             this.checkBoxMatlabEnabled.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled.Image")));
             this.checkBoxMatlabEnabled.Location = new System.Drawing.Point(966, 35);
             this.checkBoxMatlabEnabled.Name = "checkBoxMatlabEnabled";
-            this.checkBoxMatlabEnabled.Size = new System.Drawing.Size(45, 22);
+            this.checkBoxMatlabEnabled.Size = new System.Drawing.Size(48, 22);
             this.checkBoxMatlabEnabled.TabIndex = 31;
             this.checkBoxMatlabEnabled.UseVisualStyleBackColor = true;
             this.checkBoxMatlabEnabled.CheckedChanged += new System.EventHandler(this.checkBoxMatlabEnabled_CheckedChanged);
@@ -338,10 +338,10 @@ namespace com.AComm
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.Graph);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(610, 589);
+            this.tabPage1.Size = new System.Drawing.Size(610, 585);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "USB Output";
             // 
@@ -371,7 +371,7 @@ namespace com.AComm
             this.Graph.ScrollMinX = 0D;
             this.Graph.ScrollMinY = 0D;
             this.Graph.ScrollMinY2 = 0D;
-            this.Graph.Size = new System.Drawing.Size(604, 583);
+            this.Graph.Size = new System.Drawing.Size(604, 579);
             this.Graph.TabIndex = 0;
             this.Graph.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
             this.Graph.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
@@ -391,10 +391,10 @@ namespace com.AComm
             this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Controls.Add(this.labelRegister2);
             this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(610, 589);
+            this.tabPage3.Size = new System.Drawing.Size(610, 585);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Controls";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -499,7 +499,7 @@ namespace com.AComm
             this.labelDeccheckBoxCS3_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeccheckBoxCS3_.Location = new System.Drawing.Point(171, 330);
             this.labelDeccheckBoxCS3_.Name = "labelDeccheckBoxCS3_";
-            this.labelDeccheckBoxCS3_.Size = new System.Drawing.Size(14, 13);
+            this.labelDeccheckBoxCS3_.Size = new System.Drawing.Size(17, 17);
             this.labelDeccheckBoxCS3_.TabIndex = 98;
             this.labelDeccheckBoxCS3_.Text = "0";
             // 
@@ -509,7 +509,7 @@ namespace com.AComm
             this.labelcheckBoxCS3_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelcheckBoxCS3_.Location = new System.Drawing.Point(95, 330);
             this.labelcheckBoxCS3_.Name = "labelcheckBoxCS3_";
-            this.labelcheckBoxCS3_.Size = new System.Drawing.Size(14, 13);
+            this.labelcheckBoxCS3_.Size = new System.Drawing.Size(17, 17);
             this.labelcheckBoxCS3_.TabIndex = 97;
             this.labelcheckBoxCS3_.Text = "0";
             // 
@@ -518,7 +518,7 @@ namespace com.AComm
             this.label44.AutoSize = true;
             this.label44.Location = new System.Drawing.Point(8, 330);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(82, 13);
+            this.label44.Size = new System.Drawing.Size(108, 17);
             this.label44.TabIndex = 96;
             this.label44.Text = "Command Set 3";
             // 
@@ -528,7 +528,7 @@ namespace com.AComm
             this.labelDeccheckBoxCS2_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeccheckBoxCS2_.Location = new System.Drawing.Point(171, 292);
             this.labelDeccheckBoxCS2_.Name = "labelDeccheckBoxCS2_";
-            this.labelDeccheckBoxCS2_.Size = new System.Drawing.Size(14, 13);
+            this.labelDeccheckBoxCS2_.Size = new System.Drawing.Size(17, 17);
             this.labelDeccheckBoxCS2_.TabIndex = 95;
             this.labelDeccheckBoxCS2_.Text = "0";
             // 
@@ -538,7 +538,7 @@ namespace com.AComm
             this.labelcheckBoxCS2_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelcheckBoxCS2_.Location = new System.Drawing.Point(95, 292);
             this.labelcheckBoxCS2_.Name = "labelcheckBoxCS2_";
-            this.labelcheckBoxCS2_.Size = new System.Drawing.Size(14, 13);
+            this.labelcheckBoxCS2_.Size = new System.Drawing.Size(17, 17);
             this.labelcheckBoxCS2_.TabIndex = 94;
             this.labelcheckBoxCS2_.Text = "0";
             // 
@@ -547,7 +547,7 @@ namespace com.AComm
             this.label40.AutoSize = true;
             this.label40.Location = new System.Drawing.Point(8, 292);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(82, 13);
+            this.label40.Size = new System.Drawing.Size(108, 17);
             this.label40.TabIndex = 93;
             this.label40.Text = "Command Set 2";
             // 
@@ -557,7 +557,7 @@ namespace com.AComm
             this.labelDeccheckBoxCS1_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeccheckBoxCS1_.Location = new System.Drawing.Point(171, 251);
             this.labelDeccheckBoxCS1_.Name = "labelDeccheckBoxCS1_";
-            this.labelDeccheckBoxCS1_.Size = new System.Drawing.Size(14, 13);
+            this.labelDeccheckBoxCS1_.Size = new System.Drawing.Size(17, 17);
             this.labelDeccheckBoxCS1_.TabIndex = 92;
             this.labelDeccheckBoxCS1_.Text = "0";
             // 
@@ -567,7 +567,7 @@ namespace com.AComm
             this.labelcheckBoxCS1_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelcheckBoxCS1_.Location = new System.Drawing.Point(95, 251);
             this.labelcheckBoxCS1_.Name = "labelcheckBoxCS1_";
-            this.labelcheckBoxCS1_.Size = new System.Drawing.Size(14, 13);
+            this.labelcheckBoxCS1_.Size = new System.Drawing.Size(17, 17);
             this.labelcheckBoxCS1_.TabIndex = 91;
             this.labelcheckBoxCS1_.Text = "0";
             // 
@@ -576,7 +576,7 @@ namespace com.AComm
             this.label37.AutoSize = true;
             this.label37.Location = new System.Drawing.Point(8, 251);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(82, 13);
+            this.label37.Size = new System.Drawing.Size(108, 17);
             this.label37.TabIndex = 90;
             this.label37.Text = "Command Set 1";
             // 
@@ -586,7 +586,7 @@ namespace com.AComm
             this.checkBoxCS3_7.BackColor = System.Drawing.Color.LightSkyBlue;
             this.checkBoxCS3_7.Location = new System.Drawing.Point(361, 346);
             this.checkBoxCS3_7.Name = "checkBoxCS3_7";
-            this.checkBoxCS3_7.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS3_7.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS3_7.TabIndex = 89;
             this.checkBoxCS3_7.Text = "0";
             this.checkBoxCS3_7.UseVisualStyleBackColor = false;
@@ -598,7 +598,7 @@ namespace com.AComm
             this.checkBoxCS3_6.BackColor = System.Drawing.Color.LightSkyBlue;
             this.checkBoxCS3_6.Location = new System.Drawing.Point(320, 346);
             this.checkBoxCS3_6.Name = "checkBoxCS3_6";
-            this.checkBoxCS3_6.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS3_6.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS3_6.TabIndex = 88;
             this.checkBoxCS3_6.Text = "1";
             this.checkBoxCS3_6.UseVisualStyleBackColor = false;
@@ -610,7 +610,7 @@ namespace com.AComm
             this.checkBoxCS3_5.BackColor = System.Drawing.Color.LightSkyBlue;
             this.checkBoxCS3_5.Location = new System.Drawing.Point(279, 346);
             this.checkBoxCS3_5.Name = "checkBoxCS3_5";
-            this.checkBoxCS3_5.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS3_5.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS3_5.TabIndex = 87;
             this.checkBoxCS3_5.Text = "2";
             this.checkBoxCS3_5.UseVisualStyleBackColor = false;
@@ -622,7 +622,7 @@ namespace com.AComm
             this.checkBoxCS3_4.BackColor = System.Drawing.Color.LightSkyBlue;
             this.checkBoxCS3_4.Location = new System.Drawing.Point(238, 346);
             this.checkBoxCS3_4.Name = "checkBoxCS3_4";
-            this.checkBoxCS3_4.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS3_4.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS3_4.TabIndex = 86;
             this.checkBoxCS3_4.Text = "3";
             this.checkBoxCS3_4.UseVisualStyleBackColor = false;
@@ -634,7 +634,7 @@ namespace com.AComm
             this.checkBoxCS3_3.BackColor = System.Drawing.Color.LightSkyBlue;
             this.checkBoxCS3_3.Location = new System.Drawing.Point(197, 346);
             this.checkBoxCS3_3.Name = "checkBoxCS3_3";
-            this.checkBoxCS3_3.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS3_3.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS3_3.TabIndex = 85;
             this.checkBoxCS3_3.Text = "4";
             this.checkBoxCS3_3.UseVisualStyleBackColor = false;
@@ -646,7 +646,7 @@ namespace com.AComm
             this.checkBoxCS3_2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.checkBoxCS3_2.Location = new System.Drawing.Point(156, 346);
             this.checkBoxCS3_2.Name = "checkBoxCS3_2";
-            this.checkBoxCS3_2.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS3_2.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS3_2.TabIndex = 84;
             this.checkBoxCS3_2.Text = "5";
             this.checkBoxCS3_2.UseVisualStyleBackColor = false;
@@ -658,7 +658,7 @@ namespace com.AComm
             this.checkBoxCS3_1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.checkBoxCS3_1.Location = new System.Drawing.Point(115, 346);
             this.checkBoxCS3_1.Name = "checkBoxCS3_1";
-            this.checkBoxCS3_1.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS3_1.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS3_1.TabIndex = 83;
             this.checkBoxCS3_1.Text = "6";
             this.checkBoxCS3_1.UseVisualStyleBackColor = false;
@@ -670,7 +670,7 @@ namespace com.AComm
             this.checkBoxCS3_0.BackColor = System.Drawing.Color.LightSkyBlue;
             this.checkBoxCS3_0.Location = new System.Drawing.Point(74, 346);
             this.checkBoxCS3_0.Name = "checkBoxCS3_0";
-            this.checkBoxCS3_0.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS3_0.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS3_0.TabIndex = 82;
             this.checkBoxCS3_0.Text = "7";
             this.checkBoxCS3_0.UseVisualStyleBackColor = false;
@@ -682,7 +682,7 @@ namespace com.AComm
             this.checkBoxCS2_7.BackColor = System.Drawing.Color.GreenYellow;
             this.checkBoxCS2_7.Location = new System.Drawing.Point(361, 311);
             this.checkBoxCS2_7.Name = "checkBoxCS2_7";
-            this.checkBoxCS2_7.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS2_7.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS2_7.TabIndex = 81;
             this.checkBoxCS2_7.Text = "0";
             this.checkBoxCS2_7.UseVisualStyleBackColor = false;
@@ -694,7 +694,7 @@ namespace com.AComm
             this.checkBoxCS2_6.BackColor = System.Drawing.Color.GreenYellow;
             this.checkBoxCS2_6.Location = new System.Drawing.Point(320, 311);
             this.checkBoxCS2_6.Name = "checkBoxCS2_6";
-            this.checkBoxCS2_6.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS2_6.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS2_6.TabIndex = 80;
             this.checkBoxCS2_6.Text = "1";
             this.checkBoxCS2_6.UseVisualStyleBackColor = false;
@@ -706,7 +706,7 @@ namespace com.AComm
             this.checkBoxCS2_5.BackColor = System.Drawing.Color.GreenYellow;
             this.checkBoxCS2_5.Location = new System.Drawing.Point(279, 311);
             this.checkBoxCS2_5.Name = "checkBoxCS2_5";
-            this.checkBoxCS2_5.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS2_5.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS2_5.TabIndex = 79;
             this.checkBoxCS2_5.Text = "2";
             this.checkBoxCS2_5.UseVisualStyleBackColor = false;
@@ -718,7 +718,7 @@ namespace com.AComm
             this.checkBoxCS2_4.BackColor = System.Drawing.Color.GreenYellow;
             this.checkBoxCS2_4.Location = new System.Drawing.Point(238, 311);
             this.checkBoxCS2_4.Name = "checkBoxCS2_4";
-            this.checkBoxCS2_4.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS2_4.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS2_4.TabIndex = 78;
             this.checkBoxCS2_4.Text = "3";
             this.checkBoxCS2_4.UseVisualStyleBackColor = false;
@@ -730,7 +730,7 @@ namespace com.AComm
             this.checkBoxCS2_3.BackColor = System.Drawing.Color.GreenYellow;
             this.checkBoxCS2_3.Location = new System.Drawing.Point(197, 311);
             this.checkBoxCS2_3.Name = "checkBoxCS2_3";
-            this.checkBoxCS2_3.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS2_3.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS2_3.TabIndex = 77;
             this.checkBoxCS2_3.Text = "4";
             this.checkBoxCS2_3.UseVisualStyleBackColor = false;
@@ -742,7 +742,7 @@ namespace com.AComm
             this.checkBoxCS2_2.BackColor = System.Drawing.Color.GreenYellow;
             this.checkBoxCS2_2.Location = new System.Drawing.Point(156, 311);
             this.checkBoxCS2_2.Name = "checkBoxCS2_2";
-            this.checkBoxCS2_2.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS2_2.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS2_2.TabIndex = 76;
             this.checkBoxCS2_2.Text = "5";
             this.checkBoxCS2_2.UseVisualStyleBackColor = false;
@@ -754,7 +754,7 @@ namespace com.AComm
             this.checkBoxCS2_1.BackColor = System.Drawing.Color.GreenYellow;
             this.checkBoxCS2_1.Location = new System.Drawing.Point(115, 311);
             this.checkBoxCS2_1.Name = "checkBoxCS2_1";
-            this.checkBoxCS2_1.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS2_1.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS2_1.TabIndex = 75;
             this.checkBoxCS2_1.Text = "6";
             this.checkBoxCS2_1.UseVisualStyleBackColor = false;
@@ -766,7 +766,7 @@ namespace com.AComm
             this.checkBoxCS2_0.BackColor = System.Drawing.Color.GreenYellow;
             this.checkBoxCS2_0.Location = new System.Drawing.Point(74, 311);
             this.checkBoxCS2_0.Name = "checkBoxCS2_0";
-            this.checkBoxCS2_0.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS2_0.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS2_0.TabIndex = 74;
             this.checkBoxCS2_0.Text = "7";
             this.checkBoxCS2_0.UseVisualStyleBackColor = false;
@@ -778,7 +778,7 @@ namespace com.AComm
             this.checkBoxCS1_7.BackColor = System.Drawing.Color.DarkOrange;
             this.checkBoxCS1_7.Location = new System.Drawing.Point(361, 272);
             this.checkBoxCS1_7.Name = "checkBoxCS1_7";
-            this.checkBoxCS1_7.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS1_7.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS1_7.TabIndex = 73;
             this.checkBoxCS1_7.Text = "0";
             this.checkBoxCS1_7.UseVisualStyleBackColor = false;
@@ -790,7 +790,7 @@ namespace com.AComm
             this.checkBoxCS1_6.BackColor = System.Drawing.Color.DarkOrange;
             this.checkBoxCS1_6.Location = new System.Drawing.Point(320, 272);
             this.checkBoxCS1_6.Name = "checkBoxCS1_6";
-            this.checkBoxCS1_6.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS1_6.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS1_6.TabIndex = 72;
             this.checkBoxCS1_6.Text = "1";
             this.checkBoxCS1_6.UseVisualStyleBackColor = false;
@@ -802,7 +802,7 @@ namespace com.AComm
             this.checkBoxCS1_5.BackColor = System.Drawing.Color.DarkOrange;
             this.checkBoxCS1_5.Location = new System.Drawing.Point(279, 272);
             this.checkBoxCS1_5.Name = "checkBoxCS1_5";
-            this.checkBoxCS1_5.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS1_5.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS1_5.TabIndex = 71;
             this.checkBoxCS1_5.Text = "2";
             this.checkBoxCS1_5.UseVisualStyleBackColor = false;
@@ -814,7 +814,7 @@ namespace com.AComm
             this.checkBoxCS1_4.BackColor = System.Drawing.Color.DarkOrange;
             this.checkBoxCS1_4.Location = new System.Drawing.Point(238, 272);
             this.checkBoxCS1_4.Name = "checkBoxCS1_4";
-            this.checkBoxCS1_4.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS1_4.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS1_4.TabIndex = 70;
             this.checkBoxCS1_4.Text = "3";
             this.checkBoxCS1_4.UseVisualStyleBackColor = false;
@@ -826,7 +826,7 @@ namespace com.AComm
             this.checkBoxCS1_3.BackColor = System.Drawing.Color.DarkOrange;
             this.checkBoxCS1_3.Location = new System.Drawing.Point(197, 272);
             this.checkBoxCS1_3.Name = "checkBoxCS1_3";
-            this.checkBoxCS1_3.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS1_3.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS1_3.TabIndex = 69;
             this.checkBoxCS1_3.Text = "4";
             this.checkBoxCS1_3.UseVisualStyleBackColor = false;
@@ -838,7 +838,7 @@ namespace com.AComm
             this.checkBoxCS1_2.BackColor = System.Drawing.Color.DarkOrange;
             this.checkBoxCS1_2.Location = new System.Drawing.Point(156, 272);
             this.checkBoxCS1_2.Name = "checkBoxCS1_2";
-            this.checkBoxCS1_2.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS1_2.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS1_2.TabIndex = 68;
             this.checkBoxCS1_2.Text = "5";
             this.checkBoxCS1_2.UseVisualStyleBackColor = false;
@@ -850,7 +850,7 @@ namespace com.AComm
             this.checkBoxCS1_1.BackColor = System.Drawing.Color.DarkOrange;
             this.checkBoxCS1_1.Location = new System.Drawing.Point(115, 272);
             this.checkBoxCS1_1.Name = "checkBoxCS1_1";
-            this.checkBoxCS1_1.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS1_1.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS1_1.TabIndex = 67;
             this.checkBoxCS1_1.Text = "6";
             this.checkBoxCS1_1.UseVisualStyleBackColor = false;
@@ -862,7 +862,7 @@ namespace com.AComm
             this.checkBoxCS1_0.BackColor = System.Drawing.Color.DarkOrange;
             this.checkBoxCS1_0.Location = new System.Drawing.Point(74, 272);
             this.checkBoxCS1_0.Name = "checkBoxCS1_0";
-            this.checkBoxCS1_0.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS1_0.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS1_0.TabIndex = 66;
             this.checkBoxCS1_0.Text = "7";
             this.checkBoxCS1_0.UseVisualStyleBackColor = false;
@@ -874,7 +874,7 @@ namespace com.AComm
             this.labelDeccheckBoxCS0_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeccheckBoxCS0_.Location = new System.Drawing.Point(170, 212);
             this.labelDeccheckBoxCS0_.Name = "labelDeccheckBoxCS0_";
-            this.labelDeccheckBoxCS0_.Size = new System.Drawing.Size(14, 13);
+            this.labelDeccheckBoxCS0_.Size = new System.Drawing.Size(17, 17);
             this.labelDeccheckBoxCS0_.TabIndex = 65;
             this.labelDeccheckBoxCS0_.Text = "0";
             // 
@@ -884,7 +884,7 @@ namespace com.AComm
             this.checkBoxCS0_7.BackColor = System.Drawing.Color.LightCoral;
             this.checkBoxCS0_7.Location = new System.Drawing.Point(361, 231);
             this.checkBoxCS0_7.Name = "checkBoxCS0_7";
-            this.checkBoxCS0_7.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS0_7.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS0_7.TabIndex = 64;
             this.checkBoxCS0_7.Text = "0";
             this.checkBoxCS0_7.UseVisualStyleBackColor = false;
@@ -896,7 +896,7 @@ namespace com.AComm
             this.checkBoxCS0_6.BackColor = System.Drawing.Color.LightCoral;
             this.checkBoxCS0_6.Location = new System.Drawing.Point(320, 231);
             this.checkBoxCS0_6.Name = "checkBoxCS0_6";
-            this.checkBoxCS0_6.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS0_6.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS0_6.TabIndex = 63;
             this.checkBoxCS0_6.Text = "1";
             this.checkBoxCS0_6.UseVisualStyleBackColor = false;
@@ -908,7 +908,7 @@ namespace com.AComm
             this.checkBoxCS0_5.BackColor = System.Drawing.Color.LightCoral;
             this.checkBoxCS0_5.Location = new System.Drawing.Point(279, 231);
             this.checkBoxCS0_5.Name = "checkBoxCS0_5";
-            this.checkBoxCS0_5.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS0_5.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS0_5.TabIndex = 62;
             this.checkBoxCS0_5.Text = "2";
             this.checkBoxCS0_5.UseVisualStyleBackColor = false;
@@ -920,7 +920,7 @@ namespace com.AComm
             this.checkBoxCS0_4.BackColor = System.Drawing.Color.LightCoral;
             this.checkBoxCS0_4.Location = new System.Drawing.Point(238, 231);
             this.checkBoxCS0_4.Name = "checkBoxCS0_4";
-            this.checkBoxCS0_4.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS0_4.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS0_4.TabIndex = 61;
             this.checkBoxCS0_4.Text = "3";
             this.checkBoxCS0_4.UseVisualStyleBackColor = false;
@@ -932,7 +932,7 @@ namespace com.AComm
             this.checkBoxCS0_3.BackColor = System.Drawing.Color.LightCoral;
             this.checkBoxCS0_3.Location = new System.Drawing.Point(197, 231);
             this.checkBoxCS0_3.Name = "checkBoxCS0_3";
-            this.checkBoxCS0_3.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS0_3.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS0_3.TabIndex = 60;
             this.checkBoxCS0_3.Text = "4";
             this.checkBoxCS0_3.UseVisualStyleBackColor = false;
@@ -944,7 +944,7 @@ namespace com.AComm
             this.checkBoxCS0_2.BackColor = System.Drawing.Color.LightCoral;
             this.checkBoxCS0_2.Location = new System.Drawing.Point(156, 231);
             this.checkBoxCS0_2.Name = "checkBoxCS0_2";
-            this.checkBoxCS0_2.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS0_2.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS0_2.TabIndex = 59;
             this.checkBoxCS0_2.Text = "5";
             this.checkBoxCS0_2.UseVisualStyleBackColor = false;
@@ -956,7 +956,7 @@ namespace com.AComm
             this.checkBoxCS0_1.BackColor = System.Drawing.Color.LightCoral;
             this.checkBoxCS0_1.Location = new System.Drawing.Point(115, 231);
             this.checkBoxCS0_1.Name = "checkBoxCS0_1";
-            this.checkBoxCS0_1.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS0_1.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS0_1.TabIndex = 58;
             this.checkBoxCS0_1.Text = "6";
             this.checkBoxCS0_1.UseVisualStyleBackColor = false;
@@ -968,7 +968,7 @@ namespace com.AComm
             this.checkBoxCS0_0.BackColor = System.Drawing.Color.LightCoral;
             this.checkBoxCS0_0.Location = new System.Drawing.Point(74, 231);
             this.checkBoxCS0_0.Name = "checkBoxCS0_0";
-            this.checkBoxCS0_0.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxCS0_0.Size = new System.Drawing.Size(38, 21);
             this.checkBoxCS0_0.TabIndex = 57;
             this.checkBoxCS0_0.Text = "7";
             this.checkBoxCS0_0.UseVisualStyleBackColor = false;
@@ -980,7 +980,7 @@ namespace com.AComm
             this.labelcheckBoxCS0_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelcheckBoxCS0_.Location = new System.Drawing.Point(94, 212);
             this.labelcheckBoxCS0_.Name = "labelcheckBoxCS0_";
-            this.labelcheckBoxCS0_.Size = new System.Drawing.Size(14, 13);
+            this.labelcheckBoxCS0_.Size = new System.Drawing.Size(17, 17);
             this.labelcheckBoxCS0_.TabIndex = 56;
             this.labelcheckBoxCS0_.Text = "0";
             // 
@@ -989,7 +989,7 @@ namespace com.AComm
             this.label33.AutoSize = true;
             this.label33.Location = new System.Drawing.Point(7, 212);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(82, 13);
+            this.label33.Size = new System.Drawing.Size(108, 17);
             this.label33.TabIndex = 55;
             this.label33.Text = "Command Set 0";
             // 
@@ -998,7 +998,7 @@ namespace com.AComm
             this.label41.AutoSize = true;
             this.label41.Location = new System.Drawing.Point(248, 28);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(63, 13);
+            this.label41.Size = new System.Drawing.Size(80, 17);
             this.label41.TabIndex = 54;
             this.label41.Text = "Amplitude 2";
             // 
@@ -1007,7 +1007,7 @@ namespace com.AComm
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(248, 154);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(63, 13);
+            this.label32.Size = new System.Drawing.Size(80, 17);
             this.label32.TabIndex = 43;
             this.label32.Text = "Amplitude 6";
             // 
@@ -1015,7 +1015,7 @@ namespace com.AComm
             // 
             this.textBoxAmp6.Location = new System.Drawing.Point(253, 180);
             this.textBoxAmp6.Name = "textBoxAmp6";
-            this.textBoxAmp6.Size = new System.Drawing.Size(39, 21);
+            this.textBoxAmp6.Size = new System.Drawing.Size(39, 24);
             this.textBoxAmp6.TabIndex = 42;
             this.textBoxAmp6.Text = "0";
             this.textBoxAmp6.TextChanged += new System.EventHandler(this.textBoxAmp6_TextChanged);
@@ -1027,7 +1027,7 @@ namespace com.AComm
             this.labelAmpValue6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAmpValue6.Location = new System.Drawing.Point(381, 154);
             this.labelAmpValue6.Name = "labelAmpValue6";
-            this.labelAmpValue6.Size = new System.Drawing.Size(14, 13);
+            this.labelAmpValue6.Size = new System.Drawing.Size(17, 17);
             this.labelAmpValue6.TabIndex = 41;
             this.labelAmpValue6.Text = "0";
             // 
@@ -1036,7 +1036,7 @@ namespace com.AComm
             this.label34.AutoSize = true;
             this.label34.Location = new System.Drawing.Point(316, 154);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(67, 13);
+            this.label34.Size = new System.Drawing.Size(85, 17);
             this.label34.TabIndex = 40;
             this.label34.Text = "Frequency 6";
             // 
@@ -1046,7 +1046,7 @@ namespace com.AComm
             this.trackBarFreq6.Location = new System.Drawing.Point(296, 180);
             this.trackBarFreq6.Maximum = 255;
             this.trackBarFreq6.Name = "trackBarFreq6";
-            this.trackBarFreq6.Size = new System.Drawing.Size(177, 45);
+            this.trackBarFreq6.Size = new System.Drawing.Size(177, 53);
             this.trackBarFreq6.TabIndex = 39;
             this.trackBarFreq6.TickFrequency = 13;
             this.trackBarFreq6.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
@@ -1056,7 +1056,7 @@ namespace com.AComm
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(15, 154);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(63, 13);
+            this.label31.Size = new System.Drawing.Size(80, 17);
             this.label31.TabIndex = 38;
             this.label31.Text = "Amplitude 5";
             // 
@@ -1065,7 +1065,7 @@ namespace com.AComm
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(253, 95);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(63, 13);
+            this.label28.Size = new System.Drawing.Size(80, 17);
             this.label28.TabIndex = 37;
             this.label28.Text = "Amplitude 4";
             // 
@@ -1073,7 +1073,7 @@ namespace com.AComm
             // 
             this.textBoxAmp4.Location = new System.Drawing.Point(253, 122);
             this.textBoxAmp4.Name = "textBoxAmp4";
-            this.textBoxAmp4.Size = new System.Drawing.Size(37, 21);
+            this.textBoxAmp4.Size = new System.Drawing.Size(37, 24);
             this.textBoxAmp4.TabIndex = 36;
             this.textBoxAmp4.Text = "0";
             this.textBoxAmp4.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
@@ -1084,7 +1084,7 @@ namespace com.AComm
             this.labelAmpValue4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAmpValue4.Location = new System.Drawing.Point(389, 95);
             this.labelAmpValue4.Name = "labelAmpValue4";
-            this.labelAmpValue4.Size = new System.Drawing.Size(14, 13);
+            this.labelAmpValue4.Size = new System.Drawing.Size(17, 17);
             this.labelAmpValue4.TabIndex = 35;
             this.labelAmpValue4.Text = "0";
             // 
@@ -1093,7 +1093,7 @@ namespace com.AComm
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(324, 95);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(67, 13);
+            this.label30.Size = new System.Drawing.Size(85, 17);
             this.label30.TabIndex = 34;
             this.label30.Text = "Frequency 4";
             // 
@@ -1103,7 +1103,7 @@ namespace com.AComm
             this.trackBarFreq4.Location = new System.Drawing.Point(297, 122);
             this.trackBarFreq4.Maximum = 255;
             this.trackBarFreq4.Name = "trackBarFreq4";
-            this.trackBarFreq4.Size = new System.Drawing.Size(176, 45);
+            this.trackBarFreq4.Size = new System.Drawing.Size(176, 53);
             this.trackBarFreq4.TabIndex = 33;
             this.trackBarFreq4.TickFrequency = 13;
             this.trackBarFreq4.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
@@ -1113,7 +1113,7 @@ namespace com.AComm
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(15, 91);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(63, 13);
+            this.label27.Size = new System.Drawing.Size(80, 17);
             this.label27.TabIndex = 32;
             this.label27.Text = "Amplitude 3";
             // 
@@ -1122,7 +1122,7 @@ namespace com.AComm
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(14, 28);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(63, 13);
+            this.label26.Size = new System.Drawing.Size(80, 17);
             this.label26.TabIndex = 31;
             this.label26.Text = "Amplitude 1";
             // 
@@ -1130,7 +1130,7 @@ namespace com.AComm
             // 
             this.textBoxAmp2.Location = new System.Drawing.Point(253, 56);
             this.textBoxAmp2.Name = "textBoxAmp2";
-            this.textBoxAmp2.Size = new System.Drawing.Size(37, 21);
+            this.textBoxAmp2.Size = new System.Drawing.Size(37, 24);
             this.textBoxAmp2.TabIndex = 30;
             this.textBoxAmp2.Text = "0";
             this.textBoxAmp2.TextChanged += new System.EventHandler(this.textBoxAmp2_TextChanged);
@@ -1142,7 +1142,7 @@ namespace com.AComm
             this.labelAmpValue2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAmpValue2.Location = new System.Drawing.Point(382, 28);
             this.labelAmpValue2.Name = "labelAmpValue2";
-            this.labelAmpValue2.Size = new System.Drawing.Size(14, 13);
+            this.labelAmpValue2.Size = new System.Drawing.Size(17, 17);
             this.labelAmpValue2.TabIndex = 29;
             this.labelAmpValue2.Text = "0";
             // 
@@ -1151,7 +1151,7 @@ namespace com.AComm
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(317, 28);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(67, 13);
+            this.label25.Size = new System.Drawing.Size(85, 17);
             this.label25.TabIndex = 28;
             this.label25.Text = "Frequency 2";
             // 
@@ -1161,7 +1161,7 @@ namespace com.AComm
             this.trackBarFreq2.Location = new System.Drawing.Point(296, 56);
             this.trackBarFreq2.Maximum = 255;
             this.trackBarFreq2.Name = "trackBarFreq2";
-            this.trackBarFreq2.Size = new System.Drawing.Size(177, 45);
+            this.trackBarFreq2.Size = new System.Drawing.Size(177, 53);
             this.trackBarFreq2.TabIndex = 27;
             this.trackBarFreq2.TabStop = false;
             this.trackBarFreq2.TickFrequency = 13;
@@ -1171,7 +1171,7 @@ namespace com.AComm
             // 
             this.textBoxAmp5.Location = new System.Drawing.Point(23, 180);
             this.textBoxAmp5.Name = "textBoxAmp5";
-            this.textBoxAmp5.Size = new System.Drawing.Size(32, 21);
+            this.textBoxAmp5.Size = new System.Drawing.Size(32, 24);
             this.textBoxAmp5.TabIndex = 26;
             this.textBoxAmp5.Text = "0";
             this.textBoxAmp5.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
@@ -1180,7 +1180,7 @@ namespace com.AComm
             // 
             this.textBoxAmp3.Location = new System.Drawing.Point(23, 122);
             this.textBoxAmp3.Name = "textBoxAmp3";
-            this.textBoxAmp3.Size = new System.Drawing.Size(34, 21);
+            this.textBoxAmp3.Size = new System.Drawing.Size(34, 24);
             this.textBoxAmp3.TabIndex = 25;
             this.textBoxAmp3.Text = "0";
             this.textBoxAmp3.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
@@ -1189,7 +1189,7 @@ namespace com.AComm
             // 
             this.textBoxAmp1.Location = new System.Drawing.Point(23, 56);
             this.textBoxAmp1.Name = "textBoxAmp1";
-            this.textBoxAmp1.Size = new System.Drawing.Size(37, 21);
+            this.textBoxAmp1.Size = new System.Drawing.Size(37, 24);
             this.textBoxAmp1.TabIndex = 24;
             this.textBoxAmp1.Text = "0";
             this.textBoxAmp1.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
@@ -1200,7 +1200,7 @@ namespace com.AComm
             this.labelDeccheckBoxBit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeccheckBoxBit.Location = new System.Drawing.Point(253, 367);
             this.labelDeccheckBoxBit.Name = "labelDeccheckBoxBit";
-            this.labelDeccheckBoxBit.Size = new System.Drawing.Size(14, 13);
+            this.labelDeccheckBoxBit.Size = new System.Drawing.Size(17, 17);
             this.labelDeccheckBoxBit.TabIndex = 23;
             this.labelDeccheckBoxBit.Text = "0";
             // 
@@ -1210,7 +1210,7 @@ namespace com.AComm
             this.checkBoxBit7.BackColor = System.Drawing.Color.Silver;
             this.checkBoxBit7.Location = new System.Drawing.Point(361, 391);
             this.checkBoxBit7.Name = "checkBoxBit7";
-            this.checkBoxBit7.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxBit7.Size = new System.Drawing.Size(38, 21);
             this.checkBoxBit7.TabIndex = 22;
             this.checkBoxBit7.Text = "0";
             this.checkBoxBit7.UseVisualStyleBackColor = false;
@@ -1222,7 +1222,7 @@ namespace com.AComm
             this.checkBoxBit6.BackColor = System.Drawing.Color.Silver;
             this.checkBoxBit6.Location = new System.Drawing.Point(320, 391);
             this.checkBoxBit6.Name = "checkBoxBit6";
-            this.checkBoxBit6.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxBit6.Size = new System.Drawing.Size(38, 21);
             this.checkBoxBit6.TabIndex = 21;
             this.checkBoxBit6.Text = "1";
             this.checkBoxBit6.UseVisualStyleBackColor = false;
@@ -1234,7 +1234,7 @@ namespace com.AComm
             this.checkBoxBit5.BackColor = System.Drawing.Color.Silver;
             this.checkBoxBit5.Location = new System.Drawing.Point(279, 391);
             this.checkBoxBit5.Name = "checkBoxBit5";
-            this.checkBoxBit5.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxBit5.Size = new System.Drawing.Size(38, 21);
             this.checkBoxBit5.TabIndex = 20;
             this.checkBoxBit5.Text = "2";
             this.checkBoxBit5.UseVisualStyleBackColor = false;
@@ -1246,7 +1246,7 @@ namespace com.AComm
             this.checkBoxBit4.BackColor = System.Drawing.Color.Silver;
             this.checkBoxBit4.Location = new System.Drawing.Point(238, 391);
             this.checkBoxBit4.Name = "checkBoxBit4";
-            this.checkBoxBit4.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxBit4.Size = new System.Drawing.Size(38, 21);
             this.checkBoxBit4.TabIndex = 19;
             this.checkBoxBit4.Text = "3";
             this.checkBoxBit4.UseVisualStyleBackColor = false;
@@ -1258,7 +1258,7 @@ namespace com.AComm
             this.checkBoxBit3.BackColor = System.Drawing.Color.Silver;
             this.checkBoxBit3.Location = new System.Drawing.Point(197, 391);
             this.checkBoxBit3.Name = "checkBoxBit3";
-            this.checkBoxBit3.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxBit3.Size = new System.Drawing.Size(38, 21);
             this.checkBoxBit3.TabIndex = 18;
             this.checkBoxBit3.Text = "4";
             this.checkBoxBit3.UseVisualStyleBackColor = false;
@@ -1270,7 +1270,7 @@ namespace com.AComm
             this.checkBoxBit2.BackColor = System.Drawing.Color.Silver;
             this.checkBoxBit2.Location = new System.Drawing.Point(156, 391);
             this.checkBoxBit2.Name = "checkBoxBit2";
-            this.checkBoxBit2.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxBit2.Size = new System.Drawing.Size(38, 21);
             this.checkBoxBit2.TabIndex = 17;
             this.checkBoxBit2.Text = "5";
             this.checkBoxBit2.UseVisualStyleBackColor = false;
@@ -1282,7 +1282,7 @@ namespace com.AComm
             this.checkBoxBit1.BackColor = System.Drawing.Color.Silver;
             this.checkBoxBit1.Location = new System.Drawing.Point(115, 391);
             this.checkBoxBit1.Name = "checkBoxBit1";
-            this.checkBoxBit1.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxBit1.Size = new System.Drawing.Size(38, 21);
             this.checkBoxBit1.TabIndex = 16;
             this.checkBoxBit1.Text = "6";
             this.checkBoxBit1.UseVisualStyleBackColor = false;
@@ -1294,7 +1294,7 @@ namespace com.AComm
             this.checkBoxBit0.BackColor = System.Drawing.Color.Silver;
             this.checkBoxBit0.Location = new System.Drawing.Point(74, 391);
             this.checkBoxBit0.Name = "checkBoxBit0";
-            this.checkBoxBit0.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxBit0.Size = new System.Drawing.Size(38, 21);
             this.checkBoxBit0.TabIndex = 15;
             this.checkBoxBit0.Text = "7";
             this.checkBoxBit0.UseVisualStyleBackColor = false;
@@ -1306,7 +1306,7 @@ namespace com.AComm
             this.labelcheckBoxBit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelcheckBoxBit.Location = new System.Drawing.Point(162, 367);
             this.labelcheckBoxBit.Name = "labelcheckBoxBit";
-            this.labelcheckBoxBit.Size = new System.Drawing.Size(14, 13);
+            this.labelcheckBoxBit.Size = new System.Drawing.Size(17, 17);
             this.labelcheckBoxBit.TabIndex = 14;
             this.labelcheckBoxBit.Text = "0";
             // 
@@ -1315,7 +1315,7 @@ namespace com.AComm
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(7, 367);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 13);
+            this.label11.Size = new System.Drawing.Size(122, 17);
             this.label11.TabIndex = 13;
             this.label11.Text = "System Command";
             // 
@@ -1325,7 +1325,7 @@ namespace com.AComm
             this.labelAmpValue5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAmpValue5.Location = new System.Drawing.Point(148, 154);
             this.labelAmpValue5.Name = "labelAmpValue5";
-            this.labelAmpValue5.Size = new System.Drawing.Size(14, 13);
+            this.labelAmpValue5.Size = new System.Drawing.Size(17, 17);
             this.labelAmpValue5.TabIndex = 10;
             this.labelAmpValue5.Text = "0";
             // 
@@ -1334,7 +1334,7 @@ namespace com.AComm
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(83, 154);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 13);
+            this.label9.Size = new System.Drawing.Size(85, 17);
             this.label9.TabIndex = 9;
             this.label9.Text = "Frequency 5";
             // 
@@ -1344,7 +1344,7 @@ namespace com.AComm
             this.labelAmpValue3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAmpValue3.Location = new System.Drawing.Point(151, 91);
             this.labelAmpValue3.Name = "labelAmpValue3";
-            this.labelAmpValue3.Size = new System.Drawing.Size(14, 13);
+            this.labelAmpValue3.Size = new System.Drawing.Size(17, 17);
             this.labelAmpValue3.TabIndex = 6;
             this.labelAmpValue3.Text = "0";
             // 
@@ -1353,7 +1353,7 @@ namespace com.AComm
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(86, 91);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 13);
+            this.label7.Size = new System.Drawing.Size(85, 17);
             this.label7.TabIndex = 5;
             this.label7.Text = "Frequency 3";
             // 
@@ -1363,7 +1363,7 @@ namespace com.AComm
             this.labelAmpValue1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAmpValue1.Location = new System.Drawing.Point(148, 28);
             this.labelAmpValue1.Name = "labelAmpValue1";
-            this.labelAmpValue1.Size = new System.Drawing.Size(14, 13);
+            this.labelAmpValue1.Size = new System.Drawing.Size(17, 17);
             this.labelAmpValue1.TabIndex = 2;
             this.labelAmpValue1.Text = "0";
             // 
@@ -1372,7 +1372,7 @@ namespace com.AComm
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(83, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.Size = new System.Drawing.Size(85, 17);
             this.label4.TabIndex = 1;
             this.label4.Text = "Frequency 1";
             // 
@@ -1382,7 +1382,7 @@ namespace com.AComm
             this.trackBarFreq1.Location = new System.Drawing.Point(63, 56);
             this.trackBarFreq1.Maximum = 255;
             this.trackBarFreq1.Name = "trackBarFreq1";
-            this.trackBarFreq1.Size = new System.Drawing.Size(172, 45);
+            this.trackBarFreq1.Size = new System.Drawing.Size(172, 53);
             this.trackBarFreq1.TabIndex = 0;
             this.trackBarFreq1.TabStop = false;
             this.trackBarFreq1.TickFrequency = 13;
@@ -1394,7 +1394,7 @@ namespace com.AComm
             this.trackBarFreq3.Location = new System.Drawing.Point(63, 118);
             this.trackBarFreq3.Maximum = 255;
             this.trackBarFreq3.Name = "trackBarFreq3";
-            this.trackBarFreq3.Size = new System.Drawing.Size(172, 45);
+            this.trackBarFreq3.Size = new System.Drawing.Size(172, 53);
             this.trackBarFreq3.TabIndex = 3;
             this.trackBarFreq3.TickFrequency = 13;
             this.trackBarFreq3.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
@@ -1405,7 +1405,7 @@ namespace com.AComm
             this.trackBarFreq5.Location = new System.Drawing.Point(63, 180);
             this.trackBarFreq5.Maximum = 255;
             this.trackBarFreq5.Name = "trackBarFreq5";
-            this.trackBarFreq5.Size = new System.Drawing.Size(172, 45);
+            this.trackBarFreq5.Size = new System.Drawing.Size(172, 53);
             this.trackBarFreq5.TabIndex = 7;
             this.trackBarFreq5.TickFrequency = 13;
             this.trackBarFreq5.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
@@ -1415,7 +1415,7 @@ namespace com.AComm
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(184, 64);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(60, 13);
+            this.label18.Size = new System.Drawing.Size(74, 17);
             this.label18.TabIndex = 86;
             this.label18.Text = "Register 3:";
             // 
@@ -1446,7 +1446,7 @@ namespace com.AComm
             this.checkBoxContFeed.AutoSize = true;
             this.checkBoxContFeed.Location = new System.Drawing.Point(98, 24);
             this.checkBoxContFeed.Name = "checkBoxContFeed";
-            this.checkBoxContFeed.Size = new System.Drawing.Size(42, 23);
+            this.checkBoxContFeed.Size = new System.Drawing.Size(52, 27);
             this.checkBoxContFeed.TabIndex = 2;
             this.checkBoxContFeed.Text = "Read";
             this.checkBoxContFeed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1509,7 +1509,7 @@ namespace com.AComm
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(422, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
+            this.label1.Size = new System.Drawing.Size(16, 17);
             this.label1.TabIndex = 99;
             this.label1.Text = "7";
             // 
@@ -1518,7 +1518,7 @@ namespace com.AComm
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(397, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.Size = new System.Drawing.Size(16, 17);
             this.label2.TabIndex = 98;
             this.label2.Text = "6";
             // 
@@ -1527,7 +1527,7 @@ namespace com.AComm
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(372, 49);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 13);
+            this.label3.Size = new System.Drawing.Size(16, 17);
             this.label3.TabIndex = 97;
             this.label3.Text = "5";
             // 
@@ -1536,7 +1536,7 @@ namespace com.AComm
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(347, 49);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(13, 13);
+            this.label19.Size = new System.Drawing.Size(16, 17);
             this.label19.TabIndex = 96;
             this.label19.Text = "4";
             // 
@@ -1545,7 +1545,7 @@ namespace com.AComm
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(322, 49);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(13, 13);
+            this.label20.Size = new System.Drawing.Size(16, 17);
             this.label20.TabIndex = 95;
             this.label20.Text = "3";
             // 
@@ -1554,7 +1554,7 @@ namespace com.AComm
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(247, 49);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(13, 13);
+            this.label21.Size = new System.Drawing.Size(16, 17);
             this.label21.TabIndex = 92;
             this.label21.Text = "0";
             // 
@@ -1563,7 +1563,7 @@ namespace com.AComm
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(297, 49);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(13, 13);
+            this.label22.Size = new System.Drawing.Size(16, 17);
             this.label22.TabIndex = 94;
             this.label22.Text = "2";
             // 
@@ -1572,7 +1572,7 @@ namespace com.AComm
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(272, 49);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(13, 13);
+            this.label23.Size = new System.Drawing.Size(16, 17);
             this.label23.TabIndex = 93;
             this.label23.Text = "1";
             // 
@@ -1701,7 +1701,7 @@ namespace com.AComm
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(203, 49);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 13);
+            this.label15.Size = new System.Drawing.Size(16, 17);
             this.label15.TabIndex = 83;
             this.label15.Text = "7";
             // 
@@ -1720,7 +1720,7 @@ namespace com.AComm
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(178, 49);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(13, 13);
+            this.label14.Size = new System.Drawing.Size(16, 17);
             this.label14.TabIndex = 82;
             this.label14.Text = "6";
             // 
@@ -1739,7 +1739,7 @@ namespace com.AComm
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(153, 49);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 13);
+            this.label13.Size = new System.Drawing.Size(16, 17);
             this.label13.TabIndex = 81;
             this.label13.Text = "5";
             // 
@@ -1758,7 +1758,7 @@ namespace com.AComm
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(128, 49);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(13, 13);
+            this.label12.Size = new System.Drawing.Size(16, 17);
             this.label12.TabIndex = 80;
             this.label12.Text = "4";
             // 
@@ -1777,7 +1777,7 @@ namespace com.AComm
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(103, 49);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 13);
+            this.label10.Size = new System.Drawing.Size(16, 17);
             this.label10.TabIndex = 79;
             this.label10.Text = "3";
             // 
@@ -1786,7 +1786,7 @@ namespace com.AComm
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(28, 49);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 13);
+            this.label5.Size = new System.Drawing.Size(16, 17);
             this.label5.TabIndex = 76;
             this.label5.Text = "0";
             // 
@@ -1795,7 +1795,7 @@ namespace com.AComm
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(78, 49);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(13, 13);
+            this.label8.Size = new System.Drawing.Size(16, 17);
             this.label8.TabIndex = 78;
             this.label8.Text = "2";
             // 
@@ -1804,7 +1804,7 @@ namespace com.AComm
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(53, 49);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 13);
+            this.label6.Size = new System.Drawing.Size(16, 17);
             this.label6.TabIndex = 77;
             this.label6.Text = "1";
             // 
@@ -1814,7 +1814,7 @@ namespace com.AComm
             this.labelRegister1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegister1.Location = new System.Drawing.Point(250, 29);
             this.labelRegister1.Name = "labelRegister1";
-            this.labelRegister1.Size = new System.Drawing.Size(16, 16);
+            this.labelRegister1.Size = new System.Drawing.Size(21, 21);
             this.labelRegister1.TabIndex = 84;
             this.labelRegister1.Text = "0";
             // 
@@ -1824,7 +1824,7 @@ namespace com.AComm
             this.labelRegister4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegister4.Location = new System.Drawing.Point(250, 65);
             this.labelRegister4.Name = "labelRegister4";
-            this.labelRegister4.Size = new System.Drawing.Size(16, 16);
+            this.labelRegister4.Size = new System.Drawing.Size(21, 21);
             this.labelRegister4.TabIndex = 86;
             this.labelRegister4.Text = "0";
             // 
@@ -1833,7 +1833,7 @@ namespace com.AComm
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(184, 30);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 13);
+            this.label16.Size = new System.Drawing.Size(74, 17);
             this.label16.TabIndex = 84;
             this.label16.Text = "Register 1:";
             // 
@@ -1843,7 +1843,7 @@ namespace com.AComm
             this.labelRegister2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegister2.Location = new System.Drawing.Point(250, 47);
             this.labelRegister2.Name = "labelRegister2";
-            this.labelRegister2.Size = new System.Drawing.Size(16, 16);
+            this.labelRegister2.Size = new System.Drawing.Size(21, 21);
             this.labelRegister2.TabIndex = 85;
             this.labelRegister2.Text = "0";
             // 
@@ -1852,17 +1852,17 @@ namespace com.AComm
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(184, 47);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 13);
+            this.label17.Size = new System.Drawing.Size(74, 17);
             this.label17.TabIndex = 85;
             this.label17.Text = "Register 2:";
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.zedGraphControlFFTs);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(610, 589);
+            this.tabPage4.Size = new System.Drawing.Size(610, 585);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "FFT";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1928,7 +1928,7 @@ namespace com.AComm
             this.channel1_info_label.AutoSize = true;
             this.channel1_info_label.Location = new System.Drawing.Point(11, 26);
             this.channel1_info_label.Name = "channel1_info_label";
-            this.channel1_info_label.Size = new System.Drawing.Size(79, 13);
+            this.channel1_info_label.Size = new System.Drawing.Size(97, 17);
             this.channel1_info_label.TabIndex = 0;
             this.channel1_info_label.Text = "[SIGNAL INFO]";
             // 
@@ -1948,7 +1948,7 @@ namespace com.AComm
             this.channel3_info_label.AutoSize = true;
             this.channel3_info_label.Location = new System.Drawing.Point(11, 28);
             this.channel3_info_label.Name = "channel3_info_label";
-            this.channel3_info_label.Size = new System.Drawing.Size(79, 13);
+            this.channel3_info_label.Size = new System.Drawing.Size(97, 17);
             this.channel3_info_label.TabIndex = 1;
             this.channel3_info_label.Text = "[SIGNAL INFO]";
             // 
@@ -1969,7 +1969,7 @@ namespace com.AComm
             this.channel2_info_label.AutoSize = true;
             this.channel2_info_label.Location = new System.Drawing.Point(11, 26);
             this.channel2_info_label.Name = "channel2_info_label";
-            this.channel2_info_label.Size = new System.Drawing.Size(79, 13);
+            this.channel2_info_label.Size = new System.Drawing.Size(97, 17);
             this.channel2_info_label.TabIndex = 0;
             this.channel2_info_label.Text = "[SIGNAL INFO]";
             // 
@@ -1990,13 +1990,13 @@ namespace com.AComm
             this.channel4_info_label.AutoSize = true;
             this.channel4_info_label.Location = new System.Drawing.Point(11, 26);
             this.channel4_info_label.Name = "channel4_info_label";
-            this.channel4_info_label.Size = new System.Drawing.Size(79, 13);
+            this.channel4_info_label.Size = new System.Drawing.Size(97, 17);
             this.channel4_info_label.TabIndex = 0;
             this.channel4_info_label.Text = "[SIGNAL INFO]";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1028, 773);

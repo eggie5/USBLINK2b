@@ -62,7 +62,7 @@ namespace com.AComm
                // ema.Evaluate("cd work"); //FOR MAT LAB 7.0.1
                 ///
                matlab.Execute("fs=1400");
-               matlab.Execute("cd C:\\Users\\AlexEgg\\Downloads\\CSharp_MATLAB\\CSharp_MATLAB\\mcode");
+               matlab.Execute("cd 'C:\\Program Files (x86)\\MATLAB\\R2009a\\work'");
 
             }
             catch (DllNotFoundException ee)
@@ -362,7 +362,8 @@ namespace com.AComm
 
 
                 //Create binary file for DYDA then run DYDA and copy image to clipboard
-                MakeBowStaff(@"bowstaff2.cdf");
+                string bow_path = String.Format(@"C:\\Program Files (x86)\\MATLAB\\R2009a\\work\\bowstaff{0}.cdf", plot_position);
+                MakeBowStaff(bow_path);
                 if (matlab != null && checkBoxMatlabEnabled.Checked)
                 {
                     matlab.Execute("DYDA");
