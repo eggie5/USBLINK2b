@@ -464,6 +464,7 @@ namespace com.AComm
 
         private void MakeBowStaff(string path)
         {
+            //test comment
             FileStream fs = new FileStream(path, FileMode.Create);
             BinaryWriter bw = new BinaryWriter(fs);
 
