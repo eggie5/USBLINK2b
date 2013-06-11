@@ -36,6 +36,8 @@ namespace com.AComm
         GraphPane[] panes = new GraphPane[4];
         Label[] data_labels = new Label[4];
 
+        CPanel control_panel = new CPanel();
+
 
         MLApp.MLApp matlab;
 
@@ -197,24 +199,24 @@ namespace com.AComm
 
 
             leds = new PictureBox[16];
-            leds[0] = led1;
-            leds[1] = led2;
-            leds[2] = led3;
-            leds[3] = led4;
-            leds[4] = led5;
-            leds[5] = led6;
-            leds[6] = led7;
-            leds[7] = led8;
+            leds[0] = this.control_panel.led1;
+            leds[1] = this.control_panel.led2;
+            leds[2] = this.control_panel.led3;
+            leds[3] = this.control_panel.led4;
+            leds[4] = this.control_panel.led5;
+            leds[5] = this.control_panel.led6;
+            leds[6] = this.control_panel.led7;
+            leds[7] = this.control_panel.led8;
 
             //second set
-            leds[8] = led9;
-            leds[9] = led10;
-            leds[10] = led11;
-            leds[11] = led12;
-            leds[12] = led13;
-            leds[13] = led14;
-            leds[14] = led15;
-            leds[15] = led16;
+            leds[8] = this.control_panel.led9;
+            leds[9] = this.control_panel.led10;
+            leds[10] = this.control_panel.led11;
+            leds[11] = this.control_panel.led12;
+            leds[12] = this.control_panel.led13;
+            leds[13] = this.control_panel.led14;
+            leds[14] = this.control_panel.led15;
+            leds[15] = this.control_panel.led16;
 
 
             SetupFFTTab();
@@ -309,13 +311,13 @@ namespace com.AComm
             this.BeginInvoke((System.Threading.ThreadStart)delegate
             {
                 if (!enabled)
-                    checkBoxContFeed.Checked = enabled;
+                    this.control_panel.checkBoxContFeed.Checked = enabled;
 
 
-                checkBoxContFeed.Enabled = enabled;
-                groupBoxAmps.Enabled = enabled;
-                groupBoxSysStatus.Enabled = enabled;
-                buttonWriteData.Enabled = enabled;
+                this.control_panel.checkBoxContFeed.Enabled = enabled;
+                control_panel.groupBoxAmps.Enabled = enabled;
+                this.control_panel.groupBoxSysStatus.Enabled = enabled;
+                this.control_panel.buttonWriteData.Enabled = enabled;
             });
            
         }
@@ -324,7 +326,7 @@ namespace com.AComm
         private void Poll_ReadData()
         {
 
-            if (checkBoxContFeed.Checked && !timerContFeed.Enabled)
+            if (this.control_panel.checkBoxContFeed.Checked && !timerContFeed.Enabled)
             {
                 timerContFeed.Start();
             }
@@ -339,9 +341,9 @@ namespace com.AComm
                 }
 
                 //upate those 3 bytes things    
-                labelRegister1.Text = fio.USBPacketData[4].ToString(); //2
-                labelRegister2.Text = fio.USBPacketData[5].ToString(); //3
-                labelRegister4.Text = fio.USBPacketData[6].ToString(); //4
+                this.control_panel.labelRegister1.Text = fio.USBPacketData[4].ToString(); //2
+                this.control_panel.labelRegister2.Text = fio.USBPacketData[5].ToString(); //3
+                this.control_panel.labelRegister4.Text = fio.USBPacketData[6].ToString(); //4
 
                 //Update the Graph count
                 statusPanelUSBStatus.Text = "  " + graphCounter.ToString() + " Samples";
@@ -558,7 +560,7 @@ namespace com.AComm
 
             string num = trackbar.Name.Substring(trackbar.Name.Length - 1);
 
-            groupBoxAmps.Controls["labelAmpValue"+num].Text = trackbar.Value.ToString();
+            this.control_panel.groupBoxAmps.Controls["labelAmpValue"+num].Text = trackbar.Value.ToString();
 
             //SEND TO USB
 
@@ -594,10 +596,10 @@ namespace com.AComm
             //loop throught all checkboxes to get values
             for (int i = 0; i < 8; i++)
             {
-                sb.Append(Convert.ToInt32(((CheckBox)groupBoxAmps.Controls[prefix + i.ToString()]).Checked).ToString());
+                sb.Append(Convert.ToInt32(((CheckBox)this.control_panel.groupBoxAmps.Controls[prefix + i.ToString()]).Checked).ToString());
             }
 
-            Label checkboxLabel = (Label)groupBoxAmps.Controls["label" + prefix];
+            Label checkboxLabel = (Label)this.control_panel.groupBoxAmps.Controls["label" + prefix];
             checkboxLabel.Text = sb.ToString();
 
             amp4 = Convert.ToByte(Conversion.BinToUInt(sb.ToString()));
@@ -607,7 +609,7 @@ namespace com.AComm
            
 
             //labelAmpValue4DecimalVal.Text = amp4.ToString();
-            Label decLabel = (Label)groupBoxAmps.Controls["labelDec" + prefix];
+            Label decLabel = (Label)this.control_panel.groupBoxAmps.Controls["labelDec" + prefix];
             decLabel.Text = amp4.ToString();
 
             //SEND TO USB
@@ -627,31 +629,31 @@ namespace com.AComm
             ampSettings[1] = 0x1D;
 
             //body
-            ampSettings[2] = (byte)Int32.Parse(textBoxAmp1.Text);
-            ampSettings[3] = (byte)trackBarFreq1.Value;
+            ampSettings[2] = (byte)Int32.Parse(this.control_panel.textBoxAmp1.Text);
+            ampSettings[3] = (byte)this.control_panel.trackBarFreq1.Value;
 
-            ampSettings[4] = (byte)Int32.Parse(textBoxAmp2.Text);
-            ampSettings[5] = (byte)trackBarFreq2.Value;
+            ampSettings[4] = (byte)Int32.Parse(this.control_panel.textBoxAmp2.Text);
+            ampSettings[5] = (byte)this.control_panel.trackBarFreq2.Value;
 
-            ampSettings[6] = (byte)Int32.Parse(textBoxAmp3.Text);
-            ampSettings[7] = (byte)trackBarFreq3.Value;
+            ampSettings[6] = (byte)Int32.Parse(this.control_panel.textBoxAmp3.Text);
+            ampSettings[7] = (byte)this.control_panel.trackBarFreq3.Value;
 
-            ampSettings[8] = (byte)Int32.Parse(textBoxAmp4.Text);
-            ampSettings[9] = (byte)trackBarFreq4.Value;
+            ampSettings[8] = (byte)Int32.Parse(this.control_panel.textBoxAmp4.Text);
+            ampSettings[9] = (byte)this.control_panel.trackBarFreq4.Value;
 
-            ampSettings[10] = (byte)Int32.Parse(textBoxAmp5.Text);
-            ampSettings[11] = (byte)trackBarFreq5.Value;
+            ampSettings[10] = (byte)Int32.Parse(this.control_panel.textBoxAmp5.Text);
+            ampSettings[11] = (byte)this.control_panel.trackBarFreq5.Value;
 
-            ampSettings[12] = (byte)Int32.Parse(textBoxAmp6.Text);
-            ampSettings[13] = (byte)trackBarFreq6.Value;
+            ampSettings[12] = (byte)Int32.Parse(this.control_panel.textBoxAmp6.Text);
+            ampSettings[13] = (byte)this.control_panel.trackBarFreq6.Value;
 
-            ampSettings[14] = (byte)Int32.Parse(labelDeccheckBoxCS0_.Text); //(byte)Int32.Parse(textBoxAmp7.Text);
-            ampSettings[15] = (byte)Int32.Parse(labelDeccheckBoxCS1_.Text); // byte)trackBarFreq7.Value;
-            ampSettings[16] = (byte)Int32.Parse(labelDeccheckBoxCS2_.Text); //byte)Int32.Parse(textBoxAmp8.Text);
-            ampSettings[17] = (byte)Int32.Parse(labelDeccheckBoxCS3_.Text); //(byte)trackBarFreq8.Value;
+            ampSettings[14] = (byte)Int32.Parse(this.control_panel.labelDeccheckBoxCS0_.Text); //(byte)Int32.Parse(textBoxAmp7.Text);
+            ampSettings[15] = (byte)Int32.Parse(this.control_panel.labelDeccheckBoxCS1_.Text); // byte)trackBarFreq7.Value;
+            ampSettings[16] = (byte)Int32.Parse(this.control_panel.labelDeccheckBoxCS2_.Text); //byte)Int32.Parse(textBoxAmp8.Text);
+            ampSettings[17] = (byte)Int32.Parse(this.control_panel.labelDeccheckBoxCS3_.Text); //(byte)trackBarFreq8.Value;
         
             //checkboxes
-            ampSettings[18] = (byte)Int32.Parse(labelDeccheckBoxBit.Text); //this val is already in decimal
+            ampSettings[18] = (byte)Int32.Parse(this.control_panel.labelDeccheckBoxBit.Text); //this val is already in decimal
 
             //post-amble
             ampSettings[19] = 0x5d;
@@ -712,7 +714,7 @@ namespace com.AComm
 
         private void checkBoxContFeed_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBoxContFeed.Checked && !timerContFeed.Enabled)
+            if (this.control_panel.checkBoxContFeed.Checked && !timerContFeed.Enabled)
             {
                 timerContFeed.Start();
 
@@ -739,7 +741,7 @@ namespace com.AComm
         private int plot_position;
         private void timerTick(object sender, EventArgs e)
         {
-            if (checkBoxContFeed.Checked)
+            if (this.control_panel.checkBoxContFeed.Checked)
             {
                 Poll_ReadData();
             }
@@ -828,6 +830,11 @@ namespace com.AComm
         private void buttonWriteData_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonOpenCPanel_Click(object sender, EventArgs e)
+        {
+            control_panel.Show();
         }
 
         
