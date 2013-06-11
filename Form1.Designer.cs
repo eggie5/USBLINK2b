@@ -31,13 +31,22 @@ namespace com.AComm
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.usbStatusStrip = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripMenuItemConnect = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemDisconnect = new System.Windows.Forms.ToolStripMenuItem();
+            this.uSBControlPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusPanelInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusPanelUSBStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkBoxMatlabEnabled = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Graph = new ZedGraph.ZedGraphControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.buttonOpenCPanel = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.zedGraphControlFFTs = new ZedGraph.ZedGraphControl();
             this.timerContFeed = new System.Windows.Forms.Timer(this.components);
             this.timerStatusMessage = new System.Windows.Forms.Timer(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -48,17 +57,9 @@ namespace com.AComm
             this.channel2_info_label = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.channel4_info_label = new System.Windows.Forms.Label();
-            this.Graph = new ZedGraph.ZedGraphControl();
-            this.zedGraphControlFFTs = new ZedGraph.ZedGraphControl();
-            this.usbStatusStrip = new System.Windows.Forms.ToolStripSplitButton();
-            this.toolStripMenuItemConnect = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemDisconnect = new System.Windows.Forms.ToolStripMenuItem();
-            this.uSBControlPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBoxMatlabEnabled = new System.Windows.Forms.CheckBox();
-            this.buttonOpenCPanel = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -67,7 +68,6 @@ namespace com.AComm
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -81,6 +81,43 @@ namespace com.AComm
             this.statusStrip1.Size = new System.Drawing.Size(1028, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // usbStatusStrip
+            // 
+            this.usbStatusStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemConnect,
+            this.toolStripMenuItemDisconnect,
+            this.uSBControlPanelToolStripMenuItem});
+            this.usbStatusStrip.Image = global::com.AComm.Properties.Resources.try7;
+            this.usbStatusStrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.usbStatusStrip.Name = "usbStatusStrip";
+            this.usbStatusStrip.Size = new System.Drawing.Size(108, 20);
+            this.usbStatusStrip.Text = "USB Status:";
+            // 
+            // toolStripMenuItemConnect
+            // 
+            this.toolStripMenuItemConnect.Image = global::com.AComm.Properties.Resources.connect3;
+            this.toolStripMenuItemConnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItemConnect.Name = "toolStripMenuItemConnect";
+            this.toolStripMenuItemConnect.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemConnect.Text = "Connect";
+            this.toolStripMenuItemConnect.Click += new System.EventHandler(this.toolStripMenuItemConnect_Click);
+            // 
+            // toolStripMenuItemDisconnect
+            // 
+            this.toolStripMenuItemDisconnect.Image = global::com.AComm.Properties.Resources.try7;
+            this.toolStripMenuItemDisconnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItemDisconnect.Name = "toolStripMenuItemDisconnect";
+            this.toolStripMenuItemDisconnect.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemDisconnect.Text = "Disconect";
+            this.toolStripMenuItemDisconnect.Click += new System.EventHandler(this.toolStripMenuItemDisconnect_Click);
+            // 
+            // uSBControlPanelToolStripMenuItem
+            // 
+            this.uSBControlPanelToolStripMenuItem.Name = "uSBControlPanelToolStripMenuItem";
+            this.uSBControlPanelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.uSBControlPanelToolStripMenuItem.Text = "USB Control Panel";
+            this.uSBControlPanelToolStripMenuItem.Click += new System.EventHandler(this.uSBControlPanelToolStripMenuItem_Click);
             // 
             // statusPanelInfo
             // 
@@ -108,6 +145,28 @@ namespace com.AComm
             this.panel1.Size = new System.Drawing.Size(1028, 100);
             this.panel1.TabIndex = 4;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(421, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // checkBoxMatlabEnabled
+            // 
+            this.checkBoxMatlabEnabled.AutoSize = true;
+            this.checkBoxMatlabEnabled.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled.Image")));
+            this.checkBoxMatlabEnabled.Location = new System.Drawing.Point(966, 35);
+            this.checkBoxMatlabEnabled.Name = "checkBoxMatlabEnabled";
+            this.checkBoxMatlabEnabled.Size = new System.Drawing.Size(45, 22);
+            this.checkBoxMatlabEnabled.TabIndex = 31;
+            this.checkBoxMatlabEnabled.UseVisualStyleBackColor = true;
+            this.checkBoxMatlabEnabled.CheckedChanged += new System.EventHandler(this.checkBoxMatlabEnabled_CheckedChanged);
+            // 
             // tabControl1
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -133,6 +192,41 @@ namespace com.AComm
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "USB Output";
             // 
+            // Graph
+            // 
+            this.Graph.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Graph.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Graph.IsEnableHPan = true;
+            this.Graph.IsEnableVPan = true;
+            this.Graph.IsEnableZoom = true;
+            this.Graph.IsScrollY2 = false;
+            this.Graph.IsShowContextMenu = true;
+            this.Graph.IsShowHScrollBar = false;
+            this.Graph.IsShowPointValues = false;
+            this.Graph.IsShowVScrollBar = false;
+            this.Graph.IsZoomOnMouseCenter = false;
+            this.Graph.Location = new System.Drawing.Point(3, 3);
+            this.Graph.Name = "Graph";
+            this.Graph.PanButtons = System.Windows.Forms.MouseButtons.Left;
+            this.Graph.PanButtons2 = System.Windows.Forms.MouseButtons.Middle;
+            this.Graph.PanModifierKeys2 = System.Windows.Forms.Keys.None;
+            this.Graph.PointDateFormat = "g";
+            this.Graph.PointValueFormat = "G";
+            this.Graph.ScrollMaxX = 0D;
+            this.Graph.ScrollMaxY = 0D;
+            this.Graph.ScrollMaxY2 = 0D;
+            this.Graph.ScrollMinX = 0D;
+            this.Graph.ScrollMinY = 0D;
+            this.Graph.ScrollMinY2 = 0D;
+            this.Graph.Size = new System.Drawing.Size(604, 583);
+            this.Graph.TabIndex = 0;
+            this.Graph.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
+            this.Graph.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
+            this.Graph.ZoomModifierKeys = System.Windows.Forms.Keys.None;
+            this.Graph.ZoomModifierKeys2 = System.Windows.Forms.Keys.None;
+            this.Graph.ZoomStepFraction = 0.1D;
+            this.Graph.Load += new System.EventHandler(this.Graph_Load);
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.buttonOpenCPanel);
@@ -144,6 +238,16 @@ namespace com.AComm
             this.tabPage3.Text = "Controls";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // buttonOpenCPanel
+            // 
+            this.buttonOpenCPanel.Location = new System.Drawing.Point(19, 6);
+            this.buttonOpenCPanel.Name = "buttonOpenCPanel";
+            this.buttonOpenCPanel.Size = new System.Drawing.Size(196, 79);
+            this.buttonOpenCPanel.TabIndex = 0;
+            this.buttonOpenCPanel.Text = "Open Control Panel";
+            this.buttonOpenCPanel.UseVisualStyleBackColor = true;
+            this.buttonOpenCPanel.Click += new System.EventHandler(this.buttonOpenCPanel_Click);
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.zedGraphControlFFTs);
@@ -154,6 +258,40 @@ namespace com.AComm
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "FFT";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // zedGraphControlFFTs
+            // 
+            this.zedGraphControlFFTs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zedGraphControlFFTs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zedGraphControlFFTs.IsEnableHPan = true;
+            this.zedGraphControlFFTs.IsEnableVPan = true;
+            this.zedGraphControlFFTs.IsEnableZoom = true;
+            this.zedGraphControlFFTs.IsScrollY2 = false;
+            this.zedGraphControlFFTs.IsShowContextMenu = true;
+            this.zedGraphControlFFTs.IsShowHScrollBar = false;
+            this.zedGraphControlFFTs.IsShowPointValues = false;
+            this.zedGraphControlFFTs.IsShowVScrollBar = false;
+            this.zedGraphControlFFTs.IsZoomOnMouseCenter = false;
+            this.zedGraphControlFFTs.Location = new System.Drawing.Point(3, 3);
+            this.zedGraphControlFFTs.Name = "zedGraphControlFFTs";
+            this.zedGraphControlFFTs.PanButtons = System.Windows.Forms.MouseButtons.Left;
+            this.zedGraphControlFFTs.PanButtons2 = System.Windows.Forms.MouseButtons.Middle;
+            this.zedGraphControlFFTs.PanModifierKeys2 = System.Windows.Forms.Keys.None;
+            this.zedGraphControlFFTs.PointDateFormat = "g";
+            this.zedGraphControlFFTs.PointValueFormat = "G";
+            this.zedGraphControlFFTs.ScrollMaxX = 0D;
+            this.zedGraphControlFFTs.ScrollMaxY = 0D;
+            this.zedGraphControlFFTs.ScrollMaxY2 = 0D;
+            this.zedGraphControlFFTs.ScrollMinX = 0D;
+            this.zedGraphControlFFTs.ScrollMinY = 0D;
+            this.zedGraphControlFFTs.ScrollMinY2 = 0D;
+            this.zedGraphControlFFTs.Size = new System.Drawing.Size(604, 583);
+            this.zedGraphControlFFTs.TabIndex = 1;
+            this.zedGraphControlFFTs.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
+            this.zedGraphControlFFTs.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
+            this.zedGraphControlFFTs.ZoomModifierKeys = System.Windows.Forms.Keys.None;
+            this.zedGraphControlFFTs.ZoomModifierKeys2 = System.Windows.Forms.Keys.None;
+            this.zedGraphControlFFTs.ZoomStepFraction = 0.1D;
             // 
             // timerContFeed
             // 
@@ -248,144 +386,6 @@ namespace com.AComm
             this.channel4_info_label.TabIndex = 0;
             this.channel4_info_label.Text = "[SIGNAL INFO]";
             // 
-            // Graph
-            // 
-            this.Graph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Graph.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Graph.IsEnableHPan = true;
-            this.Graph.IsEnableVPan = true;
-            this.Graph.IsEnableZoom = true;
-            this.Graph.IsScrollY2 = false;
-            this.Graph.IsShowContextMenu = true;
-            this.Graph.IsShowHScrollBar = false;
-            this.Graph.IsShowPointValues = false;
-            this.Graph.IsShowVScrollBar = false;
-            this.Graph.IsZoomOnMouseCenter = false;
-            this.Graph.Location = new System.Drawing.Point(3, 3);
-            this.Graph.Name = "Graph";
-            this.Graph.PanButtons = System.Windows.Forms.MouseButtons.Left;
-            this.Graph.PanButtons2 = System.Windows.Forms.MouseButtons.Middle;
-            this.Graph.PanModifierKeys2 = System.Windows.Forms.Keys.None;
-            this.Graph.PointDateFormat = "g";
-            this.Graph.PointValueFormat = "G";
-            this.Graph.ScrollMaxX = 0D;
-            this.Graph.ScrollMaxY = 0D;
-            this.Graph.ScrollMaxY2 = 0D;
-            this.Graph.ScrollMinX = 0D;
-            this.Graph.ScrollMinY = 0D;
-            this.Graph.ScrollMinY2 = 0D;
-            this.Graph.Size = new System.Drawing.Size(604, 583);
-            this.Graph.TabIndex = 0;
-            this.Graph.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
-            this.Graph.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
-            this.Graph.ZoomModifierKeys = System.Windows.Forms.Keys.None;
-            this.Graph.ZoomModifierKeys2 = System.Windows.Forms.Keys.None;
-            this.Graph.ZoomStepFraction = 0.1D;
-            this.Graph.Load += new System.EventHandler(this.Graph_Load);
-            // 
-            // zedGraphControlFFTs
-            // 
-            this.zedGraphControlFFTs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zedGraphControlFFTs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zedGraphControlFFTs.IsEnableHPan = true;
-            this.zedGraphControlFFTs.IsEnableVPan = true;
-            this.zedGraphControlFFTs.IsEnableZoom = true;
-            this.zedGraphControlFFTs.IsScrollY2 = false;
-            this.zedGraphControlFFTs.IsShowContextMenu = true;
-            this.zedGraphControlFFTs.IsShowHScrollBar = false;
-            this.zedGraphControlFFTs.IsShowPointValues = false;
-            this.zedGraphControlFFTs.IsShowVScrollBar = false;
-            this.zedGraphControlFFTs.IsZoomOnMouseCenter = false;
-            this.zedGraphControlFFTs.Location = new System.Drawing.Point(3, 3);
-            this.zedGraphControlFFTs.Name = "zedGraphControlFFTs";
-            this.zedGraphControlFFTs.PanButtons = System.Windows.Forms.MouseButtons.Left;
-            this.zedGraphControlFFTs.PanButtons2 = System.Windows.Forms.MouseButtons.Middle;
-            this.zedGraphControlFFTs.PanModifierKeys2 = System.Windows.Forms.Keys.None;
-            this.zedGraphControlFFTs.PointDateFormat = "g";
-            this.zedGraphControlFFTs.PointValueFormat = "G";
-            this.zedGraphControlFFTs.ScrollMaxX = 0D;
-            this.zedGraphControlFFTs.ScrollMaxY = 0D;
-            this.zedGraphControlFFTs.ScrollMaxY2 = 0D;
-            this.zedGraphControlFFTs.ScrollMinX = 0D;
-            this.zedGraphControlFFTs.ScrollMinY = 0D;
-            this.zedGraphControlFFTs.ScrollMinY2 = 0D;
-            this.zedGraphControlFFTs.Size = new System.Drawing.Size(604, 583);
-            this.zedGraphControlFFTs.TabIndex = 1;
-            this.zedGraphControlFFTs.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
-            this.zedGraphControlFFTs.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
-            this.zedGraphControlFFTs.ZoomModifierKeys = System.Windows.Forms.Keys.None;
-            this.zedGraphControlFFTs.ZoomModifierKeys2 = System.Windows.Forms.Keys.None;
-            this.zedGraphControlFFTs.ZoomStepFraction = 0.1D;
-            // 
-            // usbStatusStrip
-            // 
-            this.usbStatusStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemConnect,
-            this.toolStripMenuItemDisconnect,
-            this.uSBControlPanelToolStripMenuItem});
-            this.usbStatusStrip.Image = global::com.AComm.Properties.Resources.try7;
-            this.usbStatusStrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.usbStatusStrip.Name = "usbStatusStrip";
-            this.usbStatusStrip.Size = new System.Drawing.Size(108, 19);
-            this.usbStatusStrip.Text = "USB Status:";
-            // 
-            // toolStripMenuItemConnect
-            // 
-            this.toolStripMenuItemConnect.Image = global::com.AComm.Properties.Resources.connect3;
-            this.toolStripMenuItemConnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItemConnect.Name = "toolStripMenuItemConnect";
-            this.toolStripMenuItemConnect.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItemConnect.Text = "Connect";
-            this.toolStripMenuItemConnect.Click += new System.EventHandler(this.toolStripMenuItemConnect_Click);
-            // 
-            // toolStripMenuItemDisconnect
-            // 
-            this.toolStripMenuItemDisconnect.Image = global::com.AComm.Properties.Resources.try7;
-            this.toolStripMenuItemDisconnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItemDisconnect.Name = "toolStripMenuItemDisconnect";
-            this.toolStripMenuItemDisconnect.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItemDisconnect.Text = "Disconect";
-            this.toolStripMenuItemDisconnect.Click += new System.EventHandler(this.toolStripMenuItemDisconnect_Click);
-            // 
-            // uSBControlPanelToolStripMenuItem
-            // 
-            this.uSBControlPanelToolStripMenuItem.Name = "uSBControlPanelToolStripMenuItem";
-            this.uSBControlPanelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.uSBControlPanelToolStripMenuItem.Text = "USB Control Panel";
-            this.uSBControlPanelToolStripMenuItem.Click += new System.EventHandler(this.uSBControlPanelToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(421, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // checkBoxMatlabEnabled
-            // 
-            this.checkBoxMatlabEnabled.AutoSize = true;
-            this.checkBoxMatlabEnabled.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled.Image")));
-            this.checkBoxMatlabEnabled.Location = new System.Drawing.Point(966, 35);
-            this.checkBoxMatlabEnabled.Name = "checkBoxMatlabEnabled";
-            this.checkBoxMatlabEnabled.Size = new System.Drawing.Size(45, 22);
-            this.checkBoxMatlabEnabled.TabIndex = 31;
-            this.checkBoxMatlabEnabled.UseVisualStyleBackColor = true;
-            this.checkBoxMatlabEnabled.CheckedChanged += new System.EventHandler(this.checkBoxMatlabEnabled_CheckedChanged);
-            // 
-            // buttonOpenCPanel
-            // 
-            this.buttonOpenCPanel.Location = new System.Drawing.Point(19, 6);
-            this.buttonOpenCPanel.Name = "buttonOpenCPanel";
-            this.buttonOpenCPanel.Size = new System.Drawing.Size(196, 79);
-            this.buttonOpenCPanel.TabIndex = 0;
-            this.buttonOpenCPanel.Text = "Open Control Panel";
-            this.buttonOpenCPanel.UseVisualStyleBackColor = true;
-            this.buttonOpenCPanel.Click += new System.EventHandler(this.buttonOpenCPanel_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,6 +409,7 @@ namespace com.AComm
             this.statusStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
@@ -421,7 +422,6 @@ namespace com.AComm
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,7 +434,6 @@ namespace com.AComm
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private ZedGraph.ZedGraphControl Graph;
-        private System.Windows.Forms.ToolStripStatusLabel statusPanelUSBStatus;
         internal System.Windows.Forms.ToolStripStatusLabel statusPanelInfo;
         internal System.Windows.Forms.Timer timerContFeed;
         private System.Windows.Forms.ToolStripSplitButton usbStatusStrip;
@@ -456,6 +455,7 @@ namespace com.AComm
         private System.Windows.Forms.TabPage tabPage4;
         private ZedGraph.ZedGraphControl zedGraphControlFFTs;
         private System.Windows.Forms.Button buttonOpenCPanel;
+        internal System.Windows.Forms.ToolStripStatusLabel statusPanelUSBStatus;
     }
 }
 

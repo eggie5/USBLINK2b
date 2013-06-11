@@ -376,6 +376,7 @@
             this.checkBoxCS3_7.TabIndex = 89;
             this.checkBoxCS3_7.Text = "0";
             this.checkBoxCS3_7.UseVisualStyleBackColor = false;
+            this.checkBoxCS3_7.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS3_6
             // 
@@ -387,6 +388,7 @@
             this.checkBoxCS3_6.TabIndex = 88;
             this.checkBoxCS3_6.Text = "1";
             this.checkBoxCS3_6.UseVisualStyleBackColor = false;
+            this.checkBoxCS3_6.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS3_5
             // 
@@ -398,6 +400,7 @@
             this.checkBoxCS3_5.TabIndex = 87;
             this.checkBoxCS3_5.Text = "2";
             this.checkBoxCS3_5.UseVisualStyleBackColor = false;
+            this.checkBoxCS3_5.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS3_4
             // 
@@ -409,6 +412,7 @@
             this.checkBoxCS3_4.TabIndex = 86;
             this.checkBoxCS3_4.Text = "3";
             this.checkBoxCS3_4.UseVisualStyleBackColor = false;
+            this.checkBoxCS3_4.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS3_3
             // 
@@ -420,6 +424,7 @@
             this.checkBoxCS3_3.TabIndex = 85;
             this.checkBoxCS3_3.Text = "4";
             this.checkBoxCS3_3.UseVisualStyleBackColor = false;
+            this.checkBoxCS3_3.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS3_2
             // 
@@ -431,6 +436,7 @@
             this.checkBoxCS3_2.TabIndex = 84;
             this.checkBoxCS3_2.Text = "5";
             this.checkBoxCS3_2.UseVisualStyleBackColor = false;
+            this.checkBoxCS3_2.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS3_1
             // 
@@ -442,6 +448,7 @@
             this.checkBoxCS3_1.TabIndex = 83;
             this.checkBoxCS3_1.Text = "6";
             this.checkBoxCS3_1.UseVisualStyleBackColor = false;
+            this.checkBoxCS3_1.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS3_0
             // 
@@ -453,6 +460,7 @@
             this.checkBoxCS3_0.TabIndex = 82;
             this.checkBoxCS3_0.Text = "7";
             this.checkBoxCS3_0.UseVisualStyleBackColor = false;
+            this.checkBoxCS3_0.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS2_7
             // 
@@ -464,6 +472,7 @@
             this.checkBoxCS2_7.TabIndex = 81;
             this.checkBoxCS2_7.Text = "0";
             this.checkBoxCS2_7.UseVisualStyleBackColor = false;
+            this.checkBoxCS2_7.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS2_6
             // 
@@ -475,6 +484,7 @@
             this.checkBoxCS2_6.TabIndex = 80;
             this.checkBoxCS2_6.Text = "1";
             this.checkBoxCS2_6.UseVisualStyleBackColor = false;
+            this.checkBoxCS2_6.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS2_5
             // 
@@ -486,6 +496,7 @@
             this.checkBoxCS2_5.TabIndex = 79;
             this.checkBoxCS2_5.Text = "2";
             this.checkBoxCS2_5.UseVisualStyleBackColor = false;
+            this.checkBoxCS2_5.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS2_4
             // 
@@ -497,6 +508,7 @@
             this.checkBoxCS2_4.TabIndex = 78;
             this.checkBoxCS2_4.Text = "3";
             this.checkBoxCS2_4.UseVisualStyleBackColor = false;
+            this.checkBoxCS2_4.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS2_3
             // 
@@ -508,6 +520,7 @@
             this.checkBoxCS2_3.TabIndex = 77;
             this.checkBoxCS2_3.Text = "4";
             this.checkBoxCS2_3.UseVisualStyleBackColor = false;
+            this.checkBoxCS2_3.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS2_2
             // 
@@ -519,6 +532,7 @@
             this.checkBoxCS2_2.TabIndex = 76;
             this.checkBoxCS2_2.Text = "5";
             this.checkBoxCS2_2.UseVisualStyleBackColor = false;
+            this.checkBoxCS2_2.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS2_1
             // 
@@ -530,6 +544,7 @@
             this.checkBoxCS2_1.TabIndex = 75;
             this.checkBoxCS2_1.Text = "6";
             this.checkBoxCS2_1.UseVisualStyleBackColor = false;
+            this.checkBoxCS2_1.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS2_0
             // 
@@ -541,6 +556,7 @@
             this.checkBoxCS2_0.TabIndex = 74;
             this.checkBoxCS2_0.Text = "7";
             this.checkBoxCS2_0.UseVisualStyleBackColor = false;
+            this.checkBoxCS2_0.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS1_7
             // 
@@ -552,6 +568,7 @@
             this.checkBoxCS1_7.TabIndex = 73;
             this.checkBoxCS1_7.Text = "0";
             this.checkBoxCS1_7.UseVisualStyleBackColor = false;
+            this.checkBoxCS1_7.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS1_6
             // 
@@ -563,6 +580,7 @@
             this.checkBoxCS1_6.TabIndex = 72;
             this.checkBoxCS1_6.Text = "1";
             this.checkBoxCS1_6.UseVisualStyleBackColor = false;
+            this.checkBoxCS1_6.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS1_5
             // 
@@ -574,6 +592,7 @@
             this.checkBoxCS1_5.TabIndex = 71;
             this.checkBoxCS1_5.Text = "2";
             this.checkBoxCS1_5.UseVisualStyleBackColor = false;
+            this.checkBoxCS1_5.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS1_4
             // 
@@ -585,6 +604,7 @@
             this.checkBoxCS1_4.TabIndex = 70;
             this.checkBoxCS1_4.Text = "3";
             this.checkBoxCS1_4.UseVisualStyleBackColor = false;
+            this.checkBoxCS1_4.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS1_3
             // 
@@ -596,6 +616,7 @@
             this.checkBoxCS1_3.TabIndex = 69;
             this.checkBoxCS1_3.Text = "4";
             this.checkBoxCS1_3.UseVisualStyleBackColor = false;
+            this.checkBoxCS1_3.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS1_2
             // 
@@ -607,6 +628,7 @@
             this.checkBoxCS1_2.TabIndex = 68;
             this.checkBoxCS1_2.Text = "5";
             this.checkBoxCS1_2.UseVisualStyleBackColor = false;
+            this.checkBoxCS1_2.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS1_1
             // 
@@ -618,6 +640,7 @@
             this.checkBoxCS1_1.TabIndex = 67;
             this.checkBoxCS1_1.Text = "6";
             this.checkBoxCS1_1.UseVisualStyleBackColor = false;
+            this.checkBoxCS1_1.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS1_0
             // 
@@ -629,6 +652,7 @@
             this.checkBoxCS1_0.TabIndex = 66;
             this.checkBoxCS1_0.Text = "7";
             this.checkBoxCS1_0.UseVisualStyleBackColor = false;
+            this.checkBoxCS1_0.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // labelDeccheckBoxCS0_
             // 
@@ -650,6 +674,7 @@
             this.checkBoxCS0_7.TabIndex = 64;
             this.checkBoxCS0_7.Text = "0";
             this.checkBoxCS0_7.UseVisualStyleBackColor = false;
+            this.checkBoxCS0_7.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS0_6
             // 
@@ -661,6 +686,7 @@
             this.checkBoxCS0_6.TabIndex = 63;
             this.checkBoxCS0_6.Text = "1";
             this.checkBoxCS0_6.UseVisualStyleBackColor = false;
+            this.checkBoxCS0_6.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS0_5
             // 
@@ -672,6 +698,7 @@
             this.checkBoxCS0_5.TabIndex = 62;
             this.checkBoxCS0_5.Text = "2";
             this.checkBoxCS0_5.UseVisualStyleBackColor = false;
+            this.checkBoxCS0_5.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS0_4
             // 
@@ -683,6 +710,7 @@
             this.checkBoxCS0_4.TabIndex = 61;
             this.checkBoxCS0_4.Text = "3";
             this.checkBoxCS0_4.UseVisualStyleBackColor = false;
+            this.checkBoxCS0_4.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS0_3
             // 
@@ -694,6 +722,7 @@
             this.checkBoxCS0_3.TabIndex = 60;
             this.checkBoxCS0_3.Text = "4";
             this.checkBoxCS0_3.UseVisualStyleBackColor = false;
+            this.checkBoxCS0_3.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS0_2
             // 
@@ -705,6 +734,7 @@
             this.checkBoxCS0_2.TabIndex = 59;
             this.checkBoxCS0_2.Text = "5";
             this.checkBoxCS0_2.UseVisualStyleBackColor = false;
+            this.checkBoxCS0_2.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS0_1
             // 
@@ -716,6 +746,7 @@
             this.checkBoxCS0_1.TabIndex = 58;
             this.checkBoxCS0_1.Text = "6";
             this.checkBoxCS0_1.UseVisualStyleBackColor = false;
+            this.checkBoxCS0_1.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxCS0_0
             // 
@@ -727,6 +758,7 @@
             this.checkBoxCS0_0.TabIndex = 57;
             this.checkBoxCS0_0.Text = "7";
             this.checkBoxCS0_0.UseVisualStyleBackColor = false;
+            this.checkBoxCS0_0.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // labelcheckBoxCS0_
             // 
@@ -772,6 +804,7 @@
             this.textBoxAmp6.Size = new System.Drawing.Size(39, 20);
             this.textBoxAmp6.TabIndex = 42;
             this.textBoxAmp6.Text = "0";
+            this.textBoxAmp6.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
             // 
             // labelAmpValue6
             // 
@@ -801,6 +834,7 @@
             this.trackBarFreq6.Size = new System.Drawing.Size(177, 45);
             this.trackBarFreq6.TabIndex = 39;
             this.trackBarFreq6.TickFrequency = 13;
+            this.trackBarFreq6.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
             // 
             // label31
             // 
@@ -827,6 +861,7 @@
             this.textBoxAmp4.Size = new System.Drawing.Size(37, 20);
             this.textBoxAmp4.TabIndex = 36;
             this.textBoxAmp4.Text = "0";
+            this.textBoxAmp4.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
             // 
             // labelAmpValue4
             // 
@@ -856,6 +891,7 @@
             this.trackBarFreq4.Size = new System.Drawing.Size(176, 45);
             this.trackBarFreq4.TabIndex = 33;
             this.trackBarFreq4.TickFrequency = 13;
+            this.trackBarFreq4.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
             // 
             // label27
             // 
@@ -882,6 +918,7 @@
             this.textBoxAmp2.Size = new System.Drawing.Size(37, 20);
             this.textBoxAmp2.TabIndex = 30;
             this.textBoxAmp2.Text = "0";
+            this.textBoxAmp2.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
             // 
             // labelAmpValue2
             // 
@@ -912,6 +949,7 @@
             this.trackBarFreq2.TabIndex = 27;
             this.trackBarFreq2.TabStop = false;
             this.trackBarFreq2.TickFrequency = 13;
+            this.trackBarFreq2.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
             // 
             // textBoxAmp5
             // 
@@ -920,6 +958,7 @@
             this.textBoxAmp5.Size = new System.Drawing.Size(32, 20);
             this.textBoxAmp5.TabIndex = 26;
             this.textBoxAmp5.Text = "0";
+            this.textBoxAmp5.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
             // 
             // textBoxAmp3
             // 
@@ -928,6 +967,7 @@
             this.textBoxAmp3.Size = new System.Drawing.Size(34, 20);
             this.textBoxAmp3.TabIndex = 25;
             this.textBoxAmp3.Text = "0";
+            this.textBoxAmp3.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
             // 
             // textBoxAmp1
             // 
@@ -936,6 +976,7 @@
             this.textBoxAmp1.Size = new System.Drawing.Size(37, 20);
             this.textBoxAmp1.TabIndex = 24;
             this.textBoxAmp1.Text = "0";
+            this.textBoxAmp1.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
             // 
             // labelDeccheckBoxBit
             // 
@@ -957,6 +998,7 @@
             this.checkBoxBit7.TabIndex = 22;
             this.checkBoxBit7.Text = "0";
             this.checkBoxBit7.UseVisualStyleBackColor = false;
+            this.checkBoxBit7.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxBit6
             // 
@@ -968,6 +1010,7 @@
             this.checkBoxBit6.TabIndex = 21;
             this.checkBoxBit6.Text = "1";
             this.checkBoxBit6.UseVisualStyleBackColor = false;
+            this.checkBoxBit6.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxBit5
             // 
@@ -979,6 +1022,7 @@
             this.checkBoxBit5.TabIndex = 20;
             this.checkBoxBit5.Text = "2";
             this.checkBoxBit5.UseVisualStyleBackColor = false;
+            this.checkBoxBit5.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxBit4
             // 
@@ -990,6 +1034,7 @@
             this.checkBoxBit4.TabIndex = 19;
             this.checkBoxBit4.Text = "3";
             this.checkBoxBit4.UseVisualStyleBackColor = false;
+            this.checkBoxBit4.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxBit3
             // 
@@ -1001,6 +1046,7 @@
             this.checkBoxBit3.TabIndex = 18;
             this.checkBoxBit3.Text = "4";
             this.checkBoxBit3.UseVisualStyleBackColor = false;
+            this.checkBoxBit3.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxBit2
             // 
@@ -1012,6 +1058,7 @@
             this.checkBoxBit2.TabIndex = 17;
             this.checkBoxBit2.Text = "5";
             this.checkBoxBit2.UseVisualStyleBackColor = false;
+            this.checkBoxBit2.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxBit1
             // 
@@ -1023,6 +1070,7 @@
             this.checkBoxBit1.TabIndex = 16;
             this.checkBoxBit1.Text = "6";
             this.checkBoxBit1.UseVisualStyleBackColor = false;
+            this.checkBoxBit1.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // checkBoxBit0
             // 
@@ -1034,6 +1082,7 @@
             this.checkBoxBit0.TabIndex = 15;
             this.checkBoxBit0.Text = "7";
             this.checkBoxBit0.UseVisualStyleBackColor = false;
+            this.checkBoxBit0.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // labelcheckBoxBit
             // 
@@ -1121,6 +1170,7 @@
             this.trackBarFreq1.TabIndex = 0;
             this.trackBarFreq1.TabStop = false;
             this.trackBarFreq1.TickFrequency = 13;
+            this.trackBarFreq1.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
             // 
             // trackBarFreq3
             // 
@@ -1131,6 +1181,7 @@
             this.trackBarFreq3.Size = new System.Drawing.Size(172, 45);
             this.trackBarFreq3.TabIndex = 3;
             this.trackBarFreq3.TickFrequency = 13;
+            this.trackBarFreq3.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
             // 
             // trackBarFreq5
             // 
@@ -1141,6 +1192,7 @@
             this.trackBarFreq5.Size = new System.Drawing.Size(172, 45);
             this.trackBarFreq5.TabIndex = 7;
             this.trackBarFreq5.TickFrequency = 13;
+            this.trackBarFreq5.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
             // 
             // groupBoxSysStatus
             // 
@@ -1563,6 +1615,7 @@
             this.button1.Size = new System.Drawing.Size(122, 23);
             this.button1.TabIndex = 29;
             this.button1.Text = "Control Panel";
+            this.button1.Click += new System.EventHandler(this.ShowControlPanel);
             // 
             // checkBoxContFeed
             // 
@@ -1574,6 +1627,7 @@
             this.checkBoxContFeed.TabIndex = 2;
             this.checkBoxContFeed.Text = "Read";
             this.checkBoxContFeed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxContFeed.CheckedChanged += new System.EventHandler(this.checkBoxContFeed_CheckedChanged);
             // 
             // buttonWriteData
             // 
@@ -1601,6 +1655,7 @@
             this.Controls.Add(this.groupBoxAmps);
             this.Name = "CPanel";
             this.Text = "CPanel";
+            this.Load += new System.EventHandler(this.CPanel_Load);
             this.groupBoxAmps.ResumeLayout(false);
             this.groupBoxAmps.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq6)).EndInit();

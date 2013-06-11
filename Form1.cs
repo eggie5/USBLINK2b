@@ -36,13 +36,15 @@ namespace com.AComm
         GraphPane[] panes = new GraphPane[4];
         Label[] data_labels = new Label[4];
 
-        CPanel control_panel = new CPanel();
+        CPanel control_panel;
 
 
         MLApp.MLApp matlab;
 
         public Form1()
         {
+            control_panel=new CPanel(this);
+
             InitializeComponent();
 
             usb = new CSQuickUsb();
@@ -519,7 +521,7 @@ namespace com.AComm
 
       
 
-        private void ShowControlPanel(object sender, EventArgs e)
+        internal void ShowControlPanel(object sender, EventArgs e)
         {
             ControlPanel cp = new ControlPanel(ref usb);
             cp.Show();
@@ -551,25 +553,7 @@ namespace com.AComm
         }
 
         #region amps
-        private void trackBarFreq_Scroll(object sender, EventArgs e)
-        {
-            TrackBar trackbar = (TrackBar)sender;
-            //double result = (trackbar.Value * .0557) * (1 + 6.079 * y);
-
-            //Controls["labelAmpValue1"].Text = trackbar.Value.ToString();
-
-            string num = trackbar.Name.Substring(trackbar.Name.Length - 1);
-
-            this.control_panel.groupBoxAmps.Controls["labelAmpValue"+num].Text = trackbar.Value.ToString();
-
-            //SEND TO USB
-
-            if (!SendAmpSettings())
-            {
-                statusPanelInfo.Text = usb.LastError;
-            }
-
-        }
+ 
 
         private void send_to_usb(byte[] bytes)
         {
@@ -582,44 +566,10 @@ namespace com.AComm
 
   
 
-        private byte amp4;
-        private void checkBoxBit_CheckedChanged(object sender, EventArgs e)
-        {
-            //find out which checkbox this is
-            CheckBox checkbox = (CheckBox)sender;
-            string name = checkbox.Name;
-            string prefix = name.Substring(0,name.Length - 1);
-          
+       
+  
 
-            StringBuilder sb = new StringBuilder(8);
-
-            //loop throught all checkboxes to get values
-            for (int i = 0; i < 8; i++)
-            {
-                sb.Append(Convert.ToInt32(((CheckBox)this.control_panel.groupBoxAmps.Controls[prefix + i.ToString()]).Checked).ToString());
-            }
-
-            Label checkboxLabel = (Label)this.control_panel.groupBoxAmps.Controls["label" + prefix];
-            checkboxLabel.Text = sb.ToString();
-
-            amp4 = Convert.ToByte(Conversion.BinToUInt(sb.ToString()));
-
-            string prefix2 = "labelDec" + name;
-
-           
-
-            //labelAmpValue4DecimalVal.Text = amp4.ToString();
-            Label decLabel = (Label)this.control_panel.groupBoxAmps.Controls["labelDec" + prefix];
-            decLabel.Text = amp4.ToString();
-
-            //SEND TO USB
-
-            if (!SendAmpSettings())
-            {
-                Log(usb.LastError);
-            }
-        }
-        private bool SendAmpSettings()
+        internal bool SendAmpSettings()
         {
             //setup data structure to send to USB
             
@@ -712,30 +662,8 @@ namespace com.AComm
 
         }
 
-        private void checkBoxContFeed_CheckedChanged(object sender, EventArgs e)
-        {
-            if (this.control_panel.checkBoxContFeed.Checked && !timerContFeed.Enabled)
-            {
-                timerContFeed.Start();
 
-                statusPanelInfo.Image = Properties.Resources.control_play_blue;
-                
-
-            }
-            else if (timerContFeed.Enabled)
-            {
-
-            
-                timerContFeed.Stop();
-                statusPanelUSBStatus.Image = null;
-                graphCounter = 0;
-
-                
-            }
-
-        }
-
-        int graphCounter;
+        internal int graphCounter;
 
         private int plot_counter;
         private int plot_position;
@@ -787,15 +715,7 @@ namespace com.AComm
 
         }
 
-        private void textBoxAmp_TextChanged(object sender, EventArgs e)
-        {
-            //SEND TO USB
 
-            if (!SendAmpSettings())
-            {
-                statusPanelInfo.Text = usb.LastError;
-            }
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
