@@ -1653,6 +1653,7 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.groupBoxSysStatus);
             this.Controls.Add(this.groupBoxAmps);
+            this.DoubleBuffered = true;
             this.Name = "CPanel";
             this.Text = "CPanel";
             this.Load += new System.EventHandler(this.CPanel_Load);
