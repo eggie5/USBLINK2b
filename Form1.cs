@@ -58,13 +58,9 @@ namespace com.AComm
         {
             try
             {
-               // ema = new EngMATAccess();
+             //init matlab
                matlab = new MLApp.MLApp();
 
-                //TEMP SETTINGS
-               // ema.Evaluate("fs=1400"); //FOR BEN'S FUNCTION
-               // ema.Evaluate("cd work"); //FOR MAT LAB 7.0.1
-                ///
                matlab.Execute("fs=1400");
                matlab.Execute("cd 'C:\\Program Files (x86)\\MATLAB\\R2009a\\work'");
 
@@ -339,7 +335,7 @@ namespace com.AComm
                 plot_position = (int)fio.USBPacketData[0];
                 if (plot_position > 3)
                 {
-                    plot_position = 3;
+                    plot_position = 3; //default to plot 4
                 }
 
                 //upate those 3 bytes things    
@@ -359,10 +355,7 @@ namespace com.AComm
                 FFTPane.CurveList.Clear();
 
                 //Add a new line to the Plot
-                //  for (int i = 0; i < 4; i++)
-                //{
-                curves[plot_position] = panes[plot_position].AddCurve("USB Input" + plot_position.ToString(), null, Color.Red, SymbolType.None);
-                //}
+                curves[plot_position] = panes[plot_position].AddCurve("USB Input" + plot_position.ToString(), null, Color.Red, SymbolType.None);         
 
 
                 //Create binary file for DYDA then run DYDA and copy image to clipboard
@@ -374,12 +367,10 @@ namespace com.AComm
 
                 }
 
+                //TODO: expand this notion, most of this code doesn't need to run if tab 1 isn't active
                 if (tabControl1.SelectedIndex == 0)
                 {
                     PlotRegular();
-
-
-
                 }
 
                 //now create label text
@@ -468,7 +459,6 @@ namespace com.AComm
 
         private void MakeBowStaff(string path)
         {
-            //test comment
             FileStream fs = new FileStream(path, FileMode.Create);
             BinaryWriter bw = new BinaryWriter(fs);
 
