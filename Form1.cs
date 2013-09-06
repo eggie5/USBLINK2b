@@ -247,7 +247,7 @@ namespace com.AComm
             aux_pane.YAxis.ScaleFontSpec.Size = 12;
             aux_pane.YAxis.Step = 50;
 
-            aux_pane.AddCurve("FFT Output", new double[1], new double[1], Color.Blue, SymbolType.None);
+            aux_pane.AddCurve("AUX Plot", new double[1], new double[1], Color.Blue, SymbolType.None);
 
 
             zedGraphControlFFTs.MasterPane.Add(aux_pane);
@@ -333,11 +333,12 @@ namespace com.AComm
             {
                
                 //find which plot we're working with
-                plot_position = (int)fio.USBPacketData[0];
-                if (plot_position > 5)
+                signal_id = (int)fio.USBPacketData[0];
+                plot_position = signal_id;
+                if (signal_id > 3)
                 {
                 
-                    plot_position = 5; //default to plot 5
+                    plot_position = 3; //default to plot 4
                 }
 
 
@@ -353,11 +354,11 @@ namespace com.AComm
                 aux_pane.CurveList.Clear();
 
                 //Add a new line to the Plot
-                curves[plot_position] = panes[plot_position].AddCurve("USB Input" + plot_position.ToString(), null, Color.Red, SymbolType.None);         
+                curves[plot_position] = panes[plot_position].AddCurve("USB Input" + signal_id.ToString(), null, Color.Red, SymbolType.None);         
 
 
                 //Create binary file for DYDA then run DYDA and copy image to clipboard
-                string bow_path = String.Format(@"C:\\Program Files (x86)\\MATLAB\\R2009a\\work\\bowstaff{0}.cdf", plot_position);
+                string bow_path = String.Format(@"C:\\Program Files (x86)\\MATLAB\\R2009a\\work\\bowstaff{0}.cdf", signal_id);
                 MakeBowStaff(bow_path);
                 if (matlab != null && checkBoxMatlabEnabled.Checked)
                 {
@@ -365,24 +366,22 @@ namespace com.AComm
 
                 }
 
-                //TODO: expand this notion, most of this code doesn't need to run if tab 1 isn't active
                 if (tabControl1.SelectedIndex == 0)
                 {
                     PlotRegular();
                 }
 
                 //now create label text
-                if (plot_position < 3)
+                if (signal_id < 3)
                 {
                     String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz\nSTDN Prob: {2}\nSGLS Prob: {3}\nSub Carrier det: {4}\nRanging Det: {5}",
                         fio.USBPacketData[1], fio.USBPacketData[2], fio.USBPacketData[3], fio.USBPacketData[4], fio.USBPacketData[5], fio.USBPacketData[6]);
                     
-                    data_labels[plot_position].Text = lt;
+                    data_labels[signal_id].Text = lt;
                 }
 
                 //upate those 3 bytes things    
-                //TODO: only update when plot_postion is 4-5
-                if (plot_position >= 4 && plot_position <= 5)
+                if (signal_id >= 4 && signal_id <= 5)
                 {
                     this.control_panel.labelRegister1.Text = fio.USBPacketData[4].ToString(); //2
                     this.control_panel.labelRegister2.Text = fio.USBPacketData[5].ToString(); //3
@@ -493,7 +492,7 @@ namespace com.AComm
             //check which to plot from combobox
             int index = comboBoxSignalSelect.SelectedIndex;
 
-            if (index == plot_position) //then plot
+            if (index == signal_id) //then plot
             {
                 aux_line = aux_pane.AddCurve(comboBoxSignalSelect.SelectedText, null, Color.FromKnownColor(KnownColor.MenuHighlight), SymbolType.None);
                 int x = 0;
@@ -565,8 +564,11 @@ namespace com.AComm
             byte[] ampSettings = new byte[512];
             //pre-amble
             //TODO: ben says remove this
-            ampSettings[0] = 0xd3;
-            ampSettings[1] = 0x1D;
+            //ampSettings[0] = 0xd3;
+            //ampSettings[1] = 0x1D;
+
+            ampSettings[0] = 0x00;
+            ampSettings[1] = 0x00;
 
             //body
             ampSettings[2] = (byte)Int32.Parse(this.control_panel.textBoxAmp1.Text);
@@ -664,6 +666,7 @@ namespace com.AComm
         internal int graphCounter;
 
         private int plot_counter;
+        private int signal_id;
         private int plot_position;
         private void timerTick(object sender, EventArgs e)
         {
