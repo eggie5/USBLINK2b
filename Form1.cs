@@ -333,15 +333,13 @@ namespace com.AComm
             {
                 //find which plot we're working with
                 plot_position = (int)fio.USBPacketData[0];
+                //this will need to be 5 cause there are 5 signals now
                 if (plot_position > 3)
                 {
+                    //TODO: default to 5
                     plot_position = 3; //default to plot 4
                 }
 
-                //upate those 3 bytes things    
-                this.control_panel.labelRegister1.Text = fio.USBPacketData[4].ToString(); //2
-                this.control_panel.labelRegister2.Text = fio.USBPacketData[5].ToString(); //3
-                this.control_panel.labelRegister4.Text = fio.USBPacketData[6].ToString(); //4
 
                 //Update the Graph count
                 statusPanelUSBStatus.Text = "  " + graphCounter.ToString() + " Samples";
@@ -374,8 +372,17 @@ namespace com.AComm
                 }
 
                 //now create label text
+                //TODO: only update when plot_postion is 0 -3
                 String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz\nSTDN Prob: {2}\nSGLS Prob: {3}\nSub Carrier det: {4}\nRanging Det: {5}",
                     fio.USBPacketData[1], fio.USBPacketData[2], fio.USBPacketData[3], fio.USBPacketData[4], fio.USBPacketData[5], fio.USBPacketData[6]);
+
+
+                //upate those 3 bytes things    
+                //TODO: only update when plot_postion is 4-5
+                this.control_panel.labelRegister1.Text = fio.USBPacketData[4].ToString(); //2
+                this.control_panel.labelRegister2.Text = fio.USBPacketData[5].ToString(); //3
+                this.control_panel.labelRegister4.Text = fio.USBPacketData[6].ToString(); //4
+
 
                 data_labels[plot_position].Text = lt;
 
@@ -408,6 +415,7 @@ namespace com.AComm
             LineItem curve = curves[plot_position];
             for (int i = 8; i < fio.USBPacketData.Length; i++)
             {
+                //prob start at 9th byte
                 curve.AddPoint(x, fio.USBPacketData[i]);
                 x++;
             }
@@ -565,6 +573,7 @@ namespace com.AComm
             
             byte[] ampSettings = new byte[512];
             //pre-amble
+            //TODO: ben says remove this
             ampSettings[0] = 0xd3;
             ampSettings[1] = 0x1D;
 
@@ -581,11 +590,19 @@ namespace com.AComm
             ampSettings[8] = (byte)Int32.Parse(this.control_panel.textBoxAmp4.Text);
             ampSettings[9] = (byte)this.control_panel.trackBarFreq4.Value;
 
-            ampSettings[10] = (byte)Int32.Parse(this.control_panel.textBoxAmp5.Text);
-            ampSettings[11] = (byte)this.control_panel.trackBarFreq5.Value;
+            //replace these
+           // ampSettings[10] = (byte)Int32.Parse(this.control_panel.textBoxAmp5.Text);
+            ampSettings[10] = (byte)Int32.Parse(this.control_panel.labelcheckBox_ctrl0_.Text);
 
-            ampSettings[12] = (byte)Int32.Parse(this.control_panel.textBoxAmp6.Text);
-            ampSettings[13] = (byte)this.control_panel.trackBarFreq6.Value;
+            //ampSettings[11] = (byte)this.control_panel.trackBarFreq5.Value;
+            ampSettings[11] = (byte)Int32.Parse(this.control_panel.textBoxRSetAge.Text);
+
+           // ampSettings[12] = (byte)Int32.Parse(this.control_panel.textBoxAmp6.Text);
+            ampSettings[12] = (byte)Int32.Parse(this.control_panel.textBoxFFTBinSet.Text);
+
+            //ampSettings[13] = (byte)this.control_panel.trackBarFreq6.Value;
+            ampSettings[13] = (byte)Int32.Parse(this.control_panel.labelcheckBox_ctrl3_.Text);
+            //replace these
 
             ampSettings[14] = (byte)Int32.Parse(this.control_panel.labelDeccheckBoxCS0_.Text); //(byte)Int32.Parse(textBoxAmp7.Text);
             ampSettings[15] = (byte)Int32.Parse(this.control_panel.labelDeccheckBoxCS1_.Text); // byte)trackBarFreq7.Value;

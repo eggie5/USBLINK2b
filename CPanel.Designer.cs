@@ -30,6 +30,32 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CPanel));
             this.groupBoxAmps = new System.Windows.Forms.GroupBox();
+            this.labelDeccheckBox_ctrl3_ = new System.Windows.Forms.Label();
+            this.labelcheckBox_ctrl3_ = new System.Windows.Forms.Label();
+            this.labelDeccheckBox_ctrl0_ = new System.Windows.Forms.Label();
+            this.labelcheckBox_ctrl0_ = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.checkBox_ctrl3_7 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl3_6 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl3_5 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl3_4 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl3_3 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl3_2 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl3_1 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl3_0 = new System.Windows.Forms.CheckBox();
+            this.labelFFTBinSet = new System.Windows.Forms.Label();
+            this.textBoxFFTBinSet = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBoxRSetAge = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.checkBox_ctrl0_7 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl0_6 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl0_5 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl0_4 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl0_3 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl0_2 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl0_1 = new System.Windows.Forms.CheckBox();
+            this.checkBox_ctrl0_0 = new System.Windows.Forms.CheckBox();
             this.labelDeccheckBoxCS3_ = new System.Windows.Forms.Label();
             this.labelcheckBoxCS3_ = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
@@ -76,10 +102,8 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBoxAmp6 = new System.Windows.Forms.TextBox();
             this.labelAmpValue6 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.trackBarFreq6 = new System.Windows.Forms.TrackBar();
             this.label31 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.textBoxAmp4 = new System.Windows.Forms.TextBox();
@@ -92,7 +116,6 @@
             this.labelAmpValue2 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.trackBarFreq2 = new System.Windows.Forms.TrackBar();
-            this.textBoxAmp5 = new System.Windows.Forms.TextBox();
             this.textBoxAmp3 = new System.Windows.Forms.TextBox();
             this.textBoxAmp1 = new System.Windows.Forms.TextBox();
             this.labelDeccheckBoxBit = new System.Windows.Forms.Label();
@@ -114,7 +137,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.trackBarFreq1 = new System.Windows.Forms.TrackBar();
             this.trackBarFreq3 = new System.Windows.Forms.TrackBar();
-            this.trackBarFreq5 = new System.Windows.Forms.TrackBar();
             this.groupBoxSysStatus = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -159,12 +181,10 @@
             this.checkBoxContFeed = new System.Windows.Forms.CheckBox();
             this.buttonWriteData = new System.Windows.Forms.Button();
             this.groupBoxAmps.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq5)).BeginInit();
             this.groupBoxSysStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.led15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.led9)).BeginInit();
@@ -187,6 +207,32 @@
             // 
             // groupBoxAmps
             // 
+            this.groupBoxAmps.Controls.Add(this.labelDeccheckBox_ctrl3_);
+            this.groupBoxAmps.Controls.Add(this.labelcheckBox_ctrl3_);
+            this.groupBoxAmps.Controls.Add(this.labelDeccheckBox_ctrl0_);
+            this.groupBoxAmps.Controls.Add(this.labelcheckBox_ctrl0_);
+            this.groupBoxAmps.Controls.Add(this.label35);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl3_7);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl3_6);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl3_5);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl3_4);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl3_3);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl3_2);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl3_1);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl3_0);
+            this.groupBoxAmps.Controls.Add(this.labelFFTBinSet);
+            this.groupBoxAmps.Controls.Add(this.textBoxFFTBinSet);
+            this.groupBoxAmps.Controls.Add(this.label29);
+            this.groupBoxAmps.Controls.Add(this.textBoxRSetAge);
+            this.groupBoxAmps.Controls.Add(this.label24);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl0_7);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl0_6);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl0_5);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl0_4);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl0_3);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl0_2);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl0_1);
+            this.groupBoxAmps.Controls.Add(this.checkBox_ctrl0_0);
             this.groupBoxAmps.Controls.Add(this.labelDeccheckBoxCS3_);
             this.groupBoxAmps.Controls.Add(this.labelcheckBoxCS3_);
             this.groupBoxAmps.Controls.Add(this.label44);
@@ -233,10 +279,8 @@
             this.groupBoxAmps.Controls.Add(this.label33);
             this.groupBoxAmps.Controls.Add(this.label41);
             this.groupBoxAmps.Controls.Add(this.label32);
-            this.groupBoxAmps.Controls.Add(this.textBoxAmp6);
             this.groupBoxAmps.Controls.Add(this.labelAmpValue6);
             this.groupBoxAmps.Controls.Add(this.label34);
-            this.groupBoxAmps.Controls.Add(this.trackBarFreq6);
             this.groupBoxAmps.Controls.Add(this.label31);
             this.groupBoxAmps.Controls.Add(this.label28);
             this.groupBoxAmps.Controls.Add(this.textBoxAmp4);
@@ -249,7 +293,6 @@
             this.groupBoxAmps.Controls.Add(this.labelAmpValue2);
             this.groupBoxAmps.Controls.Add(this.label25);
             this.groupBoxAmps.Controls.Add(this.trackBarFreq2);
-            this.groupBoxAmps.Controls.Add(this.textBoxAmp5);
             this.groupBoxAmps.Controls.Add(this.textBoxAmp3);
             this.groupBoxAmps.Controls.Add(this.textBoxAmp1);
             this.groupBoxAmps.Controls.Add(this.labelDeccheckBoxBit);
@@ -271,19 +314,288 @@
             this.groupBoxAmps.Controls.Add(this.label4);
             this.groupBoxAmps.Controls.Add(this.trackBarFreq1);
             this.groupBoxAmps.Controls.Add(this.trackBarFreq3);
-            this.groupBoxAmps.Controls.Add(this.trackBarFreq5);
-            this.groupBoxAmps.Location = new System.Drawing.Point(210, 212);
+            this.groupBoxAmps.Location = new System.Drawing.Point(201, 98);
             this.groupBoxAmps.Name = "groupBoxAmps";
-            this.groupBoxAmps.Size = new System.Drawing.Size(486, 411);
+            this.groupBoxAmps.Size = new System.Drawing.Size(656, 547);
             this.groupBoxAmps.TabIndex = 27;
             this.groupBoxAmps.TabStop = false;
             this.groupBoxAmps.Text = "Amplifiers";
+            // 
+            // labelDeccheckBox_ctrl3_
+            // 
+            this.labelDeccheckBox_ctrl3_.AutoSize = true;
+            this.labelDeccheckBox_ctrl3_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeccheckBox_ctrl3_.Location = new System.Drawing.Point(158, 286);
+            this.labelDeccheckBox_ctrl3_.Name = "labelDeccheckBox_ctrl3_";
+            this.labelDeccheckBox_ctrl3_.Size = new System.Drawing.Size(14, 13);
+            this.labelDeccheckBox_ctrl3_.TabIndex = 124;
+            this.labelDeccheckBox_ctrl3_.Text = "0";
+            // 
+            // labelcheckBox_ctrl3_
+            // 
+            this.labelcheckBox_ctrl3_.AutoSize = true;
+            this.labelcheckBox_ctrl3_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelcheckBox_ctrl3_.Location = new System.Drawing.Point(82, 286);
+            this.labelcheckBox_ctrl3_.Name = "labelcheckBox_ctrl3_";
+            this.labelcheckBox_ctrl3_.Size = new System.Drawing.Size(14, 13);
+            this.labelcheckBox_ctrl3_.TabIndex = 123;
+            this.labelcheckBox_ctrl3_.Text = "0";
+            // 
+            // labelDeccheckBox_ctrl0_
+            // 
+            this.labelDeccheckBox_ctrl0_.AutoSize = true;
+            this.labelDeccheckBox_ctrl0_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeccheckBox_ctrl0_.Location = new System.Drawing.Point(158, 212);
+            this.labelDeccheckBox_ctrl0_.Name = "labelDeccheckBox_ctrl0_";
+            this.labelDeccheckBox_ctrl0_.Size = new System.Drawing.Size(14, 13);
+            this.labelDeccheckBox_ctrl0_.TabIndex = 122;
+            this.labelDeccheckBox_ctrl0_.Text = "0";
+            // 
+            // labelcheckBox_ctrl0_
+            // 
+            this.labelcheckBox_ctrl0_.AutoSize = true;
+            this.labelcheckBox_ctrl0_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelcheckBox_ctrl0_.Location = new System.Drawing.Point(82, 212);
+            this.labelcheckBox_ctrl0_.Name = "labelcheckBox_ctrl0_";
+            this.labelcheckBox_ctrl0_.Size = new System.Drawing.Size(14, 13);
+            this.labelcheckBox_ctrl0_.TabIndex = 121;
+            this.labelcheckBox_ctrl0_.Text = "0";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(35, 286);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(33, 13);
+            this.label35.TabIndex = 120;
+            this.label35.Text = "ctrl_3";
+            // 
+            // checkBox_ctrl3_7
+            // 
+            this.checkBox_ctrl3_7.AutoSize = true;
+            this.checkBox_ctrl3_7.Location = new System.Drawing.Point(591, 302);
+            this.checkBox_ctrl3_7.Name = "checkBox_ctrl3_7";
+            this.checkBox_ctrl3_7.Size = new System.Drawing.Size(53, 17);
+            this.checkBox_ctrl3_7.TabIndex = 119;
+            this.checkBox_ctrl3_7.Text = "NB(0)";
+            this.checkBox_ctrl3_7.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl3_7.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl3_6
+            // 
+            this.checkBox_ctrl3_6.AutoSize = true;
+            this.checkBox_ctrl3_6.Location = new System.Drawing.Point(526, 302);
+            this.checkBox_ctrl3_6.Name = "checkBox_ctrl3_6";
+            this.checkBox_ctrl3_6.Size = new System.Drawing.Size(53, 17);
+            this.checkBox_ctrl3_6.TabIndex = 118;
+            this.checkBox_ctrl3_6.Text = "NB(1)";
+            this.checkBox_ctrl3_6.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl3_6.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl3_5
+            // 
+            this.checkBox_ctrl3_5.AutoSize = true;
+            this.checkBox_ctrl3_5.Location = new System.Drawing.Point(470, 302);
+            this.checkBox_ctrl3_5.Name = "checkBox_ctrl3_5";
+            this.checkBox_ctrl3_5.Size = new System.Drawing.Size(37, 17);
+            this.checkBox_ctrl3_5.TabIndex = 117;
+            this.checkBox_ctrl3_5.Text = "x0";
+            this.checkBox_ctrl3_5.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl3_5.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl3_4
+            // 
+            this.checkBox_ctrl3_4.AutoSize = true;
+            this.checkBox_ctrl3_4.Location = new System.Drawing.Point(404, 302);
+            this.checkBox_ctrl3_4.Name = "checkBox_ctrl3_4";
+            this.checkBox_ctrl3_4.Size = new System.Drawing.Size(37, 17);
+            this.checkBox_ctrl3_4.TabIndex = 116;
+            this.checkBox_ctrl3_4.Text = "x1";
+            this.checkBox_ctrl3_4.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl3_4.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl3_3
+            // 
+            this.checkBox_ctrl3_3.AutoSize = true;
+            this.checkBox_ctrl3_3.Location = new System.Drawing.Point(295, 302);
+            this.checkBox_ctrl3_3.Name = "checkBox_ctrl3_3";
+            this.checkBox_ctrl3_3.Size = new System.Drawing.Size(37, 17);
+            this.checkBox_ctrl3_3.TabIndex = 115;
+            this.checkBox_ctrl3_3.Text = "x2";
+            this.checkBox_ctrl3_3.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl3_3.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl3_2
+            // 
+            this.checkBox_ctrl3_2.AutoSize = true;
+            this.checkBox_ctrl3_2.Location = new System.Drawing.Point(204, 302);
+            this.checkBox_ctrl3_2.Name = "checkBox_ctrl3_2";
+            this.checkBox_ctrl3_2.Size = new System.Drawing.Size(37, 17);
+            this.checkBox_ctrl3_2.TabIndex = 114;
+            this.checkBox_ctrl3_2.Text = "x3";
+            this.checkBox_ctrl3_2.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl3_2.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl3_1
+            // 
+            this.checkBox_ctrl3_1.AutoSize = true;
+            this.checkBox_ctrl3_1.Location = new System.Drawing.Point(122, 302);
+            this.checkBox_ctrl3_1.Name = "checkBox_ctrl3_1";
+            this.checkBox_ctrl3_1.Size = new System.Drawing.Size(37, 17);
+            this.checkBox_ctrl3_1.TabIndex = 113;
+            this.checkBox_ctrl3_1.Text = "x4";
+            this.checkBox_ctrl3_1.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl3_1.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl3_0
+            // 
+            this.checkBox_ctrl3_0.AutoSize = true;
+            this.checkBox_ctrl3_0.Location = new System.Drawing.Point(38, 302);
+            this.checkBox_ctrl3_0.Name = "checkBox_ctrl3_0";
+            this.checkBox_ctrl3_0.Size = new System.Drawing.Size(37, 17);
+            this.checkBox_ctrl3_0.TabIndex = 112;
+            this.checkBox_ctrl3_0.Text = "x5";
+            this.checkBox_ctrl3_0.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl3_0.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // labelFFTBinSet
+            // 
+            this.labelFFTBinSet.AutoSize = true;
+            this.labelFFTBinSet.Location = new System.Drawing.Point(154, 266);
+            this.labelFFTBinSet.Name = "labelFFTBinSet";
+            this.labelFFTBinSet.Size = new System.Drawing.Size(66, 13);
+            this.labelFFTBinSet.TabIndex = 111;
+            this.labelFFTBinSet.Text = "FFT_bin_set";
+            // 
+            // textBoxFFTBinSet
+            // 
+            this.textBoxFFTBinSet.Location = new System.Drawing.Point(219, 263);
+            this.textBoxFFTBinSet.Name = "textBoxFFTBinSet";
+            this.textBoxFFTBinSet.Size = new System.Drawing.Size(32, 20);
+            this.textBoxFFTBinSet.TabIndex = 110;
+            this.textBoxFFTBinSet.Text = "0";
+            this.textBoxFFTBinSet.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(35, 263);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(59, 13);
+            this.label29.TabIndex = 109;
+            this.label29.Text = "R_set_age";
+            // 
+            // textBoxRSetAge
+            // 
+            this.textBoxRSetAge.Location = new System.Drawing.Point(102, 263);
+            this.textBoxRSetAge.Name = "textBoxRSetAge";
+            this.textBoxRSetAge.Size = new System.Drawing.Size(32, 20);
+            this.textBoxRSetAge.TabIndex = 108;
+            this.textBoxRSetAge.Text = "0";
+            this.textBoxRSetAge.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(35, 212);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(33, 13);
+            this.label24.TabIndex = 107;
+            this.label24.Text = "ctrl_0";
+            // 
+            // checkBox_ctrl0_7
+            // 
+            this.checkBox_ctrl0_7.AutoSize = true;
+            this.checkBox_ctrl0_7.Location = new System.Drawing.Point(591, 228);
+            this.checkBox_ctrl0_7.Name = "checkBox_ctrl0_7";
+            this.checkBox_ctrl0_7.Size = new System.Drawing.Size(59, 17);
+            this.checkBox_ctrl0_7.TabIndex = 106;
+            this.checkBox_ctrl0_7.Text = "chan-0";
+            this.checkBox_ctrl0_7.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl0_7.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl0_6
+            // 
+            this.checkBox_ctrl0_6.AutoSize = true;
+            this.checkBox_ctrl0_6.Location = new System.Drawing.Point(526, 228);
+            this.checkBox_ctrl0_6.Name = "checkBox_ctrl0_6";
+            this.checkBox_ctrl0_6.Size = new System.Drawing.Size(59, 17);
+            this.checkBox_ctrl0_6.TabIndex = 105;
+            this.checkBox_ctrl0_6.Text = "chan-1";
+            this.checkBox_ctrl0_6.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl0_6.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl0_5
+            // 
+            this.checkBox_ctrl0_5.AutoSize = true;
+            this.checkBox_ctrl0_5.Location = new System.Drawing.Point(470, 228);
+            this.checkBox_ctrl0_5.Name = "checkBox_ctrl0_5";
+            this.checkBox_ctrl0_5.Size = new System.Drawing.Size(59, 17);
+            this.checkBox_ctrl0_5.TabIndex = 104;
+            this.checkBox_ctrl0_5.Text = "chan-2";
+            this.checkBox_ctrl0_5.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl0_5.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl0_4
+            // 
+            this.checkBox_ctrl0_4.AutoSize = true;
+            this.checkBox_ctrl0_4.Location = new System.Drawing.Point(404, 228);
+            this.checkBox_ctrl0_4.Name = "checkBox_ctrl0_4";
+            this.checkBox_ctrl0_4.Size = new System.Drawing.Size(59, 17);
+            this.checkBox_ctrl0_4.TabIndex = 103;
+            this.checkBox_ctrl0_4.Text = "chan-3";
+            this.checkBox_ctrl0_4.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl0_4.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl0_3
+            // 
+            this.checkBox_ctrl0_3.AutoSize = true;
+            this.checkBox_ctrl0_3.Location = new System.Drawing.Point(295, 228);
+            this.checkBox_ctrl0_3.Name = "checkBox_ctrl0_3";
+            this.checkBox_ctrl0_3.Size = new System.Drawing.Size(75, 17);
+            this.checkBox_ctrl0_3.TabIndex = 102;
+            this.checkBox_ctrl0_3.Text = "bin_strobe";
+            this.checkBox_ctrl0_3.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl0_3.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl0_2
+            // 
+            this.checkBox_ctrl0_2.AutoSize = true;
+            this.checkBox_ctrl0_2.Location = new System.Drawing.Point(204, 228);
+            this.checkBox_ctrl0_2.Name = "checkBox_ctrl0_2";
+            this.checkBox_ctrl0_2.Size = new System.Drawing.Size(66, 17);
+            this.checkBox_ctrl0_2.TabIndex = 101;
+            this.checkBox_ctrl0_2.Text = "DFT_sel";
+            this.checkBox_ctrl0_2.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl0_2.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl0_1
+            // 
+            this.checkBox_ctrl0_1.AutoSize = true;
+            this.checkBox_ctrl0_1.Location = new System.Drawing.Point(122, 228);
+            this.checkBox_ctrl0_1.Name = "checkBox_ctrl0_1";
+            this.checkBox_ctrl0_1.Size = new System.Drawing.Size(63, 17);
+            this.checkBox_ctrl0_1.TabIndex = 100;
+            this.checkBox_ctrl0_1.Text = "fifo4_rst";
+            this.checkBox_ctrl0_1.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl0_1.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
+            // 
+            // checkBox_ctrl0_0
+            // 
+            this.checkBox_ctrl0_0.AutoSize = true;
+            this.checkBox_ctrl0_0.Location = new System.Drawing.Point(38, 228);
+            this.checkBox_ctrl0_0.Name = "checkBox_ctrl0_0";
+            this.checkBox_ctrl0_0.Size = new System.Drawing.Size(68, 17);
+            this.checkBox_ctrl0_0.TabIndex = 99;
+            this.checkBox_ctrl0_0.Text = "AGC_ext";
+            this.checkBox_ctrl0_0.UseVisualStyleBackColor = false;
+            this.checkBox_ctrl0_0.CheckedChanged += new System.EventHandler(this.checkBoxBit_CheckedChanged);
             // 
             // labelDeccheckBoxCS3_
             // 
             this.labelDeccheckBoxCS3_.AutoSize = true;
             this.labelDeccheckBoxCS3_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeccheckBoxCS3_.Location = new System.Drawing.Point(171, 330);
+            this.labelDeccheckBoxCS3_.Location = new System.Drawing.Point(196, 463);
             this.labelDeccheckBoxCS3_.Name = "labelDeccheckBoxCS3_";
             this.labelDeccheckBoxCS3_.Size = new System.Drawing.Size(14, 13);
             this.labelDeccheckBoxCS3_.TabIndex = 98;
@@ -293,7 +605,7 @@
             // 
             this.labelcheckBoxCS3_.AutoSize = true;
             this.labelcheckBoxCS3_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcheckBoxCS3_.Location = new System.Drawing.Point(95, 330);
+            this.labelcheckBoxCS3_.Location = new System.Drawing.Point(120, 463);
             this.labelcheckBoxCS3_.Name = "labelcheckBoxCS3_";
             this.labelcheckBoxCS3_.Size = new System.Drawing.Size(14, 13);
             this.labelcheckBoxCS3_.TabIndex = 97;
@@ -302,7 +614,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(8, 330);
+            this.label44.Location = new System.Drawing.Point(33, 463);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(82, 13);
             this.label44.TabIndex = 96;
@@ -312,7 +624,7 @@
             // 
             this.labelDeccheckBoxCS2_.AutoSize = true;
             this.labelDeccheckBoxCS2_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeccheckBoxCS2_.Location = new System.Drawing.Point(171, 292);
+            this.labelDeccheckBoxCS2_.Location = new System.Drawing.Point(196, 425);
             this.labelDeccheckBoxCS2_.Name = "labelDeccheckBoxCS2_";
             this.labelDeccheckBoxCS2_.Size = new System.Drawing.Size(14, 13);
             this.labelDeccheckBoxCS2_.TabIndex = 95;
@@ -322,7 +634,7 @@
             // 
             this.labelcheckBoxCS2_.AutoSize = true;
             this.labelcheckBoxCS2_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcheckBoxCS2_.Location = new System.Drawing.Point(95, 292);
+            this.labelcheckBoxCS2_.Location = new System.Drawing.Point(120, 425);
             this.labelcheckBoxCS2_.Name = "labelcheckBoxCS2_";
             this.labelcheckBoxCS2_.Size = new System.Drawing.Size(14, 13);
             this.labelcheckBoxCS2_.TabIndex = 94;
@@ -331,7 +643,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(8, 292);
+            this.label40.Location = new System.Drawing.Point(33, 425);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(82, 13);
             this.label40.TabIndex = 93;
@@ -341,7 +653,7 @@
             // 
             this.labelDeccheckBoxCS1_.AutoSize = true;
             this.labelDeccheckBoxCS1_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeccheckBoxCS1_.Location = new System.Drawing.Point(171, 251);
+            this.labelDeccheckBoxCS1_.Location = new System.Drawing.Point(196, 384);
             this.labelDeccheckBoxCS1_.Name = "labelDeccheckBoxCS1_";
             this.labelDeccheckBoxCS1_.Size = new System.Drawing.Size(14, 13);
             this.labelDeccheckBoxCS1_.TabIndex = 92;
@@ -351,7 +663,7 @@
             // 
             this.labelcheckBoxCS1_.AutoSize = true;
             this.labelcheckBoxCS1_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcheckBoxCS1_.Location = new System.Drawing.Point(95, 251);
+            this.labelcheckBoxCS1_.Location = new System.Drawing.Point(120, 384);
             this.labelcheckBoxCS1_.Name = "labelcheckBoxCS1_";
             this.labelcheckBoxCS1_.Size = new System.Drawing.Size(14, 13);
             this.labelcheckBoxCS1_.TabIndex = 91;
@@ -360,7 +672,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(8, 251);
+            this.label37.Location = new System.Drawing.Point(33, 384);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(82, 13);
             this.label37.TabIndex = 90;
@@ -370,7 +682,7 @@
             // 
             this.checkBoxCS3_7.AutoSize = true;
             this.checkBoxCS3_7.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.checkBoxCS3_7.Location = new System.Drawing.Point(361, 346);
+            this.checkBoxCS3_7.Location = new System.Drawing.Point(386, 479);
             this.checkBoxCS3_7.Name = "checkBoxCS3_7";
             this.checkBoxCS3_7.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS3_7.TabIndex = 89;
@@ -382,7 +694,7 @@
             // 
             this.checkBoxCS3_6.AutoSize = true;
             this.checkBoxCS3_6.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.checkBoxCS3_6.Location = new System.Drawing.Point(320, 346);
+            this.checkBoxCS3_6.Location = new System.Drawing.Point(345, 479);
             this.checkBoxCS3_6.Name = "checkBoxCS3_6";
             this.checkBoxCS3_6.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS3_6.TabIndex = 88;
@@ -394,7 +706,7 @@
             // 
             this.checkBoxCS3_5.AutoSize = true;
             this.checkBoxCS3_5.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.checkBoxCS3_5.Location = new System.Drawing.Point(279, 346);
+            this.checkBoxCS3_5.Location = new System.Drawing.Point(304, 479);
             this.checkBoxCS3_5.Name = "checkBoxCS3_5";
             this.checkBoxCS3_5.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS3_5.TabIndex = 87;
@@ -406,7 +718,7 @@
             // 
             this.checkBoxCS3_4.AutoSize = true;
             this.checkBoxCS3_4.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.checkBoxCS3_4.Location = new System.Drawing.Point(238, 346);
+            this.checkBoxCS3_4.Location = new System.Drawing.Point(263, 479);
             this.checkBoxCS3_4.Name = "checkBoxCS3_4";
             this.checkBoxCS3_4.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS3_4.TabIndex = 86;
@@ -418,7 +730,7 @@
             // 
             this.checkBoxCS3_3.AutoSize = true;
             this.checkBoxCS3_3.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.checkBoxCS3_3.Location = new System.Drawing.Point(197, 346);
+            this.checkBoxCS3_3.Location = new System.Drawing.Point(222, 479);
             this.checkBoxCS3_3.Name = "checkBoxCS3_3";
             this.checkBoxCS3_3.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS3_3.TabIndex = 85;
@@ -430,7 +742,7 @@
             // 
             this.checkBoxCS3_2.AutoSize = true;
             this.checkBoxCS3_2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.checkBoxCS3_2.Location = new System.Drawing.Point(156, 346);
+            this.checkBoxCS3_2.Location = new System.Drawing.Point(181, 479);
             this.checkBoxCS3_2.Name = "checkBoxCS3_2";
             this.checkBoxCS3_2.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS3_2.TabIndex = 84;
@@ -442,7 +754,7 @@
             // 
             this.checkBoxCS3_1.AutoSize = true;
             this.checkBoxCS3_1.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.checkBoxCS3_1.Location = new System.Drawing.Point(115, 346);
+            this.checkBoxCS3_1.Location = new System.Drawing.Point(140, 479);
             this.checkBoxCS3_1.Name = "checkBoxCS3_1";
             this.checkBoxCS3_1.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS3_1.TabIndex = 83;
@@ -454,7 +766,7 @@
             // 
             this.checkBoxCS3_0.AutoSize = true;
             this.checkBoxCS3_0.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.checkBoxCS3_0.Location = new System.Drawing.Point(74, 346);
+            this.checkBoxCS3_0.Location = new System.Drawing.Point(99, 479);
             this.checkBoxCS3_0.Name = "checkBoxCS3_0";
             this.checkBoxCS3_0.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS3_0.TabIndex = 82;
@@ -466,7 +778,7 @@
             // 
             this.checkBoxCS2_7.AutoSize = true;
             this.checkBoxCS2_7.BackColor = System.Drawing.Color.GreenYellow;
-            this.checkBoxCS2_7.Location = new System.Drawing.Point(361, 311);
+            this.checkBoxCS2_7.Location = new System.Drawing.Point(386, 444);
             this.checkBoxCS2_7.Name = "checkBoxCS2_7";
             this.checkBoxCS2_7.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS2_7.TabIndex = 81;
@@ -478,7 +790,7 @@
             // 
             this.checkBoxCS2_6.AutoSize = true;
             this.checkBoxCS2_6.BackColor = System.Drawing.Color.GreenYellow;
-            this.checkBoxCS2_6.Location = new System.Drawing.Point(320, 311);
+            this.checkBoxCS2_6.Location = new System.Drawing.Point(345, 444);
             this.checkBoxCS2_6.Name = "checkBoxCS2_6";
             this.checkBoxCS2_6.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS2_6.TabIndex = 80;
@@ -490,7 +802,7 @@
             // 
             this.checkBoxCS2_5.AutoSize = true;
             this.checkBoxCS2_5.BackColor = System.Drawing.Color.GreenYellow;
-            this.checkBoxCS2_5.Location = new System.Drawing.Point(279, 311);
+            this.checkBoxCS2_5.Location = new System.Drawing.Point(304, 444);
             this.checkBoxCS2_5.Name = "checkBoxCS2_5";
             this.checkBoxCS2_5.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS2_5.TabIndex = 79;
@@ -502,7 +814,7 @@
             // 
             this.checkBoxCS2_4.AutoSize = true;
             this.checkBoxCS2_4.BackColor = System.Drawing.Color.GreenYellow;
-            this.checkBoxCS2_4.Location = new System.Drawing.Point(238, 311);
+            this.checkBoxCS2_4.Location = new System.Drawing.Point(263, 444);
             this.checkBoxCS2_4.Name = "checkBoxCS2_4";
             this.checkBoxCS2_4.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS2_4.TabIndex = 78;
@@ -514,7 +826,7 @@
             // 
             this.checkBoxCS2_3.AutoSize = true;
             this.checkBoxCS2_3.BackColor = System.Drawing.Color.GreenYellow;
-            this.checkBoxCS2_3.Location = new System.Drawing.Point(197, 311);
+            this.checkBoxCS2_3.Location = new System.Drawing.Point(222, 444);
             this.checkBoxCS2_3.Name = "checkBoxCS2_3";
             this.checkBoxCS2_3.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS2_3.TabIndex = 77;
@@ -526,7 +838,7 @@
             // 
             this.checkBoxCS2_2.AutoSize = true;
             this.checkBoxCS2_2.BackColor = System.Drawing.Color.GreenYellow;
-            this.checkBoxCS2_2.Location = new System.Drawing.Point(156, 311);
+            this.checkBoxCS2_2.Location = new System.Drawing.Point(181, 444);
             this.checkBoxCS2_2.Name = "checkBoxCS2_2";
             this.checkBoxCS2_2.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS2_2.TabIndex = 76;
@@ -538,7 +850,7 @@
             // 
             this.checkBoxCS2_1.AutoSize = true;
             this.checkBoxCS2_1.BackColor = System.Drawing.Color.GreenYellow;
-            this.checkBoxCS2_1.Location = new System.Drawing.Point(115, 311);
+            this.checkBoxCS2_1.Location = new System.Drawing.Point(140, 444);
             this.checkBoxCS2_1.Name = "checkBoxCS2_1";
             this.checkBoxCS2_1.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS2_1.TabIndex = 75;
@@ -550,7 +862,7 @@
             // 
             this.checkBoxCS2_0.AutoSize = true;
             this.checkBoxCS2_0.BackColor = System.Drawing.Color.GreenYellow;
-            this.checkBoxCS2_0.Location = new System.Drawing.Point(74, 311);
+            this.checkBoxCS2_0.Location = new System.Drawing.Point(99, 444);
             this.checkBoxCS2_0.Name = "checkBoxCS2_0";
             this.checkBoxCS2_0.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS2_0.TabIndex = 74;
@@ -562,7 +874,7 @@
             // 
             this.checkBoxCS1_7.AutoSize = true;
             this.checkBoxCS1_7.BackColor = System.Drawing.Color.DarkOrange;
-            this.checkBoxCS1_7.Location = new System.Drawing.Point(361, 272);
+            this.checkBoxCS1_7.Location = new System.Drawing.Point(386, 405);
             this.checkBoxCS1_7.Name = "checkBoxCS1_7";
             this.checkBoxCS1_7.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS1_7.TabIndex = 73;
@@ -574,7 +886,7 @@
             // 
             this.checkBoxCS1_6.AutoSize = true;
             this.checkBoxCS1_6.BackColor = System.Drawing.Color.DarkOrange;
-            this.checkBoxCS1_6.Location = new System.Drawing.Point(320, 272);
+            this.checkBoxCS1_6.Location = new System.Drawing.Point(345, 405);
             this.checkBoxCS1_6.Name = "checkBoxCS1_6";
             this.checkBoxCS1_6.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS1_6.TabIndex = 72;
@@ -586,7 +898,7 @@
             // 
             this.checkBoxCS1_5.AutoSize = true;
             this.checkBoxCS1_5.BackColor = System.Drawing.Color.DarkOrange;
-            this.checkBoxCS1_5.Location = new System.Drawing.Point(279, 272);
+            this.checkBoxCS1_5.Location = new System.Drawing.Point(304, 405);
             this.checkBoxCS1_5.Name = "checkBoxCS1_5";
             this.checkBoxCS1_5.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS1_5.TabIndex = 71;
@@ -598,7 +910,7 @@
             // 
             this.checkBoxCS1_4.AutoSize = true;
             this.checkBoxCS1_4.BackColor = System.Drawing.Color.DarkOrange;
-            this.checkBoxCS1_4.Location = new System.Drawing.Point(238, 272);
+            this.checkBoxCS1_4.Location = new System.Drawing.Point(263, 405);
             this.checkBoxCS1_4.Name = "checkBoxCS1_4";
             this.checkBoxCS1_4.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS1_4.TabIndex = 70;
@@ -610,7 +922,7 @@
             // 
             this.checkBoxCS1_3.AutoSize = true;
             this.checkBoxCS1_3.BackColor = System.Drawing.Color.DarkOrange;
-            this.checkBoxCS1_3.Location = new System.Drawing.Point(197, 272);
+            this.checkBoxCS1_3.Location = new System.Drawing.Point(222, 405);
             this.checkBoxCS1_3.Name = "checkBoxCS1_3";
             this.checkBoxCS1_3.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS1_3.TabIndex = 69;
@@ -622,7 +934,7 @@
             // 
             this.checkBoxCS1_2.AutoSize = true;
             this.checkBoxCS1_2.BackColor = System.Drawing.Color.DarkOrange;
-            this.checkBoxCS1_2.Location = new System.Drawing.Point(156, 272);
+            this.checkBoxCS1_2.Location = new System.Drawing.Point(181, 405);
             this.checkBoxCS1_2.Name = "checkBoxCS1_2";
             this.checkBoxCS1_2.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS1_2.TabIndex = 68;
@@ -634,7 +946,7 @@
             // 
             this.checkBoxCS1_1.AutoSize = true;
             this.checkBoxCS1_1.BackColor = System.Drawing.Color.DarkOrange;
-            this.checkBoxCS1_1.Location = new System.Drawing.Point(115, 272);
+            this.checkBoxCS1_1.Location = new System.Drawing.Point(140, 405);
             this.checkBoxCS1_1.Name = "checkBoxCS1_1";
             this.checkBoxCS1_1.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS1_1.TabIndex = 67;
@@ -646,7 +958,7 @@
             // 
             this.checkBoxCS1_0.AutoSize = true;
             this.checkBoxCS1_0.BackColor = System.Drawing.Color.DarkOrange;
-            this.checkBoxCS1_0.Location = new System.Drawing.Point(74, 272);
+            this.checkBoxCS1_0.Location = new System.Drawing.Point(99, 405);
             this.checkBoxCS1_0.Name = "checkBoxCS1_0";
             this.checkBoxCS1_0.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS1_0.TabIndex = 66;
@@ -658,7 +970,7 @@
             // 
             this.labelDeccheckBoxCS0_.AutoSize = true;
             this.labelDeccheckBoxCS0_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeccheckBoxCS0_.Location = new System.Drawing.Point(170, 212);
+            this.labelDeccheckBoxCS0_.Location = new System.Drawing.Point(195, 345);
             this.labelDeccheckBoxCS0_.Name = "labelDeccheckBoxCS0_";
             this.labelDeccheckBoxCS0_.Size = new System.Drawing.Size(14, 13);
             this.labelDeccheckBoxCS0_.TabIndex = 65;
@@ -668,7 +980,7 @@
             // 
             this.checkBoxCS0_7.AutoSize = true;
             this.checkBoxCS0_7.BackColor = System.Drawing.Color.LightCoral;
-            this.checkBoxCS0_7.Location = new System.Drawing.Point(361, 231);
+            this.checkBoxCS0_7.Location = new System.Drawing.Point(386, 364);
             this.checkBoxCS0_7.Name = "checkBoxCS0_7";
             this.checkBoxCS0_7.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS0_7.TabIndex = 64;
@@ -680,7 +992,7 @@
             // 
             this.checkBoxCS0_6.AutoSize = true;
             this.checkBoxCS0_6.BackColor = System.Drawing.Color.LightCoral;
-            this.checkBoxCS0_6.Location = new System.Drawing.Point(320, 231);
+            this.checkBoxCS0_6.Location = new System.Drawing.Point(345, 364);
             this.checkBoxCS0_6.Name = "checkBoxCS0_6";
             this.checkBoxCS0_6.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS0_6.TabIndex = 63;
@@ -692,7 +1004,7 @@
             // 
             this.checkBoxCS0_5.AutoSize = true;
             this.checkBoxCS0_5.BackColor = System.Drawing.Color.LightCoral;
-            this.checkBoxCS0_5.Location = new System.Drawing.Point(279, 231);
+            this.checkBoxCS0_5.Location = new System.Drawing.Point(304, 364);
             this.checkBoxCS0_5.Name = "checkBoxCS0_5";
             this.checkBoxCS0_5.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS0_5.TabIndex = 62;
@@ -704,7 +1016,7 @@
             // 
             this.checkBoxCS0_4.AutoSize = true;
             this.checkBoxCS0_4.BackColor = System.Drawing.Color.LightCoral;
-            this.checkBoxCS0_4.Location = new System.Drawing.Point(238, 231);
+            this.checkBoxCS0_4.Location = new System.Drawing.Point(263, 364);
             this.checkBoxCS0_4.Name = "checkBoxCS0_4";
             this.checkBoxCS0_4.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS0_4.TabIndex = 61;
@@ -716,7 +1028,7 @@
             // 
             this.checkBoxCS0_3.AutoSize = true;
             this.checkBoxCS0_3.BackColor = System.Drawing.Color.LightCoral;
-            this.checkBoxCS0_3.Location = new System.Drawing.Point(197, 231);
+            this.checkBoxCS0_3.Location = new System.Drawing.Point(222, 364);
             this.checkBoxCS0_3.Name = "checkBoxCS0_3";
             this.checkBoxCS0_3.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS0_3.TabIndex = 60;
@@ -728,7 +1040,7 @@
             // 
             this.checkBoxCS0_2.AutoSize = true;
             this.checkBoxCS0_2.BackColor = System.Drawing.Color.LightCoral;
-            this.checkBoxCS0_2.Location = new System.Drawing.Point(156, 231);
+            this.checkBoxCS0_2.Location = new System.Drawing.Point(181, 364);
             this.checkBoxCS0_2.Name = "checkBoxCS0_2";
             this.checkBoxCS0_2.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS0_2.TabIndex = 59;
@@ -740,7 +1052,7 @@
             // 
             this.checkBoxCS0_1.AutoSize = true;
             this.checkBoxCS0_1.BackColor = System.Drawing.Color.LightCoral;
-            this.checkBoxCS0_1.Location = new System.Drawing.Point(115, 231);
+            this.checkBoxCS0_1.Location = new System.Drawing.Point(140, 364);
             this.checkBoxCS0_1.Name = "checkBoxCS0_1";
             this.checkBoxCS0_1.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS0_1.TabIndex = 58;
@@ -752,7 +1064,7 @@
             // 
             this.checkBoxCS0_0.AutoSize = true;
             this.checkBoxCS0_0.BackColor = System.Drawing.Color.LightCoral;
-            this.checkBoxCS0_0.Location = new System.Drawing.Point(74, 231);
+            this.checkBoxCS0_0.Location = new System.Drawing.Point(99, 364);
             this.checkBoxCS0_0.Name = "checkBoxCS0_0";
             this.checkBoxCS0_0.Size = new System.Drawing.Size(32, 17);
             this.checkBoxCS0_0.TabIndex = 57;
@@ -764,7 +1076,7 @@
             // 
             this.labelcheckBoxCS0_.AutoSize = true;
             this.labelcheckBoxCS0_.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcheckBoxCS0_.Location = new System.Drawing.Point(94, 212);
+            this.labelcheckBoxCS0_.Location = new System.Drawing.Point(119, 345);
             this.labelcheckBoxCS0_.Name = "labelcheckBoxCS0_";
             this.labelcheckBoxCS0_.Size = new System.Drawing.Size(14, 13);
             this.labelcheckBoxCS0_.TabIndex = 56;
@@ -773,7 +1085,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(7, 212);
+            this.label33.Location = new System.Drawing.Point(32, 345);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(82, 13);
             this.label33.TabIndex = 55;
@@ -797,15 +1109,6 @@
             this.label32.TabIndex = 43;
             this.label32.Text = "Amplitude 6";
             // 
-            // textBoxAmp6
-            // 
-            this.textBoxAmp6.Location = new System.Drawing.Point(253, 180);
-            this.textBoxAmp6.Name = "textBoxAmp6";
-            this.textBoxAmp6.Size = new System.Drawing.Size(39, 20);
-            this.textBoxAmp6.TabIndex = 42;
-            this.textBoxAmp6.Text = "0";
-            this.textBoxAmp6.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
-            // 
             // labelAmpValue6
             // 
             this.labelAmpValue6.AutoSize = true;
@@ -824,17 +1127,6 @@
             this.label34.Size = new System.Drawing.Size(66, 13);
             this.label34.TabIndex = 40;
             this.label34.Text = "Frequency 6";
-            // 
-            // trackBarFreq6
-            // 
-            this.trackBarFreq6.Cursor = System.Windows.Forms.Cursors.SizeWE;
-            this.trackBarFreq6.Location = new System.Drawing.Point(296, 180);
-            this.trackBarFreq6.Maximum = 255;
-            this.trackBarFreq6.Name = "trackBarFreq6";
-            this.trackBarFreq6.Size = new System.Drawing.Size(177, 45);
-            this.trackBarFreq6.TabIndex = 39;
-            this.trackBarFreq6.TickFrequency = 13;
-            this.trackBarFreq6.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
             // 
             // label31
             // 
@@ -951,15 +1243,6 @@
             this.trackBarFreq2.TickFrequency = 13;
             this.trackBarFreq2.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
             // 
-            // textBoxAmp5
-            // 
-            this.textBoxAmp5.Location = new System.Drawing.Point(23, 180);
-            this.textBoxAmp5.Name = "textBoxAmp5";
-            this.textBoxAmp5.Size = new System.Drawing.Size(32, 20);
-            this.textBoxAmp5.TabIndex = 26;
-            this.textBoxAmp5.Text = "0";
-            this.textBoxAmp5.Leave += new System.EventHandler(this.textBoxAmp_TextChanged);
-            // 
             // textBoxAmp3
             // 
             this.textBoxAmp3.Location = new System.Drawing.Point(23, 122);
@@ -982,7 +1265,7 @@
             // 
             this.labelDeccheckBoxBit.AutoSize = true;
             this.labelDeccheckBoxBit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeccheckBoxBit.Location = new System.Drawing.Point(253, 367);
+            this.labelDeccheckBoxBit.Location = new System.Drawing.Point(278, 500);
             this.labelDeccheckBoxBit.Name = "labelDeccheckBoxBit";
             this.labelDeccheckBoxBit.Size = new System.Drawing.Size(14, 13);
             this.labelDeccheckBoxBit.TabIndex = 23;
@@ -992,7 +1275,7 @@
             // 
             this.checkBoxBit7.AutoSize = true;
             this.checkBoxBit7.BackColor = System.Drawing.Color.Silver;
-            this.checkBoxBit7.Location = new System.Drawing.Point(361, 391);
+            this.checkBoxBit7.Location = new System.Drawing.Point(386, 524);
             this.checkBoxBit7.Name = "checkBoxBit7";
             this.checkBoxBit7.Size = new System.Drawing.Size(32, 17);
             this.checkBoxBit7.TabIndex = 22;
@@ -1004,7 +1287,7 @@
             // 
             this.checkBoxBit6.AutoSize = true;
             this.checkBoxBit6.BackColor = System.Drawing.Color.Silver;
-            this.checkBoxBit6.Location = new System.Drawing.Point(320, 391);
+            this.checkBoxBit6.Location = new System.Drawing.Point(345, 524);
             this.checkBoxBit6.Name = "checkBoxBit6";
             this.checkBoxBit6.Size = new System.Drawing.Size(32, 17);
             this.checkBoxBit6.TabIndex = 21;
@@ -1016,7 +1299,7 @@
             // 
             this.checkBoxBit5.AutoSize = true;
             this.checkBoxBit5.BackColor = System.Drawing.Color.Silver;
-            this.checkBoxBit5.Location = new System.Drawing.Point(279, 391);
+            this.checkBoxBit5.Location = new System.Drawing.Point(304, 524);
             this.checkBoxBit5.Name = "checkBoxBit5";
             this.checkBoxBit5.Size = new System.Drawing.Size(32, 17);
             this.checkBoxBit5.TabIndex = 20;
@@ -1028,7 +1311,7 @@
             // 
             this.checkBoxBit4.AutoSize = true;
             this.checkBoxBit4.BackColor = System.Drawing.Color.Silver;
-            this.checkBoxBit4.Location = new System.Drawing.Point(238, 391);
+            this.checkBoxBit4.Location = new System.Drawing.Point(263, 524);
             this.checkBoxBit4.Name = "checkBoxBit4";
             this.checkBoxBit4.Size = new System.Drawing.Size(32, 17);
             this.checkBoxBit4.TabIndex = 19;
@@ -1040,7 +1323,7 @@
             // 
             this.checkBoxBit3.AutoSize = true;
             this.checkBoxBit3.BackColor = System.Drawing.Color.Silver;
-            this.checkBoxBit3.Location = new System.Drawing.Point(197, 391);
+            this.checkBoxBit3.Location = new System.Drawing.Point(222, 524);
             this.checkBoxBit3.Name = "checkBoxBit3";
             this.checkBoxBit3.Size = new System.Drawing.Size(32, 17);
             this.checkBoxBit3.TabIndex = 18;
@@ -1052,7 +1335,7 @@
             // 
             this.checkBoxBit2.AutoSize = true;
             this.checkBoxBit2.BackColor = System.Drawing.Color.Silver;
-            this.checkBoxBit2.Location = new System.Drawing.Point(156, 391);
+            this.checkBoxBit2.Location = new System.Drawing.Point(181, 524);
             this.checkBoxBit2.Name = "checkBoxBit2";
             this.checkBoxBit2.Size = new System.Drawing.Size(32, 17);
             this.checkBoxBit2.TabIndex = 17;
@@ -1064,7 +1347,7 @@
             // 
             this.checkBoxBit1.AutoSize = true;
             this.checkBoxBit1.BackColor = System.Drawing.Color.Silver;
-            this.checkBoxBit1.Location = new System.Drawing.Point(115, 391);
+            this.checkBoxBit1.Location = new System.Drawing.Point(140, 524);
             this.checkBoxBit1.Name = "checkBoxBit1";
             this.checkBoxBit1.Size = new System.Drawing.Size(32, 17);
             this.checkBoxBit1.TabIndex = 16;
@@ -1076,7 +1359,7 @@
             // 
             this.checkBoxBit0.AutoSize = true;
             this.checkBoxBit0.BackColor = System.Drawing.Color.Silver;
-            this.checkBoxBit0.Location = new System.Drawing.Point(74, 391);
+            this.checkBoxBit0.Location = new System.Drawing.Point(99, 524);
             this.checkBoxBit0.Name = "checkBoxBit0";
             this.checkBoxBit0.Size = new System.Drawing.Size(32, 17);
             this.checkBoxBit0.TabIndex = 15;
@@ -1088,7 +1371,7 @@
             // 
             this.labelcheckBoxBit.AutoSize = true;
             this.labelcheckBoxBit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcheckBoxBit.Location = new System.Drawing.Point(162, 367);
+            this.labelcheckBoxBit.Location = new System.Drawing.Point(187, 500);
             this.labelcheckBoxBit.Name = "labelcheckBoxBit";
             this.labelcheckBoxBit.Size = new System.Drawing.Size(14, 13);
             this.labelcheckBoxBit.TabIndex = 14;
@@ -1097,7 +1380,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 367);
+            this.label11.Location = new System.Drawing.Point(32, 500);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 13);
             this.label11.TabIndex = 13;
@@ -1183,17 +1466,6 @@
             this.trackBarFreq3.TickFrequency = 13;
             this.trackBarFreq3.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
             // 
-            // trackBarFreq5
-            // 
-            this.trackBarFreq5.Cursor = System.Windows.Forms.Cursors.SizeWE;
-            this.trackBarFreq5.Location = new System.Drawing.Point(63, 180);
-            this.trackBarFreq5.Maximum = 255;
-            this.trackBarFreq5.Name = "trackBarFreq5";
-            this.trackBarFreq5.Size = new System.Drawing.Size(172, 45);
-            this.trackBarFreq5.TabIndex = 7;
-            this.trackBarFreq5.TickFrequency = 13;
-            this.trackBarFreq5.Scroll += new System.EventHandler(this.trackBarFreq_Scroll);
-            // 
             // groupBoxSysStatus
             // 
             this.groupBoxSysStatus.Controls.Add(this.label1);
@@ -1228,7 +1500,7 @@
             this.groupBoxSysStatus.Controls.Add(this.label5);
             this.groupBoxSysStatus.Controls.Add(this.label8);
             this.groupBoxSysStatus.Controls.Add(this.label6);
-            this.groupBoxSysStatus.Location = new System.Drawing.Point(220, 126);
+            this.groupBoxSysStatus.Location = new System.Drawing.Point(211, 12);
             this.groupBoxSysStatus.Name = "groupBoxSysStatus";
             this.groupBoxSysStatus.Size = new System.Drawing.Size(489, 80);
             this.groupBoxSysStatus.TabIndex = 88;
@@ -1542,7 +1814,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(572, 67);
+            this.label18.Location = new System.Drawing.Point(32, 160);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(58, 13);
             this.label18.TabIndex = 93;
@@ -1552,7 +1824,7 @@
             // 
             this.labelRegister1.AutoSize = true;
             this.labelRegister1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegister1.Location = new System.Drawing.Point(638, 32);
+            this.labelRegister1.Location = new System.Drawing.Point(98, 125);
             this.labelRegister1.Name = "labelRegister1";
             this.labelRegister1.Size = new System.Drawing.Size(16, 16);
             this.labelRegister1.TabIndex = 89;
@@ -1562,7 +1834,7 @@
             // 
             this.labelRegister4.AutoSize = true;
             this.labelRegister4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegister4.Location = new System.Drawing.Point(638, 68);
+            this.labelRegister4.Location = new System.Drawing.Point(98, 161);
             this.labelRegister4.Name = "labelRegister4";
             this.labelRegister4.Size = new System.Drawing.Size(16, 16);
             this.labelRegister4.TabIndex = 94;
@@ -1571,7 +1843,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(572, 33);
+            this.label16.Location = new System.Drawing.Point(32, 126);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(58, 13);
             this.label16.TabIndex = 90;
@@ -1581,7 +1853,7 @@
             // 
             this.labelRegister2.AutoSize = true;
             this.labelRegister2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegister2.Location = new System.Drawing.Point(638, 50);
+            this.labelRegister2.Location = new System.Drawing.Point(98, 143);
             this.labelRegister2.Name = "labelRegister2";
             this.labelRegister2.Size = new System.Drawing.Size(16, 16);
             this.labelRegister2.TabIndex = 91;
@@ -1590,7 +1862,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(572, 50);
+            this.label17.Location = new System.Drawing.Point(32, 143);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(58, 13);
             this.label17.TabIndex = 92;
@@ -1601,7 +1873,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.checkBoxContFeed);
             this.groupBox1.Controls.Add(this.buttonWriteData);
-            this.groupBox1.Location = new System.Drawing.Point(218, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(157, 93);
             this.groupBox1.TabIndex = 95;
@@ -1659,12 +1931,10 @@
             this.Load += new System.EventHandler(this.CPanel_Load);
             this.groupBoxAmps.ResumeLayout(false);
             this.groupBoxAmps.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq5)).EndInit();
             this.groupBoxSysStatus.ResumeLayout(false);
             this.groupBoxSysStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.led15)).EndInit();
@@ -1766,18 +2036,14 @@
         internal System.Windows.Forms.Label labelcheckBoxCS0_;
         internal System.Windows.Forms.Label labelDeccheckBoxBit;
         internal System.Windows.Forms.Label labelcheckBoxBit;
-        internal System.Windows.Forms.TextBox textBoxAmp6;
         internal System.Windows.Forms.TextBox textBoxAmp4;
         internal System.Windows.Forms.TextBox textBoxAmp2;
-        internal System.Windows.Forms.TextBox textBoxAmp5;
         internal System.Windows.Forms.TextBox textBoxAmp3;
         internal System.Windows.Forms.TextBox textBoxAmp1;
-        internal System.Windows.Forms.TrackBar trackBarFreq6;
         internal System.Windows.Forms.TrackBar trackBarFreq4;
         internal System.Windows.Forms.TrackBar trackBarFreq2;
         internal System.Windows.Forms.TrackBar trackBarFreq1;
         internal System.Windows.Forms.TrackBar trackBarFreq3;
-        internal System.Windows.Forms.TrackBar trackBarFreq5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -1821,5 +2087,31 @@
         internal System.Windows.Forms.Button button1;
         internal System.Windows.Forms.CheckBox checkBoxContFeed;
         internal System.Windows.Forms.Button buttonWriteData;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.CheckBox checkBox_ctrl3_7;
+        private System.Windows.Forms.CheckBox checkBox_ctrl3_6;
+        private System.Windows.Forms.CheckBox checkBox_ctrl3_5;
+        private System.Windows.Forms.CheckBox checkBox_ctrl3_4;
+        private System.Windows.Forms.CheckBox checkBox_ctrl3_3;
+        private System.Windows.Forms.CheckBox checkBox_ctrl3_2;
+        private System.Windows.Forms.CheckBox checkBox_ctrl3_1;
+        private System.Windows.Forms.CheckBox checkBox_ctrl3_0;
+        private System.Windows.Forms.Label labelFFTBinSet;
+        internal System.Windows.Forms.TextBox textBoxFFTBinSet;
+        private System.Windows.Forms.Label label29;
+        internal System.Windows.Forms.TextBox textBoxRSetAge;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.CheckBox checkBox_ctrl0_7;
+        private System.Windows.Forms.CheckBox checkBox_ctrl0_6;
+        private System.Windows.Forms.CheckBox checkBox_ctrl0_5;
+        private System.Windows.Forms.CheckBox checkBox_ctrl0_4;
+        private System.Windows.Forms.CheckBox checkBox_ctrl0_3;
+        private System.Windows.Forms.CheckBox checkBox_ctrl0_2;
+        private System.Windows.Forms.CheckBox checkBox_ctrl0_1;
+        private System.Windows.Forms.CheckBox checkBox_ctrl0_0;
+        internal System.Windows.Forms.Label labelDeccheckBox_ctrl3_;
+        internal System.Windows.Forms.Label labelcheckBox_ctrl3_;
+        internal System.Windows.Forms.Label labelDeccheckBox_ctrl0_;
+        internal System.Windows.Forms.Label labelcheckBox_ctrl0_;
     }
 }
