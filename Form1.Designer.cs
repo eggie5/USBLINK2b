@@ -57,6 +57,7 @@ namespace com.AComm
             this.channel2_info_label = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.channel4_info_label = new System.Windows.Forms.Label();
+            this.comboBoxSignalSelect = new System.Windows.Forms.ComboBox();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -250,6 +251,7 @@ namespace com.AComm
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.comboBoxSignalSelect);
             this.tabPage4.Controls.Add(this.zedGraphControlFFTs);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -261,7 +263,7 @@ namespace com.AComm
             // 
             // zedGraphControlFFTs
             // 
-            this.zedGraphControlFFTs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zedGraphControlFFTs.Dock = System.Windows.Forms.DockStyle.Top;
             this.zedGraphControlFFTs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zedGraphControlFFTs.IsEnableHPan = true;
             this.zedGraphControlFFTs.IsEnableVPan = true;
@@ -285,7 +287,7 @@ namespace com.AComm
             this.zedGraphControlFFTs.ScrollMinX = 0D;
             this.zedGraphControlFFTs.ScrollMinY = 0D;
             this.zedGraphControlFFTs.ScrollMinY2 = 0D;
-            this.zedGraphControlFFTs.Size = new System.Drawing.Size(604, 583);
+            this.zedGraphControlFFTs.Size = new System.Drawing.Size(604, 517);
             this.zedGraphControlFFTs.TabIndex = 1;
             this.zedGraphControlFFTs.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
             this.zedGraphControlFFTs.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
@@ -386,6 +388,21 @@ namespace com.AComm
             this.channel4_info_label.TabIndex = 0;
             this.channel4_info_label.Text = "[SIGNAL INFO]";
             // 
+            // comboBoxSignalSelect
+            // 
+            this.comboBoxSignalSelect.FormattingEnabled = true;
+            this.comboBoxSignalSelect.Items.AddRange(new object[] {
+            "Channel 0",
+            "Channel 1",
+            "Channel 2",
+            "Channel 3",
+            "Raw ADC",
+            "Polyphase Filtered"});
+            this.comboBoxSignalSelect.Location = new System.Drawing.Point(33, 542);
+            this.comboBoxSignalSelect.Name = "comboBoxSignalSelect";
+            this.comboBoxSignalSelect.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSignalSelect.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,6 +474,7 @@ namespace com.AComm
         private ZedGraph.ZedGraphControl zedGraphControlFFTs;
         private System.Windows.Forms.Button buttonOpenCPanel;
         internal System.Windows.Forms.ToolStripStatusLabel statusPanelUSBStatus;
+        private System.Windows.Forms.ComboBox comboBoxSignalSelect;
     }
 }
 

@@ -22,12 +22,12 @@ namespace com.AComm
         internal CSQuickUsb usb;
         MATLABFileIO fio;
    
-        LineItem myFFT;
+        LineItem aux_line;
         GraphPane pane1;
         GraphPane pane2;
         GraphPane pane3;
         GraphPane pane4;
-        GraphPane FFTPane;
+        GraphPane aux_pane;
         MasterPane myMaster;
         PictureBox[] leds;
         Bitmap on = Properties.Resources.onled;
@@ -233,24 +233,24 @@ namespace com.AComm
             myFFTMaster.MarginAll = 10;
             myFFTMaster.InnerPaneGap = 10;
             myFFTMaster.Legend.IsVisible = false;
-            FFTPane = new GraphPane();
-            FFTPane.XAxis.Max = 512;
-            FFTPane.XAxis.IsShowGrid = true;
-            FFTPane.XAxis.ScaleFontSpec.FontColor = Color.Black;
-            FFTPane.XAxis.ScaleFontSpec.Size = 12;
-            FFTPane.XAxis.Step = 50;
+            aux_pane = new GraphPane();
+            aux_pane.XAxis.Max = 512;
+            aux_pane.XAxis.IsShowGrid = true;
+            aux_pane.XAxis.ScaleFontSpec.FontColor = Color.Black;
+            aux_pane.XAxis.ScaleFontSpec.Size = 12;
+            aux_pane.XAxis.Step = 50;
 
-            FFTPane.YAxis.Max = 600;
-            FFTPane.YAxis.Min = 20;
-            FFTPane.YAxis.IsShowGrid = true;
-            FFTPane.YAxis.ScaleFontSpec.FontColor = Color.Black;
-            FFTPane.YAxis.ScaleFontSpec.Size = 12;
-            FFTPane.YAxis.Step = 50;
+            aux_pane.YAxis.Max = 600;
+            aux_pane.YAxis.Min = 20;
+            aux_pane.YAxis.IsShowGrid = true;
+            aux_pane.YAxis.ScaleFontSpec.FontColor = Color.Black;
+            aux_pane.YAxis.ScaleFontSpec.Size = 12;
+            aux_pane.YAxis.Step = 50;
 
-            FFTPane.AddCurve("FFT Output", new double[1], new double[1], Color.Blue, SymbolType.None);
+            aux_pane.AddCurve("FFT Output", new double[1], new double[1], Color.Blue, SymbolType.None);
 
 
-            zedGraphControlFFTs.MasterPane.Add(FFTPane);
+            zedGraphControlFFTs.MasterPane.Add(aux_pane);
             //myMaster.Add(FFTPane);
         }
 
@@ -331,13 +331,13 @@ namespace com.AComm
 
             if (fio.GetAmpValuesFromUSB())
             {
+               
                 //find which plot we're working with
                 plot_position = (int)fio.USBPacketData[0];
-                //this will need to be 5 cause there are 5 signals now
-                if (plot_position > 3)
+                if (plot_position > 5)
                 {
-                    //TODO: default to 5
-                    plot_position = 3; //default to plot 4
+                
+                    plot_position = 5; //default to plot 5
                 }
 
 
@@ -350,7 +350,7 @@ namespace com.AComm
                 myMaster.PaneList[1].CurveList.Clear();
                 myMaster.PaneList[2].CurveList.Clear();
                 myMaster.PaneList[3].CurveList.Clear();
-                FFTPane.CurveList.Clear();
+                aux_pane.CurveList.Clear();
 
                 //Add a new line to the Plot
                 curves[plot_position] = panes[plot_position].AddCurve("USB Input" + plot_position.ToString(), null, Color.Red, SymbolType.None);         
@@ -372,23 +372,29 @@ namespace com.AComm
                 }
 
                 //now create label text
-                //TODO: only update when plot_postion is 0 -3
-                String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz\nSTDN Prob: {2}\nSGLS Prob: {3}\nSub Carrier det: {4}\nRanging Det: {5}",
-                    fio.USBPacketData[1], fio.USBPacketData[2], fio.USBPacketData[3], fio.USBPacketData[4], fio.USBPacketData[5], fio.USBPacketData[6]);
-
+                if (plot_position < 3)
+                {
+                    String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz\nSTDN Prob: {2}\nSGLS Prob: {3}\nSub Carrier det: {4}\nRanging Det: {5}",
+                        fio.USBPacketData[1], fio.USBPacketData[2], fio.USBPacketData[3], fio.USBPacketData[4], fio.USBPacketData[5], fio.USBPacketData[6]);
+                    
+                    data_labels[plot_position].Text = lt;
+                }
 
                 //upate those 3 bytes things    
                 //TODO: only update when plot_postion is 4-5
-                this.control_panel.labelRegister1.Text = fio.USBPacketData[4].ToString(); //2
-                this.control_panel.labelRegister2.Text = fio.USBPacketData[5].ToString(); //3
-                this.control_panel.labelRegister4.Text = fio.USBPacketData[6].ToString(); //4
+                if (plot_position >= 4 && plot_position <= 5)
+                {
+                    this.control_panel.labelRegister1.Text = fio.USBPacketData[4].ToString(); //2
+                    this.control_panel.labelRegister2.Text = fio.USBPacketData[5].ToString(); //3
+                    this.control_panel.labelRegister4.Text = fio.USBPacketData[6].ToString(); //4
+                }
 
 
-                data_labels[plot_position].Text = lt;
-
+                
+                //plot only when second tab is visible
                 if (tabControl1.SelectedIndex == 2)
                 {
-                    PlotFFT();
+                    PlotAux();
                     zedGraphControlFFTs.Invalidate();
                 }
 
@@ -413,7 +419,7 @@ namespace com.AComm
             //ben says first bit is plot position
            // int plot_position = plot_position;// (int)fio.USBPacketData[0];
             LineItem curve = curves[plot_position];
-            for (int i = 8; i < fio.USBPacketData.Length; i++)
+            for (int i = 9; i < fio.USBPacketData.Length; i++)
             {
                 //prob start at 9th byte
                 curve.AddPoint(x, fio.USBPacketData[i]);
@@ -478,42 +484,27 @@ namespace com.AComm
 
 
         float[] last_fft = new float[512];
-        private void PlotFFT()
+       
+        
+        private void PlotAux()
         {
-            myFFT = FFTPane.AddCurve("FFT Output", null, Color.FromKnownColor(KnownColor.MenuHighlight), SymbolType.None);
+            
 
-            float[] fft_vector = new float[fio.USBPacketData.Length];
-            fio.USBPacketData.CopyTo(fft_vector, 0);
+            //check which to plot from combobox
+            int index = comboBoxSignalSelect.SelectedIndex;
 
-            //multiply data by W THEN fft
-            for (int k = 0; k < fft_vector.Length; k++)
+            if (index == plot_position) //then plot
             {
-                fft_vector[k] = fft_vector[k] * 1;//W[k];
+                aux_line = aux_pane.AddCurve(comboBoxSignalSelect.SelectedText, null, Color.FromKnownColor(KnownColor.MenuHighlight), SymbolType.None);
+                int x = 0;
+                for (int j = 9; j < fio.USBPacketData.Length; j++)
+                {
+                    aux_line.AddPoint(x, fio.USBPacketData[j]);
+                    x++;
+                }
+
+                Graph.Invalidate();
             }
-
-            Fourier.FFT(fft_vector, 256, FourierDirection.Forward);
-
-
-
-
-
-            for (int i = 0; i < fft_vector.Length; i++)
-            {
-                float _fft = 20 * ((float)Math.Log10((Math.Abs(fft_vector[i]))));
-
-                float avg = (_fft + last_fft[i]) * (float)0.9;
-                fft_vector[i] = avg;
-            }
-
-            last_fft = fft_vector;
-
-
-            for (int j = 0; j < fft_vector.Length; j++)
-            {
-                myFFT.AddPoint(j, fft_vector[j]);
-            }
-
-            Graph.Invalidate();
 
         }
 
