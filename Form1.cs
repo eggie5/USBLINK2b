@@ -334,6 +334,13 @@ namespace com.AComm
                
                 //find which plot we're working with
                 signal_id = (int)fio.USBPacketData[0];
+
+                for(int i=0; i<32; i++)
+                    Console.Write(fio.USBPacketData[i].ToString() + " ");
+
+                Console.WriteLine("");
+
+
                 plot_position = signal_id;
                 if (signal_id > 3)
                 {
@@ -358,7 +365,7 @@ namespace com.AComm
 
 
                 //Create binary file for DYDA then run DYDA and copy image to clipboard
-                string bow_path = String.Format(@"C:\\Program Files (x86)\\MATLAB\\R2009a\\work\\bowstaff{0}.cdf", signal_id);
+                string bow_path = String.Format(@"C:\\matlab_work\\bowstaff{0}.cdf", plot_position);
                 MakeBowStaff(bow_path);
                 if (matlab != null && checkBoxMatlabEnabled.Checked)
                 {
@@ -372,16 +379,16 @@ namespace com.AComm
                 }
 
                 //now create label text
-                if (signal_id < 3)
+                if (plot_position < 4)
                 {
                     String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz\nSTDN Prob: {2}\nSGLS Prob: {3}\nSub Carrier det: {4}\nRanging Det: {5}",
                         fio.USBPacketData[1], fio.USBPacketData[2], fio.USBPacketData[3], fio.USBPacketData[4], fio.USBPacketData[5], fio.USBPacketData[6]);
                     
-                    data_labels[signal_id].Text = lt;
+                    data_labels[plot_position].Text = lt;
                 }
 
                 //upate those 3 bytes things    
-                if (signal_id >= 4 && signal_id <= 5)
+                if (signal_id == 4 || signal_id == 5)
                 {
                     this.control_panel.labelRegister1.Text = fio.USBPacketData[4].ToString(); //2
                     this.control_panel.labelRegister2.Text = fio.USBPacketData[5].ToString(); //3
@@ -564,11 +571,11 @@ namespace com.AComm
             byte[] ampSettings = new byte[512];
             //pre-amble
             //TODO: ben says remove this
-            //ampSettings[0] = 0xd3;
-            //ampSettings[1] = 0x1D;
+            ampSettings[0] = 0xd3;
+            ampSettings[1] = 0x1D;
 
-            ampSettings[0] = 0x00;
-            ampSettings[1] = 0x00;
+            //ampSettings[0] = 0x00;
+            //ampSettings[1] = 0x00;
 
             //body
             ampSettings[2] = (byte)Int32.Parse(this.control_panel.textBoxAmp1.Text);
@@ -585,7 +592,7 @@ namespace com.AComm
 
             //replace these
            // ampSettings[10] = (byte)Int32.Parse(this.control_panel.textBoxAmp5.Text);
-            ampSettings[10] = (byte)Int32.Parse(this.control_panel.labelcheckBox_ctrl0_.Text);
+            ampSettings[10] = (byte)Int32.Parse(this.control_panel.labelDeccheckBox_ctrl0_.Text);
 
             //ampSettings[11] = (byte)this.control_panel.trackBarFreq5.Value;
             ampSettings[11] = (byte)Int32.Parse(this.control_panel.textBoxRSetAge.Text);
@@ -594,7 +601,7 @@ namespace com.AComm
             ampSettings[12] = (byte)Int32.Parse(this.control_panel.textBoxFFTBinSet.Text);
 
             //ampSettings[13] = (byte)this.control_panel.trackBarFreq6.Value;
-            ampSettings[13] = (byte)Int32.Parse(this.control_panel.labelcheckBox_ctrl3_.Text);
+            ampSettings[13] = (byte)Int32.Parse(this.control_panel.labelDeccheckBox_ctrl3_.Text);
             //replace these
 
             ampSettings[14] = (byte)Int32.Parse(this.control_panel.labelDeccheckBoxCS0_.Text); //(byte)Int32.Parse(textBoxAmp7.Text);

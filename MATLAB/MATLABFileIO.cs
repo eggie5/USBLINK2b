@@ -43,9 +43,9 @@ namespace USBLiNK
         internal bool GetAmpValuesFromUSB()
         {
 
-            usbAmpValues = new byte[512];
+            byte [] read_bytes = new byte[512];
 
-            if (!guiRef.usb.Read(out usbAmpValues, 512))
+            if (!guiRef.usb.Read(out read_bytes, 512))
             {
 
                 guiRef.statusPanelInfo.Text = guiRef.usb.LastError;
@@ -53,6 +53,13 @@ namespace USBLiNK
                 return false;
             }
 
+            usbAmpValues = new byte[512];
+            int x = 0;
+            for (int i = 2; i < 512; i++)
+            {
+                usbAmpValues[x] = read_bytes[i];
+                x++;
+            }
             
             #region sorting algorthim
             /*graphValues = new ArrayList();
