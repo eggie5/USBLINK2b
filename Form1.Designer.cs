@@ -46,6 +46,7 @@ namespace com.AComm
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.buttonOpenCPanel = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.comboBoxSignalSelect = new System.Windows.Forms.ComboBox();
             this.zedGraphControlFFTs = new ZedGraph.ZedGraphControl();
             this.timerContFeed = new System.Windows.Forms.Timer(this.components);
             this.timerStatusMessage = new System.Windows.Forms.Timer(this.components);
@@ -57,7 +58,6 @@ namespace com.AComm
             this.channel2_info_label = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.channel4_info_label = new System.Windows.Forms.Label();
-            this.comboBoxSignalSelect = new System.Windows.Forms.ComboBox();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,9 +77,9 @@ namespace com.AComm
             this.usbStatusStrip,
             this.statusPanelInfo,
             this.statusPanelUSBStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 751);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 749);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1028, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1028, 24);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -92,7 +92,7 @@ namespace com.AComm
             this.usbStatusStrip.Image = global::com.AComm.Properties.Resources.try7;
             this.usbStatusStrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usbStatusStrip.Name = "usbStatusStrip";
-            this.usbStatusStrip.Size = new System.Drawing.Size(108, 20);
+            this.usbStatusStrip.Size = new System.Drawing.Size(128, 22);
             this.usbStatusStrip.Text = "USB Status:";
             // 
             // toolStripMenuItemConnect
@@ -100,7 +100,7 @@ namespace com.AComm
             this.toolStripMenuItemConnect.Image = global::com.AComm.Properties.Resources.connect3;
             this.toolStripMenuItemConnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItemConnect.Name = "toolStripMenuItemConnect";
-            this.toolStripMenuItemConnect.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemConnect.Size = new System.Drawing.Size(202, 22);
             this.toolStripMenuItemConnect.Text = "Connect";
             this.toolStripMenuItemConnect.Click += new System.EventHandler(this.toolStripMenuItemConnect_Click);
             // 
@@ -109,14 +109,14 @@ namespace com.AComm
             this.toolStripMenuItemDisconnect.Image = global::com.AComm.Properties.Resources.try7;
             this.toolStripMenuItemDisconnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItemDisconnect.Name = "toolStripMenuItemDisconnect";
-            this.toolStripMenuItemDisconnect.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemDisconnect.Size = new System.Drawing.Size(202, 22);
             this.toolStripMenuItemDisconnect.Text = "Disconect";
             this.toolStripMenuItemDisconnect.Click += new System.EventHandler(this.toolStripMenuItemDisconnect_Click);
             // 
             // uSBControlPanelToolStripMenuItem
             // 
             this.uSBControlPanelToolStripMenuItem.Name = "uSBControlPanelToolStripMenuItem";
-            this.uSBControlPanelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.uSBControlPanelToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.uSBControlPanelToolStripMenuItem.Text = "USB Control Panel";
             this.uSBControlPanelToolStripMenuItem.Click += new System.EventHandler(this.uSBControlPanelToolStripMenuItem_Click);
             // 
@@ -126,13 +126,13 @@ namespace com.AComm
             this.statusPanelInfo.ForeColor = System.Drawing.Color.Black;
             this.statusPanelInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.statusPanelInfo.Name = "statusPanelInfo";
-            this.statusPanelInfo.Size = new System.Drawing.Size(77, 17);
+            this.statusPanelInfo.Size = new System.Drawing.Size(95, 19);
             this.statusPanelInfo.Text = "[statusPanel1]";
             // 
             // statusPanelUSBStatus
             // 
             this.statusPanelUSBStatus.Name = "statusPanelUSBStatus";
-            this.statusPanelUSBStatus.Size = new System.Drawing.Size(0, 17);
+            this.statusPanelUSBStatus.Size = new System.Drawing.Size(0, 19);
             // 
             // panel1
             // 
@@ -143,7 +143,7 @@ namespace com.AComm
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1028, 100);
+            this.panel1.Size = new System.Drawing.Size(1028, 60);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox1
@@ -151,7 +151,7 @@ namespace com.AComm
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(421, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(391, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
@@ -161,9 +161,9 @@ namespace com.AComm
             // 
             this.checkBoxMatlabEnabled.AutoSize = true;
             this.checkBoxMatlabEnabled.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled.Image")));
-            this.checkBoxMatlabEnabled.Location = new System.Drawing.Point(966, 35);
+            this.checkBoxMatlabEnabled.Location = new System.Drawing.Point(674, 20);
             this.checkBoxMatlabEnabled.Name = "checkBoxMatlabEnabled";
-            this.checkBoxMatlabEnabled.Size = new System.Drawing.Size(45, 22);
+            this.checkBoxMatlabEnabled.Size = new System.Drawing.Size(48, 22);
             this.checkBoxMatlabEnabled.TabIndex = 31;
             this.checkBoxMatlabEnabled.UseVisualStyleBackColor = true;
             this.checkBoxMatlabEnabled.CheckedChanged += new System.EventHandler(this.checkBoxMatlabEnabled_CheckedChanged);
@@ -186,10 +186,10 @@ namespace com.AComm
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.Graph);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(610, 589);
+            this.tabPage1.Size = new System.Drawing.Size(610, 585);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "USB Output";
             // 
@@ -219,7 +219,7 @@ namespace com.AComm
             this.Graph.ScrollMinX = 0D;
             this.Graph.ScrollMinY = 0D;
             this.Graph.ScrollMinY2 = 0D;
-            this.Graph.Size = new System.Drawing.Size(604, 583);
+            this.Graph.Size = new System.Drawing.Size(604, 579);
             this.Graph.TabIndex = 0;
             this.Graph.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
             this.Graph.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
@@ -231,10 +231,10 @@ namespace com.AComm
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.buttonOpenCPanel);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(610, 589);
+            this.tabPage3.Size = new System.Drawing.Size(610, 585);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Controls";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -253,13 +253,28 @@ namespace com.AComm
             // 
             this.tabPage4.Controls.Add(this.comboBoxSignalSelect);
             this.tabPage4.Controls.Add(this.zedGraphControlFFTs);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(610, 589);
+            this.tabPage4.Size = new System.Drawing.Size(610, 585);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "FFT";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxSignalSelect
+            // 
+            this.comboBoxSignalSelect.FormattingEnabled = true;
+            this.comboBoxSignalSelect.Items.AddRange(new object[] {
+            "Channel 0",
+            "Channel 1",
+            "Channel 2",
+            "Channel 3",
+            "Raw ADC",
+            "Polyphase Filtered"});
+            this.comboBoxSignalSelect.Location = new System.Drawing.Point(33, 542);
+            this.comboBoxSignalSelect.Name = "comboBoxSignalSelect";
+            this.comboBoxSignalSelect.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxSignalSelect.TabIndex = 4;
             // 
             // zedGraphControlFFTs
             // 
@@ -322,7 +337,7 @@ namespace com.AComm
             this.channel1_info_label.AutoSize = true;
             this.channel1_info_label.Location = new System.Drawing.Point(11, 26);
             this.channel1_info_label.Name = "channel1_info_label";
-            this.channel1_info_label.Size = new System.Drawing.Size(79, 13);
+            this.channel1_info_label.Size = new System.Drawing.Size(97, 17);
             this.channel1_info_label.TabIndex = 0;
             this.channel1_info_label.Text = "[SIGNAL INFO]";
             // 
@@ -342,7 +357,7 @@ namespace com.AComm
             this.channel3_info_label.AutoSize = true;
             this.channel3_info_label.Location = new System.Drawing.Point(11, 28);
             this.channel3_info_label.Name = "channel3_info_label";
-            this.channel3_info_label.Size = new System.Drawing.Size(79, 13);
+            this.channel3_info_label.Size = new System.Drawing.Size(97, 17);
             this.channel3_info_label.TabIndex = 1;
             this.channel3_info_label.Text = "[SIGNAL INFO]";
             // 
@@ -363,7 +378,7 @@ namespace com.AComm
             this.channel2_info_label.AutoSize = true;
             this.channel2_info_label.Location = new System.Drawing.Point(11, 26);
             this.channel2_info_label.Name = "channel2_info_label";
-            this.channel2_info_label.Size = new System.Drawing.Size(79, 13);
+            this.channel2_info_label.Size = new System.Drawing.Size(97, 17);
             this.channel2_info_label.TabIndex = 0;
             this.channel2_info_label.Text = "[SIGNAL INFO]";
             // 
@@ -384,28 +399,13 @@ namespace com.AComm
             this.channel4_info_label.AutoSize = true;
             this.channel4_info_label.Location = new System.Drawing.Point(11, 26);
             this.channel4_info_label.Name = "channel4_info_label";
-            this.channel4_info_label.Size = new System.Drawing.Size(79, 13);
+            this.channel4_info_label.Size = new System.Drawing.Size(97, 17);
             this.channel4_info_label.TabIndex = 0;
             this.channel4_info_label.Text = "[SIGNAL INFO]";
             // 
-            // comboBoxSignalSelect
-            // 
-            this.comboBoxSignalSelect.FormattingEnabled = true;
-            this.comboBoxSignalSelect.Items.AddRange(new object[] {
-            "Channel 0",
-            "Channel 1",
-            "Channel 2",
-            "Channel 3",
-            "Raw ADC",
-            "Polyphase Filtered"});
-            this.comboBoxSignalSelect.Location = new System.Drawing.Point(33, 542);
-            this.comboBoxSignalSelect.Name = "comboBoxSignalSelect";
-            this.comboBoxSignalSelect.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxSignalSelect.TabIndex = 4;
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1028, 773);
