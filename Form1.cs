@@ -365,7 +365,7 @@ namespace com.AComm
 
 
                 //Create binary file for DYDA then run DYDA and copy image to clipboard
-                string bow_path = String.Format(@"C:\\matlab_work\\bowstaff{0}.cdf", plot_position);
+                string bow_path = String.Format(@"C:\\Program Files (x86)\\MATLAB\\R2009a\\work\\bowstaff{0}.cdf", plot_position);
                 MakeBowStaff(bow_path);
                 if (matlab != null && checkBoxMatlabEnabled.Checked)
                 {
