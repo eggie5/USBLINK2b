@@ -23,7 +23,7 @@ namespace USBLiNK
         internal byte[] USBPacketData;
         
         private byte[] usbAmpValues;
-        internal bool[] USBprolog = new bool[8];
+        internal bool[] USBprolog = new bool[16];
 
 
         public MATLABFileIO(Form1 reference)
@@ -136,10 +136,12 @@ namespace USBLiNK
             BitArray USBStreamAsBits = new BitArray(USBPacketData);
             
             //Get the USB prolog from the first byte of the USB stream
-            for(int i=0; i<8; i++)
+            int xx = 0;
+            for(int i=48; i<64; i++)
             {
                 //setting global var
-                USBprolog[i]=USBStreamAsBits[i];
+                USBprolog[xx]=USBStreamAsBits[i];
+                xx++;
             }
 
             return true;

@@ -354,23 +354,29 @@ namespace com.AComm
                 graphCounter++;
 
                 //Clear The previous graphs
-                myMaster.PaneList[0].CurveList.Clear();
-                myMaster.PaneList[1].CurveList.Clear();
-                myMaster.PaneList[2].CurveList.Clear();
-                myMaster.PaneList[3].CurveList.Clear();
-                aux_pane.CurveList.Clear();
+                //myMaster.PaneList[0].CurveList.Clear();
+                //myMaster.PaneList[1].CurveList.Clear();
+                //myMaster.PaneList[2].CurveList.Clear();
+                //myMaster.PaneList[3].CurveList.Clear();
+                myMaster.PaneList[plot_position].CurveList.Clear();
+                
 
                 //Add a new line to the Plot
-                curves[plot_position] = panes[plot_position].AddCurve("USB Input" + signal_id.ToString(), null, Color.Red, SymbolType.None);         
+                curves[plot_position] = panes[plot_position].AddCurve("USB Input" + signal_id.ToString(), null, Color.Red, SymbolType.None);
 
-
-                //Create binary file for DYDA then run DYDA and copy image to clipboard
-                string bow_path = String.Format(@"C:\\Program Files (x86)\\MATLAB\\R2009a\\work\\bowstaff{0}.cdf", plot_position);
-                MakeBowStaff(bow_path);
-                if (matlab != null && checkBoxMatlabEnabled.Checked)
+                int bow_index = signal_id;
+                if (bow_index <= 5)
                 {
-                    matlab.Execute("DYDA");
+                    //Create binary file for DYDA then run DYDA and copy image to clipboard
+                    string bow_path = String.Format(@"C:\\matlab_work\\bowstaff{0}.cdf", bow_index);
+                    MakeBowStaff(bow_path);
+                    matlab.Execute(String.Format("fig_index={0}",bow_index));
 
+                    if (matlab != null && checkBoxMatlabEnabled.Checked)
+                    {
+                        matlab.Execute("DYDA");
+
+                    }
                 }
 
                 if (tabControl1.SelectedIndex == 0)
@@ -382,7 +388,8 @@ namespace com.AComm
                 if (plot_position < 4)
                 {
                     String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz\nSTDN Prob: {2}\nSGLS Prob: {3}\nSub Carrier det: {4}\nRanging Det: {5}",
-                        fio.USBPacketData[1], fio.USBPacketData[2], fio.USBPacketData[3], fio.USBPacketData[4], fio.USBPacketData[5], fio.USBPacketData[6]);
+                        fio.USBPacketData[2], fio.USBPacketData[3], fio.USBPacketData[4], fio.USBPacketData[5], fio.USBPacketData[6], 
+                        fio.USBPacketData[7]);
                     
                     data_labels[plot_position].Text = lt;
                 }
@@ -401,7 +408,7 @@ namespace com.AComm
                 if (tabControl1.SelectedIndex == 2)
                 {
                     PlotAux();
-                    zedGraphControlFFTs.Invalidate();
+                    //zedGraphControlFFTs.Invalidate();
                 }
 
                 //Causes the graph to be redrawn
@@ -442,7 +449,7 @@ namespace com.AComm
        
         private void DataBindLEDs(bool [] bitArray)
         {
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 16; i++)
             {
                 if (bitArray[i])
                 {
@@ -455,25 +462,25 @@ namespace com.AComm
             }
 
             //get the second byte of the resp in bits for second set of LEDS
-            bool [] led_bin = new bool[8];
-            BitArray bits = new BitArray(fio.USBPacketData);
-            for (int j = 0; j < 8; j++)
-            {
-                led_bin[j] = bits[j+8]; //+8 to get the second byte of bits
-            }
+            //bool [] led_bin = new bool[8];
+            //BitArray bits = new BitArray(fio.USBPacketData);
+            //for (int j = 0; j < 8; j++)
+            //{
+            //    led_bin[j] = bits[j+8]; //+8 to get the second byte of bits
+            //}
 
             //same as first loop to databind leds icons
-            for (int i = 8; i < leds.Length; i++)
-            {
-                if (bits[i])
-                {
-                    leds[i].Image = on;
-                }
-                else
-                {
-                    leds[i].Image = off;
-                }
-            }
+            //for (int i = 8; i < 16; i++)
+            //{
+            //    if (bitArray[i])
+            //    {
+            //        leds[i].Image = on;
+            //    }
+            //    else
+            //    {
+            //        leds[i].Image = off;
+            //    }
+            //}
 
         }
 
@@ -494,8 +501,8 @@ namespace com.AComm
         
         private void PlotAux()
         {
-            
 
+            aux_pane.CurveList.Clear();
             //check which to plot from combobox
             int index = comboBoxSignalSelect.SelectedIndex;
 
@@ -509,7 +516,7 @@ namespace com.AComm
                     x++;
                 }
 
-                Graph.Invalidate();
+                zedGraphControlFFTs.Invalidate();
             }
 
         }
