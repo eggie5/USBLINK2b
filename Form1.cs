@@ -13,6 +13,7 @@ using Exocortex.DSP;
 using System.IO;
 using com.BearBrand;
 using System.Collections;
+using System.Threading;
 
 namespace com.AComm
 {
@@ -372,9 +373,29 @@ namespace com.AComm
                     MakeBowStaff(bow_path);
                     matlab.Execute(String.Format("fig_index={0}",bow_index));
 
-                    if (matlab != null && checkBoxMatlabEnabled.Checked)
+                    if (matlab != null)
                     {
-                        matlab.Execute("DYDA");
+                        if (checkBoxMatlabEnabled.Checked)
+                        {
+                            ThreadPool.QueueUserWorkItem(o => matlab.Execute("DYDA"));
+                           
+
+                        }
+                        if (checkBoxMatlabEnabled2.Checked)
+                        {
+                            matlab.Execute("DYDA2");
+
+                        }
+                        if (checkBoxMatlabEnabled3.Checked)
+                        {
+                            matlab.Execute("DYDA3");
+
+                        }
+                        if (checkBoxMatlabEnabled4.Checked)
+                        {
+                            matlab.Execute("DYDA4");
+
+                        }
 
                     }
                 }
