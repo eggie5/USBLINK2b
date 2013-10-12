@@ -1,4 +1,4 @@
-﻿% Modified-Benjamin Eggs Test Matlab IO program
+% Modified-Benjamin Eggs Test Matlab IO program
 % Purpoes: Read dynamic dat aimported from Channel Simulator PCB via USB2.0
 % interface
 

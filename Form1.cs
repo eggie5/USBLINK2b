@@ -63,7 +63,7 @@ namespace com.AComm
                matlab = new MLApp.MLApp();
 
                matlab.Execute("fs=1400");
-               matlab.Execute("cd 'C:\\Program Files (x86)\\MATLAB\\R2009a\\work'");
+               matlab.Execute("cd 'C:\\matlab_work'");
 
             }
             catch (DllNotFoundException ee)
@@ -369,33 +369,14 @@ namespace com.AComm
                 if (bow_index <= 5)
                 {
                     //Create binary file for DYDA then run DYDA and copy image to clipboard
-                    string bow_path = String.Format(@"C:\\Program Files (x86)\\MATLAB\\R2009a\\work\\bowstaff{0}.cdf", bow_index);
+                    //bens: @"C:\\Program Files (x86)\\MATLAB\\R2009a\\work\\bowstaff{0}.cdf"
+                    string bow_path = String.Format(@"C:\\matlab_work\\bowstaff{0}.cdf", bow_index);
                     MakeBowStaff(bow_path);
                     matlab.Execute(String.Format("fig_index={0}",bow_index));
 
                     if (matlab != null)
                     {
-                        if (checkBoxMatlabEnabled.Checked)
-                        {
-                            ThreadPool.QueueUserWorkItem(o => matlab.Execute("DYDA"));
-                           
-
-                        }
-                        if (checkBoxMatlabEnabled2.Checked)
-                        {
-                            matlab.Execute("DYDA2");
-
-                        }
-                        if (checkBoxMatlabEnabled3.Checked)
-                        {
-                            matlab.Execute("DYDA3");
-
-                        }
-                        if (checkBoxMatlabEnabled4.Checked)
-                        {
-                            matlab.Execute("DYDA4");
-
-                        }
+                        ThreadPool.QueueUserWorkItem(o => dyda()); //offload to worker thread so UI is not blocked
 
                     }
                 }
@@ -443,6 +424,19 @@ namespace com.AComm
                 Log(usb.LastError);
                 return;
             }
+        }
+
+        //this is run on worker thread
+        public void dyda()
+        {
+            if (checkBoxMatlabEnabled.Checked)
+                matlab.Execute("waveform0");
+            if (checkBoxMatlabEnabled2.Checked)
+                matlab.Execute("waveform1");
+            if (checkBoxMatlabEnabled3.Checked)
+                matlab.Execute("waveform2");
+            if (checkBoxMatlabEnabled4.Checked)
+                matlab.Execute("waveform3");
         }
 
         private void PlotRegular()
