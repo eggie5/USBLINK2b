@@ -390,8 +390,12 @@ namespace com.AComm
                 if (plot_position < 4)
                 {
                     String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz\nSTDN Prob: {2}\nSGLS Prob: {3}\nSub Carrier det: {4}\nRanging Det: {5}",
-                        fio.USBPacketData[2], fio.USBPacketData[3], fio.USBPacketData[4], fio.USBPacketData[5], fio.USBPacketData[6], 
-                        fio.USBPacketData[7]);
+                        shiftScale1(fio.USBPacketData[2]), 
+                        shiftScale2(fio.USBPacketData[3]), 
+                        shiftScale3(fio.USBPacketData[4]), 
+                        shiftScale4(fio.USBPacketData[5]),
+                        shiftScale5(fio.USBPacketData[6]), 
+                        shiftScale6(fio.USBPacketData[7]));
                     
                     data_labels[plot_position].Text = lt;
                 }
@@ -424,6 +428,69 @@ namespace com.AComm
                 Log(usb.LastError);
                 return;
             }
+        }
+
+        //byte is an 8 bit unsigned integer
+        //but this method will return a 32bit signed integer
+        private int shiftScale1(byte x)
+        {
+            int y;
+            int m=1;
+            int b=1;
+
+            y = (m * x) + b;
+
+            return y;
+        }
+        private int shiftScale2(byte x)
+        {
+            int y;
+            int m = 2;
+            int b = 2;
+
+            y = (m * x) + b;
+
+            return y;
+        }
+        private int shiftScale3(byte x)
+        {
+            int y;
+            int m = 3;
+            int b = 3;
+
+            y = (m * x) + b;
+
+            return y;
+        }
+        private int shiftScale4(byte x)
+        {
+            int y;
+            int m = 4;
+            int b = 4;
+
+            y = (m * x) + b;
+
+            return y;
+        }
+        private int shiftScale5(byte x)
+        {
+            int y;
+            int m = 5;
+            int b = 5;
+
+            y = (m * x) + b;
+
+            return y;
+        }
+        private int shiftScale6(byte x)
+        {
+            int y;
+            int m = 6;
+            int b = 6;
+
+            y = (m * x) + b;
+
+            return y;
         }
 
         //this is run on worker thread
