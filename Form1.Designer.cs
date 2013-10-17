@@ -38,6 +38,9 @@ namespace com.AComm
             this.statusPanelInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusPanelUSBStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxMatlabEnabled4 = new System.Windows.Forms.CheckBox();
+            this.checkBoxMatlabEnabled3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxMatlabEnabled2 = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBoxMatlabEnabled = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -58,9 +61,6 @@ namespace com.AComm
             this.channel2_info_label = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.channel4_info_label = new System.Windows.Forms.Label();
-            this.checkBoxMatlabEnabled2 = new System.Windows.Forms.CheckBox();
-            this.checkBoxMatlabEnabled3 = new System.Windows.Forms.CheckBox();
-            this.checkBoxMatlabEnabled4 = new System.Windows.Forms.CheckBox();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -152,6 +152,39 @@ namespace com.AComm
             this.panel1.Size = new System.Drawing.Size(1102, 100);
             this.panel1.TabIndex = 4;
             // 
+            // checkBoxMatlabEnabled4
+            // 
+            this.checkBoxMatlabEnabled4.AutoSize = true;
+            this.checkBoxMatlabEnabled4.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled4.Image")));
+            this.checkBoxMatlabEnabled4.Location = new System.Drawing.Point(915, 38);
+            this.checkBoxMatlabEnabled4.Name = "checkBoxMatlabEnabled4";
+            this.checkBoxMatlabEnabled4.Size = new System.Drawing.Size(45, 22);
+            this.checkBoxMatlabEnabled4.TabIndex = 35;
+            this.checkBoxMatlabEnabled4.Text = "4";
+            this.checkBoxMatlabEnabled4.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxMatlabEnabled3
+            // 
+            this.checkBoxMatlabEnabled3.AutoSize = true;
+            this.checkBoxMatlabEnabled3.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled3.Image")));
+            this.checkBoxMatlabEnabled3.Location = new System.Drawing.Point(855, 38);
+            this.checkBoxMatlabEnabled3.Name = "checkBoxMatlabEnabled3";
+            this.checkBoxMatlabEnabled3.Size = new System.Drawing.Size(45, 22);
+            this.checkBoxMatlabEnabled3.TabIndex = 34;
+            this.checkBoxMatlabEnabled3.Text = "3";
+            this.checkBoxMatlabEnabled3.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxMatlabEnabled2
+            // 
+            this.checkBoxMatlabEnabled2.AutoSize = true;
+            this.checkBoxMatlabEnabled2.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled2.Image")));
+            this.checkBoxMatlabEnabled2.Location = new System.Drawing.Point(795, 38);
+            this.checkBoxMatlabEnabled2.Name = "checkBoxMatlabEnabled2";
+            this.checkBoxMatlabEnabled2.Size = new System.Drawing.Size(45, 22);
+            this.checkBoxMatlabEnabled2.TabIndex = 33;
+            this.checkBoxMatlabEnabled2.Text = "2";
+            this.checkBoxMatlabEnabled2.UseVisualStyleBackColor = true;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -167,19 +200,20 @@ namespace com.AComm
             // 
             this.checkBoxMatlabEnabled.AutoSize = true;
             this.checkBoxMatlabEnabled.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled.Image")));
-            this.checkBoxMatlabEnabled.Location = new System.Drawing.Point(840, 10);
+            this.checkBoxMatlabEnabled.Location = new System.Drawing.Point(733, 38);
             this.checkBoxMatlabEnabled.Name = "checkBoxMatlabEnabled";
             this.checkBoxMatlabEnabled.Size = new System.Drawing.Size(45, 22);
             this.checkBoxMatlabEnabled.TabIndex = 31;
             this.checkBoxMatlabEnabled.Text = "1";
+            this.checkBoxMatlabEnabled.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.checkBoxMatlabEnabled.UseVisualStyleBackColor = true;
             this.checkBoxMatlabEnabled.CheckedChanged += new System.EventHandler(this.checkBoxMatlabEnabled_CheckedChanged);
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
@@ -413,39 +447,6 @@ namespace com.AComm
             this.channel4_info_label.Size = new System.Drawing.Size(87, 13);
             this.channel4_info_label.TabIndex = 0;
             this.channel4_info_label.Text = "[SIGNAL INFO]";
-            // 
-            // checkBoxMatlabEnabled2
-            // 
-            this.checkBoxMatlabEnabled2.AutoSize = true;
-            this.checkBoxMatlabEnabled2.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled2.Image")));
-            this.checkBoxMatlabEnabled2.Location = new System.Drawing.Point(891, 10);
-            this.checkBoxMatlabEnabled2.Name = "checkBoxMatlabEnabled2";
-            this.checkBoxMatlabEnabled2.Size = new System.Drawing.Size(45, 22);
-            this.checkBoxMatlabEnabled2.TabIndex = 33;
-            this.checkBoxMatlabEnabled2.Text = "2";
-            this.checkBoxMatlabEnabled2.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxMatlabEnabled3
-            // 
-            this.checkBoxMatlabEnabled3.AutoSize = true;
-            this.checkBoxMatlabEnabled3.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled3.Image")));
-            this.checkBoxMatlabEnabled3.Location = new System.Drawing.Point(837, 38);
-            this.checkBoxMatlabEnabled3.Name = "checkBoxMatlabEnabled3";
-            this.checkBoxMatlabEnabled3.Size = new System.Drawing.Size(45, 22);
-            this.checkBoxMatlabEnabled3.TabIndex = 34;
-            this.checkBoxMatlabEnabled3.Text = "3";
-            this.checkBoxMatlabEnabled3.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxMatlabEnabled4
-            // 
-            this.checkBoxMatlabEnabled4.AutoSize = true;
-            this.checkBoxMatlabEnabled4.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled4.Image")));
-            this.checkBoxMatlabEnabled4.Location = new System.Drawing.Point(891, 38);
-            this.checkBoxMatlabEnabled4.Name = "checkBoxMatlabEnabled4";
-            this.checkBoxMatlabEnabled4.Size = new System.Drawing.Size(45, 22);
-            this.checkBoxMatlabEnabled4.TabIndex = 35;
-            this.checkBoxMatlabEnabled4.Text = "4";
-            this.checkBoxMatlabEnabled4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

@@ -1574,79 +1574,81 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(602, 48);
+            this.label1.Location = new System.Drawing.Point(589, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
+            this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 99;
-            this.label1.Text = "7";
+            this.label1.Text = "3 Hz";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(564, 48);
+            this.label2.Location = new System.Drawing.Point(530, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 98;
-            this.label2.Text = "6";
+            this.label2.Text = "Bit Lock";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(527, 48);
+            this.label3.Location = new System.Drawing.Point(490, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 13);
+            this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 97;
-            this.label3.Text = "5";
+            this.label3.Text = "Zero";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(490, 48);
+            this.label19.Location = new System.Drawing.Point(490, 33);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(13, 13);
+            this.label19.Size = new System.Drawing.Size(27, 13);
             this.label19.TabIndex = 96;
-            this.label19.Text = "4";
+            this.label19.Text = "One";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(453, 48);
+            this.label20.Location = new System.Drawing.Point(490, 13);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(13, 13);
+            this.label20.Size = new System.Drawing.Size(14, 13);
             this.label20.TabIndex = 95;
-            this.label20.Text = "3";
+            this.label20.Text = "S";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(342, 48);
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(352, 15);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(13, 13);
+            this.label21.Size = new System.Drawing.Size(46, 13);
             this.label21.TabIndex = 92;
-            this.label21.Text = "0";
+            this.label21.Text = "F Lock";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(416, 48);
+            this.label22.Location = new System.Drawing.Point(410, 48);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(13, 13);
+            this.label22.Size = new System.Drawing.Size(36, 13);
             this.label22.TabIndex = 94;
-            this.label22.Text = "2";
+            this.label22.Text = "1 KHz";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(380, 48);
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(351, 47);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(13, 13);
+            this.label23.Size = new System.Drawing.Size(55, 13);
             this.label23.TabIndex = 93;
-            this.label23.Text = "1";
+            this.label23.Text = "SC Lock";
             // 
             // led15
             // 
             this.led15.Image = ((System.Drawing.Image)(resources.GetObject("led15.Image")));
-            this.led15.Location = new System.Drawing.Point(562, 29);
+            this.led15.Location = new System.Drawing.Point(542, 29);
             this.led15.Name = "led15";
             this.led15.Size = new System.Drawing.Size(16, 16);
             this.led15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1656,7 +1658,7 @@
             // led9
             // 
             this.led9.Image = ((System.Drawing.Image)(resources.GetObject("led9.Image")));
-            this.led9.Location = new System.Drawing.Point(340, 29);
+            this.led9.Location = new System.Drawing.Point(331, 14);
             this.led9.Name = "led9";
             this.led9.Size = new System.Drawing.Size(16, 16);
             this.led9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1666,7 +1668,7 @@
             // led11
             // 
             this.led11.Image = ((System.Drawing.Image)(resources.GetObject("led11.Image")));
-            this.led11.Location = new System.Drawing.Point(415, 29);
+            this.led11.Location = new System.Drawing.Point(418, 29);
             this.led11.Name = "led11";
             this.led11.Size = new System.Drawing.Size(16, 16);
             this.led11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1676,7 +1678,7 @@
             // led12
             // 
             this.led12.Image = ((System.Drawing.Image)(resources.GetObject("led12.Image")));
-            this.led12.Location = new System.Drawing.Point(452, 29);
+            this.led12.Location = new System.Drawing.Point(468, 12);
             this.led12.Name = "led12";
             this.led12.Size = new System.Drawing.Size(16, 16);
             this.led12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1686,7 +1688,7 @@
             // led13
             // 
             this.led13.Image = ((System.Drawing.Image)(resources.GetObject("led13.Image")));
-            this.led13.Location = new System.Drawing.Point(489, 29);
+            this.led13.Location = new System.Drawing.Point(468, 33);
             this.led13.Name = "led13";
             this.led13.Size = new System.Drawing.Size(16, 16);
             this.led13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1696,7 +1698,7 @@
             // led14
             // 
             this.led14.Image = ((System.Drawing.Image)(resources.GetObject("led14.Image")));
-            this.led14.Location = new System.Drawing.Point(526, 29);
+            this.led14.Location = new System.Drawing.Point(468, 56);
             this.led14.Name = "led14";
             this.led14.Size = new System.Drawing.Size(16, 16);
             this.led14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1706,7 +1708,7 @@
             // led16
             // 
             this.led16.Image = ((System.Drawing.Image)(resources.GetObject("led16.Image")));
-            this.led16.Location = new System.Drawing.Point(600, 29);
+            this.led16.Location = new System.Drawing.Point(593, 29);
             this.led16.Name = "led16";
             this.led16.Size = new System.Drawing.Size(16, 16);
             this.led16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1716,7 +1718,7 @@
             // led10
             // 
             this.led10.Image = ((System.Drawing.Image)(resources.GetObject("led10.Image")));
-            this.led10.Location = new System.Drawing.Point(378, 29);
+            this.led10.Location = new System.Drawing.Point(331, 45);
             this.led10.Name = "led10";
             this.led10.Size = new System.Drawing.Size(16, 16);
             this.led10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

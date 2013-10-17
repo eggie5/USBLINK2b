@@ -63,7 +63,7 @@ namespace com.AComm
                matlab = new MLApp.MLApp();
 
                matlab.Execute("fs=1400");
-               matlab.Execute("cd 'C:\\matlab_work'");
+               matlab.Execute("cd 'C:\\Program Files (x86)\\MATLAB\\R2009a\\work'");
 
             }
             catch (DllNotFoundException ee)
@@ -370,7 +370,7 @@ namespace com.AComm
                 {
                     //Create binary file for DYDA then run DYDA and copy image to clipboard
                     //bens: @"C:\\Program Files (x86)\\MATLAB\\R2009a\\work\\bowstaff{0}.cdf"
-                    string bow_path = String.Format(@"C:\\matlab_work\\bowstaff{0}.cdf", bow_index);
+                    string bow_path = String.Format(@"C:\\Program Files (x86)\\MATLAB\\R2009a\\work\\bowstaff{0}.cdf", bow_index);
                     MakeBowStaff(bow_path);
                     matlab.Execute(String.Format("fig_index={0}",bow_index));
 
