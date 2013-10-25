@@ -389,14 +389,14 @@ namespace com.AComm
                 //now create label text
                 if (plot_position < 4)
                 {
-                    String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz\nSTDN Prob: {2}\nSGLS Prob: {3}\nSub Carrier det: {4}\nRanging Det: {5}",
-                        shiftScale1(fio.USBPacketData[2]), 
-                        shiftScale2(fio.USBPacketData[3]), 
-                        shiftScale3(fio.USBPacketData[4]), 
+                    String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz\nDFT256: {2}\nPP48 Chan: {3}\nCarrier det: {4}\nSub-carrier Det: {5}",
+                        shiftScale1(fio.USBPacketData[2]),
+                        shiftScale2(fio.USBPacketData[3]),
+                        shiftScale3(fio.USBPacketData[4]),
                         shiftScale4(fio.USBPacketData[5]),
-                        shiftScale5(fio.USBPacketData[6]), 
+                        shiftScale5(fio.USBPacketData[6]),
                         shiftScale6(fio.USBPacketData[7]));
-                    
+
                     data_labels[plot_position].Text = lt;
                 }
 
@@ -407,7 +407,6 @@ namespace com.AComm
                     this.control_panel.labelRegister2.Text = fio.USBPacketData[5].ToString(); //3
                     this.control_panel.labelRegister4.Text = fio.USBPacketData[6].ToString(); //4
                 }
-
 
                 
                 //plot only when second tab is visible
@@ -503,7 +502,7 @@ namespace com.AComm
             if (checkBoxMatlabEnabled3.Checked)
                 matlab.Execute("waveform2");
             if (checkBoxMatlabEnabled4.Checked)
-                matlab.Execute("waveform3");
+                matlab.Execute("waveform4");
         }
 
         private void PlotRegular()
@@ -852,6 +851,11 @@ namespace com.AComm
         private void buttonOpenCPanel_Click(object sender, EventArgs e)
         {
             control_panel.Show();
+        }
+
+        private void checkBoxMatlabEnabled4_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
 
         

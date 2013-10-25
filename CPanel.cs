@@ -157,6 +157,21 @@ namespace com.AComm
 
         }
 
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelcheckBoxCS1__Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

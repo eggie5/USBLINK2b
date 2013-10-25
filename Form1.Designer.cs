@@ -162,6 +162,7 @@ namespace com.AComm
             this.checkBoxMatlabEnabled4.TabIndex = 35;
             this.checkBoxMatlabEnabled4.Text = "4";
             this.checkBoxMatlabEnabled4.UseVisualStyleBackColor = true;
+            this.checkBoxMatlabEnabled4.CheckedChanged += new System.EventHandler(this.checkBoxMatlabEnabled4_CheckedChanged);
             // 
             // checkBoxMatlabEnabled3
             // 
