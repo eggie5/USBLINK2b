@@ -154,11 +154,10 @@ namespace com.AComm
             // 
             // checkBoxMatlabEnabled4
             // 
-            this.checkBoxMatlabEnabled4.AutoSize = true;
             this.checkBoxMatlabEnabled4.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled4.Image")));
-            this.checkBoxMatlabEnabled4.Location = new System.Drawing.Point(915, 38);
+            this.checkBoxMatlabEnabled4.Location = new System.Drawing.Point(970, 33);
             this.checkBoxMatlabEnabled4.Name = "checkBoxMatlabEnabled4";
-            this.checkBoxMatlabEnabled4.Size = new System.Drawing.Size(45, 22);
+            this.checkBoxMatlabEnabled4.Size = new System.Drawing.Size(80, 31);
             this.checkBoxMatlabEnabled4.TabIndex = 35;
             this.checkBoxMatlabEnabled4.Text = "4";
             this.checkBoxMatlabEnabled4.UseVisualStyleBackColor = true;
@@ -166,22 +165,20 @@ namespace com.AComm
             // 
             // checkBoxMatlabEnabled3
             // 
-            this.checkBoxMatlabEnabled3.AutoSize = true;
             this.checkBoxMatlabEnabled3.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled3.Image")));
-            this.checkBoxMatlabEnabled3.Location = new System.Drawing.Point(855, 38);
+            this.checkBoxMatlabEnabled3.Location = new System.Drawing.Point(877, 33);
             this.checkBoxMatlabEnabled3.Name = "checkBoxMatlabEnabled3";
-            this.checkBoxMatlabEnabled3.Size = new System.Drawing.Size(45, 22);
+            this.checkBoxMatlabEnabled3.Size = new System.Drawing.Size(91, 31);
             this.checkBoxMatlabEnabled3.TabIndex = 34;
             this.checkBoxMatlabEnabled3.Text = "3";
             this.checkBoxMatlabEnabled3.UseVisualStyleBackColor = true;
             // 
             // checkBoxMatlabEnabled2
             // 
-            this.checkBoxMatlabEnabled2.AutoSize = true;
             this.checkBoxMatlabEnabled2.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled2.Image")));
-            this.checkBoxMatlabEnabled2.Location = new System.Drawing.Point(795, 38);
+            this.checkBoxMatlabEnabled2.Location = new System.Drawing.Point(809, 33);
             this.checkBoxMatlabEnabled2.Name = "checkBoxMatlabEnabled2";
-            this.checkBoxMatlabEnabled2.Size = new System.Drawing.Size(45, 22);
+            this.checkBoxMatlabEnabled2.Size = new System.Drawing.Size(66, 31);
             this.checkBoxMatlabEnabled2.TabIndex = 33;
             this.checkBoxMatlabEnabled2.Text = "2";
             this.checkBoxMatlabEnabled2.UseVisualStyleBackColor = true;
@@ -199,14 +196,12 @@ namespace com.AComm
             // 
             // checkBoxMatlabEnabled
             // 
-            this.checkBoxMatlabEnabled.AutoSize = true;
             this.checkBoxMatlabEnabled.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxMatlabEnabled.Image")));
-            this.checkBoxMatlabEnabled.Location = new System.Drawing.Point(733, 38);
+            this.checkBoxMatlabEnabled.Location = new System.Drawing.Point(723, 33);
             this.checkBoxMatlabEnabled.Name = "checkBoxMatlabEnabled";
-            this.checkBoxMatlabEnabled.Size = new System.Drawing.Size(45, 22);
+            this.checkBoxMatlabEnabled.Size = new System.Drawing.Size(84, 31);
             this.checkBoxMatlabEnabled.TabIndex = 31;
             this.checkBoxMatlabEnabled.Text = "1";
-            this.checkBoxMatlabEnabled.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.checkBoxMatlabEnabled.UseVisualStyleBackColor = true;
             this.checkBoxMatlabEnabled.CheckedChanged += new System.EventHandler(this.checkBoxMatlabEnabled_CheckedChanged);
             // 
@@ -472,7 +467,6 @@ namespace com.AComm
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

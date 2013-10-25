@@ -321,7 +321,7 @@ namespace com.AComm
            
         }
 
-
+        bool last_reg2_state = false;
         private void Poll_ReadData()
         {
 
@@ -374,6 +374,49 @@ namespace com.AComm
                     MakeBowStaff(bow_path);
                     matlab.Execute(String.Format("fig_index={0}",bow_index));
 
+                    Byte [] byte2 = {fio.USBPacketData[2]};
+                    BitArray bitarray = new BitArray(byte2); //get the byte in bits
+
+                    foreach (bool bit in bitarray)
+                    {
+                        Console.Write(bit);
+                    }
+                    Console.WriteLine("");
+
+                   // if (bitarray[7] && checkBoxMatlabEnabled.Checked) //== 1  and checked...
+                    //{
+                        matlab.Execute(String.Format("stdn={0}", Convert.ToInt32(bitarray[0])));
+                        matlab.Execute(String.Format("stdn_sc={0}", Convert.ToInt32(bitarray[1])));
+                    //}
+                    //else
+                    //{
+                    //    matlab.Execute(String.Format("sgls={0}", bitarray[2]));
+                    //    matlab.Execute(String.Format("sgls_sc={0}", bitarray[3]));
+                    //}
+                    
+
+                    //this is the code to highlight the textbox for ben
+                    //w simple animation of background colors
+                    if (bitarray[0])
+                    {
+                        if (last_reg2_state)
+                        {
+                            control_panel.labelRegister2.BackColor = Color.Red;
+                            last_reg2_state = false;
+                        }
+                        else
+                        {
+                            control_panel.labelRegister2.BackColor = Color.Lime;
+                            last_reg2_state = true;
+                        }
+                        
+                        
+                    }
+                    else
+                    {
+                        control_panel.labelRegister2.BackColor = SystemColors.Window;
+                    }
+
                     if (matlab != null)
                     {
                         ThreadPool.QueueUserWorkItem(o => dyda()); //offload to worker thread so UI is not blocked
@@ -389,7 +432,7 @@ namespace com.AComm
                 //now create label text
                 if (plot_position < 4)
                 {
-                    String lt = String.Format("Frequency Center: {0}Mhz\nFrequency Delta: {1} KHz\nDFT256: {2}\nPP48 Chan: {3}\nCarrier det: {4}\nSub-carrier Det: {5}",
+                    String lt = String.Format("Frequency Center: {0}Mhz\n\nFrequency Delta: {1} KHz\n\nDFT256: {2}\n\nPP48 Chan: {3}\n\nCarrier det: {4}\n\nSub-carrier Det: {5}",
                         shiftScale1(fio.USBPacketData[2]),
                         shiftScale2(fio.USBPacketData[3]),
                         shiftScale3(fio.USBPacketData[4]),
@@ -402,12 +445,12 @@ namespace com.AComm
 
 
                 //upate those 3 bytes things    
-                if (signal_id == 4 || signal_id == 5)
-                {
+                //if (signal_id == 4 || signal_id == 5)
+                //{
                     this.control_panel.labelRegister1.Text = fio.USBPacketData[4].ToString(); //2
                     this.control_panel.labelRegister2.Text = fio.USBPacketData[5].ToString(); //3
                     this.control_panel.labelRegister4.Text = fio.USBPacketData[6].ToString(); //4
-                }
+                //}
 
                 
                 //plot only when second tab is visible
@@ -445,8 +488,8 @@ namespace com.AComm
         private int shiftScale2(byte x)
         {
             int y;
-            int m = 2;
-            int b = 2;
+            int m = 1;
+            int b = 1;
 
             y = (m * x) + b;
 
@@ -455,8 +498,8 @@ namespace com.AComm
         private int shiftScale3(byte x)
         {
             int y;
-            int m = 3;
-            int b = 3;
+            int m = 1;
+            int b = 1;
 
             y = (m * x) + b;
 
@@ -465,8 +508,8 @@ namespace com.AComm
         private int shiftScale4(byte x)
         {
             int y;
-            int m = 4;
-            int b = 4;
+            int m = 1;
+            int b = 1;
 
             y = (m * x) + b;
 
@@ -475,8 +518,8 @@ namespace com.AComm
         private int shiftScale5(byte x)
         {
             int y;
-            int m = 5;
-            int b = 5;
+            int m = 1;
+            int b = 0;
 
             y = (m * x) + b;
 
@@ -485,8 +528,8 @@ namespace com.AComm
         private int shiftScale6(byte x)
         {
             int y;
-            int m = 6;
-            int b = 6;
+            int m = 1;
+            int b = 0;
 
             y = (m * x) + b;
 
