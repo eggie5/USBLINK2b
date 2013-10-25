@@ -400,6 +400,7 @@ namespace com.AComm
                     data_labels[plot_position].Text = lt;
                 }
 
+
                 //upate those 3 bytes things    
                 if (signal_id == 4 || signal_id == 5)
                 {
