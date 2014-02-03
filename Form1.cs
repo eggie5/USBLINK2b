@@ -332,6 +332,12 @@ namespace com.AComm
 
             if (fio.GetAmpValuesFromUSB())
             {
+                if (fio.ImagePacket)
+                {
+                    //branch to image routine
+                    handle_image_packet();
+                    return;
+                }
                
                 //find which plot we're working with
                 signal_id = (int)fio.USBPacketData[0];
@@ -471,6 +477,11 @@ namespace com.AComm
                 Log(usb.LastError);
                 return;
             }
+        }
+
+        private void handle_image_packet()
+        {
+            throw new NotImplementedException();
         }
 
         //byte is an 8 bit unsigned integer

@@ -19,11 +19,22 @@ namespace USBLiNK
     {
         
         private Form1 guiRef;
-       
+
         internal byte[] USBPacketData;
         
         private byte[] usbAmpValues;
         internal bool[] USBprolog = new bool[16];
+
+       
+        private const int DEFAULT_READ_LEN = 512;
+        private const int IMG_READ_LEN = 57120;
+        private int current_read_len = DEFAULT_READ_LEN;// or 57120 Bytes
+        private bool image_packet;
+
+        public bool ImagePacket
+        {
+            get { return image_packet && this.current_read_len==IMG_READ_LEN; }
+        }
 
 
         public MATLABFileIO(Form1 reference)
@@ -43,99 +54,40 @@ namespace USBLiNK
         internal bool GetAmpValuesFromUSB()
         {
 
-            byte [] read_bytes = new byte[512];
+            //max according to docs is:
+            //16777216 instead of 512 (16MB)
+            byte [] read_bytes = new byte[current_read_len];
 
-            if (!guiRef.usb.Read(out read_bytes, 512))
+            if (!guiRef.usb.Read(out read_bytes, read_bytes.Length))
             {
-
                 guiRef.statusPanelInfo.Text = guiRef.usb.LastError;
-
                 return false;
             }
 
-            usbAmpValues = new byte[512];
+            //strip out the frist 2 bytes and save remainder to usbAmpValues
+            usbAmpValues = new byte[read_bytes.Length];
             int x = 0;
-            for (int i = 2; i < 512; i++)
+            for (int i = 2; i < read_bytes.Length; i++)
             {
                 usbAmpValues[x] = read_bytes[i];
                 x++;
             }
-            
-            #region sorting algorthim
-            /*graphValues = new ArrayList();
 
-            //Add 4 0's to arraylist
-            newData = new ArrayList();
-            for (int i = 0; i < 4; i++)
-            {
-                newData.Add((byte)0);
-            }
-
-            //cut off the last 4 elements
-            for (int i = 0; i < usbAmpValues.Length-4; i++)
-            {
-                newData.Add(usbAmpValues[i]);
-            }
-
-            //Seperate into 16 length Arraylist and then arrange them
-            ArrayList groupe = new ArrayList();
-
-            int e = 0;
-            int incrementer = 16;
-
-            foreach (byte num in newData)
-            {
-                groupe.Add(num);
-                e++;
-
-                if (e == incrementer)
-                {
-                    ReArrange(groupe);
-                    groupe.Clear();
-                    incrementer += 16;
-                }
-            }
-             
-
-
-
-            //Check last groupe to see if it's 16 long
-            //If false, add 0's 'till it is.
-
-            if (groupe.Count != 16 && graphValues.Count!=512)
-            {
-                int ELEDIF = 16 - groupe.Count;
-
-                //add 0's to end of groupe to fill 16 spaces
-
-                for (int i = 0; i < ELEDIF; i++)
-                {
-                    groupe.Add((byte)0);
-                }
-
-                //Add last groupe to main arraylist
-                ReArrange(groupe);
-            }
-
-            //do ben's last rearrange thing
-            FinalizeData();*/
-#endregion
-
-
-            USBPacketData= new byte[512];
-            //graphValues.CopyTo(GraphPoints);
 
             //this seems really redundant and I should consider
             //removing it for preformance concerns
-            usbAmpValues.CopyTo(USBPacketData, 0);
+            //USBPacketData = new byte[read_bytes.Length];
+            //usbAmpValues.CopyTo(USBPacketData, 0);
+            USBPacketData = usbAmpValues;
            
-            
-
 
             //get the USB stream as bits from bytes
-            BitArray USBStreamAsBits = new BitArray(USBPacketData);
+            BitArray USBStreamAsBits = new BitArray(usbAmpValues);
             
             //Get the USB prolog from the first byte of the USB stream
+            //the 48th bit is the 7th byte and 64 is the end of the 8th byte
+            //this is just a hackish way to get the bits of the bits of the 
+            //prologue
             int xx = 0;
             for(int i=48; i<64; i++)
             {
@@ -144,9 +96,33 @@ namespace USBLiNK
                 xx++;
             }
 
+
+            //now check the prolog for the singal 
+            //that the next sample will be an image transfer
+            //and if so increase the read size
+            is_image_packet(usbAmpValues[6]);
+
             return true;
 
         }
+
+        private void is_image_packet(byte signal)
+        {
+            if (signal == 255)
+            {
+                //the next sample will be image data so increase the read length
+                this.current_read_len = IMG_READ_LEN;
+                this.image_packet = true;
+            }
+            else
+            {
+                this.current_read_len = DEFAULT_READ_LEN; //default
+                this.image_packet = false;
+            }
+
+        }
+
+    
      
 
         //THIS method reads the binary file "COEFFS" from readCoeffsPath 
@@ -175,5 +151,7 @@ namespace USBLiNK
             }
         
         }
+
+        
     }
 }
