@@ -490,7 +490,7 @@ namespace com.AComm
         {
             int y;
             int m=1;
-            int b=1;
+            int b=0;
 
             y = (m * x) + b;
 
@@ -500,7 +500,7 @@ namespace com.AComm
         {
             int y;
             int m = 1;
-            int b = 1;
+            int b = 0;
 
             y = (m * x) + b;
 
@@ -510,7 +510,7 @@ namespace com.AComm
         {
             int y;
             int m = 1;
-            int b = 1;
+            int b = 0;
 
             y = (m * x) + b;
 
@@ -520,7 +520,7 @@ namespace com.AComm
         {
             int y;
             int m = 1;
-            int b = 1;
+            int b = 0;
 
             y = (m * x) + b;
 
